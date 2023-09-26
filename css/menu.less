@@ -6,23 +6,25 @@ ul{
 .menu{
     background-color: @color-white;
     color: @color-white;
-    height: 70px;
+    height: 55px;
     &__logo{
-        max-width: 200px;
+        max-width: 100px;
         overflow: hidden;
+        margin: 0 10px;
     }
     &__container{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90%;
+        width: 100%;
         max-width: 1200px;
-        height: 100%;
+        height: 90%;
         margin: 0 auto;
+        background-color: #000000;
     }
     &__links{
         margin: 0;
-        height: 100%;
+        height: 80%;
         transition: transform .5s;
         display: flex;
         z-index: 2;
@@ -93,7 +95,7 @@ ul{
     }
     &__img{
         display: block;
-        width: 36px;
+        width: 24px;
     }
     
 }
@@ -130,15 +132,17 @@ ul{
             position: fixed;
             max-width: 400px;
             width: 100%;
-            top: 115px;
+            top: 50px;
             padding: 0;
             bottom: 0;
             right: 0;
-            background-color: @color-primary;
+            background: rgb(0,0,0);
+background: linear-gradient(180deg, rgba(0,0,0,1) 29%, rgba(246,177,0,0.9490740740740741) 89%);
             overflow-y: auto;
             display: grid;
             grid-auto-rows: max-content;
             transform: translateX(100%);
+            border-radius: 0 0 175px 0;
             &-show{
                 transform: unset;
                 width: 100%;
