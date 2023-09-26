@@ -21,6 +21,11 @@ ul {
   color: #ffffff;
   height: 55px;
 }
+.menu-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .menu__logo {
   max-width: 100px;
   overflow: hidden;
@@ -87,7 +92,7 @@ ul {
   background-color: #411c4c !important;
 }
 .menu__link:hover {
-  background-color: #2F6887;
+  background-color: #411c4c;
   color: #ffffff;
   -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
@@ -138,6 +143,9 @@ ul {
   width: 24px;
 }
 @media screen and (max-width: 800px) {
+  .menu-top {
+    display: none;
+  }
   .menu__hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
