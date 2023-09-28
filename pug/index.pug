@@ -1,10 +1,37 @@
 extend ../components/template.pug
 block content
-    .section-slide
-    .section-nosotros
-    .section-contactanos 
-    .section-soporte
-    .section-catalogo 
-    .section-especializado 
-    .section-innovacion 
-    .section-soporte2
+    .content
+        .content__section-slide
+            section(data-bs-ride="carousel").content__slides.carousel.slide.carousel-fade#carouselExampleFade
+                .carousel-inner
+                    .carousel-item.active
+                        picture.carousel-item__img
+                            source(media="(min-width:1110px)" srcset="/images/Desktop/desktopSlidesIndex-1920x466.jpg")
+                            source(media="(min-width:768px)" srcset="/images/Tablet/tabletSlidesIndex-1110x466.jpg")
+                            img(src="/images/Mobile/mobileSlidesIndex_1-722x1048.jpg" alt="Imgagen de pallets").d-block.w-100
+                        .slideContent
+                            .slideContent__box#slide1Content
+                                h1 MANIOBRAMOS  CON #[br] #[strong PRECISIÓN]  #[br] Air palets #[br]
+                    .carousel-item
+                        picture.carousel-item__img
+                            source(media="(min-width:1110px)" srcset="/images/Desktop/desktopSlidesIndex2-1920x466.jpg")
+                            source(media="(min-width:768px)" srcset="/images/Tablet/tabletSlidesIndex2-1110x466.jpg")
+                            img(src="/images/Mobile/mobileSlidesIndex_2-722x1048.jpg" alt="Imgagen de un montacargas").d-block.w-100
+                        .slideContent
+                            .slideContent__box#slide1Content
+                                p Somos  #[br] #[strong EXPERTOS]  #[br] en servicios  #[br] industriales.
+
+                button(type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev").carousel-control-prev.hidden
+                    span(aria-hidden="true").carousel-control-prev-icon.hidden
+                    span.visually-hidden.hidden Previous
+                button(type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next").carousel-control-next.hidden
+                    span(aria-hidden="true").carousel-control-next-icon.hidden
+                    span.visually-hidden.hidden Next
+
+        .content__section-nosotros
+        .content__section-contactanos 
+        .content__section-soporte
+        .content__section-catalogo 
+        .content__section-especializado 
+        .content__section-innovacion 
+        .content__section-soporte2
