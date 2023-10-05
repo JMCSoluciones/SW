@@ -63,3 +63,129 @@
 header{
     height: 48px;
 }
+.title{
+    font-size: 2.2rem;
+    color: @color-text;
+    border-bottom: 3px solid @color-primary;
+    margin: 30px 10px;
+    text-align: center;
+}
+.content{
+    color: @color-text;
+    &__section-nosotros{
+        margin: 20px auto;
+        text-align: justify;
+        width: 300px;
+        &-txt{
+            font-size: 1.4rem;
+
+        }
+    }
+    &__section-contactanos{
+        background-image: url(/images/Mobile/mobileItemContactanos480x520.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        height: 379px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: @color-white;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: @font-light;
+            width: 100vw;
+            height: 200px;
+            background-color: rgba(30, 30, 30, 0.4);
+
+            p:nth-child(1){
+                border-bottom: 2px solid @color-primary;
+
+            }
+            p:nth-child(2){
+                font-size: 2.4rem;
+            }
+            strong{
+                font-weight: @font-semibold;
+            }
+        }
+    }
+    &__section-soporte{
+        margin: 20px auto;
+        text-align: justify;
+        width: 300px;
+        &-txt{
+            font-size: 1.4rem;
+
+        }
+    }
+    &__section-catalogo{
+        background-image: url(/images/Mobile/mobileItemCatalogo480x520.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        height: 379px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-txt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: @color-white;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: @font-light;
+            width: 100vw;
+            height: 200px;
+            background-color: rgba(30, 30, 30, 0.4);
+            &-box{
+                border: 3px solid @color-primary;
+                width: 189px;
+                border-radius: 20px;
+                text-align: left;
+                padding: 5px 10px;
+                p:nth-child(1){
+                    margin: 0;
+                    font-size: 1.6rem;
+                    color: #D6D6D6;
+                    font-weight: @font-semibold;
+
+                }
+                p:nth-child(2){
+                    font-size: 3rem;
+                    font-weight: @font-bold;
+                    margin: 0;
+
+                }
+                strong{
+                    font-weight: @font-semibold;
+                }
+                &-link{
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 5px;
+                    text-align: right;
+                    a{
+                        color: @color-white;
+                        text-decoration: none;
+                        font-size: 1.6rem;
+                        font-weight: @font-semibold;
+
+                    }
+                    img{
+                        width: 25px;
+                    }
+                }
+            }
+        }
+       
+    }
+
+
+}
