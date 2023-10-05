@@ -86,7 +86,7 @@ header {
   font-size: 1.4rem;
 }
 .content__section-contactanos {
-  background-image: url(/images/Mobile/mobileItemContactanos480x520.jpg);
+  background-image: url(images/Mobile/mobileItemContactanos480x520.jpg);
   background-attachment: fixed;
   background-position: center;
   height: 379px;
@@ -140,7 +140,7 @@ header {
   font-size: 1.4rem;
 }
 .content__section-catalogo {
-  background-image: url(/images/Mobile/mobileItemCatalogo480x520.jpg);
+  background-image: url(images/Mobile/mobileItemCatalogo480x520.jpg);
   background-attachment: fixed;
   background-position: center;
   height: 379px;
@@ -228,7 +228,7 @@ header {
   font-size: 1.4rem;
 }
 .content__section-innovacion {
-  background-image: url(/images/Mobile/mobileItemInovacion480x520.jpg);
+  background-image: url(images/Mobile/mobileItemInovacion480x520.jpg);
   background-attachment: fixed;
   background-position: center;
   height: 379px;
