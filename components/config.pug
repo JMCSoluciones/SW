@@ -1,3 +1,11 @@
 //- -var services = ["Movimiento de Maquinaria","Acometidas Eléctricas", "Acometidas Hidráulicas","Pailería","Pintura"]
 //- -var links = ["Inicio","Empresa","Movimiento de Maquinaria","Acometidas Eléctricas", "Acometidas Hidráulicas","Pailería","Pintura","Contacto","Aviso de privacidad"]
 //- -var valores = ["PASIÓN POR EL SERVICIO","HONESTIDAD","LIDERAZGO","COMPROMISO","EXPERIENCIA","CALIDAD","RESPONSABILIDAD","CONFIANZA"]
+-var titulo = "STEROWANIA"
+-var titulos = ["CONOCE NUESTROS PRODUCTOS","Semaforo", "Postes", "Señalamientos","Complementos viales","Servicios de diseño vial y urbano"]
+mixin caja(imagen,titulo,enlace)
+	.caja 
+		.caja__imagen: img(src="images/Mobile/"+imagen)
+		.caja__contenido
+			h3=titulo
+			a(href="http://www.google.com") enlace 
