@@ -101,5 +101,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+# Prepros
+prepros.config
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,linux,visualstudiocode
