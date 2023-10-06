@@ -791,7 +791,7 @@ footer .footer__foot .link__jmc a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 .slide__box p {
   color: #ffffff;
@@ -845,4 +845,41 @@ footer .footer__foot .link__jmc a {
 }
 .slideComplementos {
   background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+}
+.slidePostes {
+  background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
+}
+.slideSemaforos {
+  background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
+}
+.slideSenalamientos {
+  background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
+}
+.slideServicios {
+  background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
+}
+.link-categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  margin: 30px auto;
+  width: 80vw;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6C6864;
+}
+.link-categorias p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.link-categorias .dropdown a {
+  font-size: 1.4rem;
 }
