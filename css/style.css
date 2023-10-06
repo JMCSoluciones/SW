@@ -883,3 +883,88 @@ footer .footer__foot .link__jmc a {
 .link-categorias .dropdown a {
   font-size: 1.4rem;
 }
+.login {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(29%, #000000), color-stop(89%, rgba(246, 177, 0, 0.94907407)));
+  background: linear-gradient(180deg, #000000 29%, rgba(246, 177, 0, 0.94907407) 89%);
+}
+.login .titulologin {
+  font-size: 24px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  color: #ffffff;
+}
+.login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 400px;
+}
+.login .form-group {
+  margin: auto;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  width: 250px;
+  position: relative;
+  color: white;
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+}
+.login .icono {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.login .icono img {
+  width: 20px;
+  height: 20px;
+  top: 22px;
+  left: 10px;
+}
+.login button {
+  color: white !important;
+  font-weight: 600;
+  width: 100px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.login .form-group.form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
