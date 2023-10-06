@@ -637,3 +637,107 @@ footer{
     }
 
 }
+// Diseño del Slide de catálogo y categorias
+.slide{
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 466px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        background-color: rgba(30, 30, 30, 0.7);
+        height: 300px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 20px;
+        p{
+            color: @color-white;
+        }
+        p:nth-child(1){
+            border-bottom: 2px solid @color-primary;
+            font-size: 2rem;
+            width: 190px;
+            margin-bottom: 0;
+            font-weight: @font-extralight;
+
+        }
+        p:nth-child(2){
+            font-size: 4rem;
+            width: 190px;
+            line-height: 3.7rem;
+            font-weight: @font-extralight;
+            margin-top: 5px;
+            strong{
+                font-size: 4.2rem;
+            }
+
+
+        }
+    }
+}
+.categoriaIntro{
+    width: 100vw;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: @color-text;
+    p:nth-child(1){
+        border-bottom: 2px solid @color-primary;
+        font-size: 2rem;
+        font-weight: @font-light;
+        margin-bottom: 0;
+    }
+    p:nth-child(2){
+        font-size: 4rem;
+    }
+}
+.slideCatalogo{
+    background-image: url(/images//Mobile/mobileSlideProductos-722x1048.jpg);
+    
+}
+.slideComplementos{
+    background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+}
+.slidePostes{
+    background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
+}
+.slideSemaforos{
+    background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
+}
+.slideSenalamientos{
+    background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
+}
+.slideServicios{
+    background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
+}
+
+.link-categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 30px auto;
+    width: 80vw;
+    gap:10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: @color-text;
+    p{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    .dropdown{
+        a{
+            font-size: 1.4rem;
+        
+        }
+    }
+}
