@@ -1,10 +1,68 @@
 extend ../components/template.pug
 block content
-    .section-slide
-    .section-nosotros
-    .section-contactanos 
-    .section-soporte
-    .section-catalogo 
-    .section-especializado 
-    .section-innovacion 
-    .section-soporte2
+    .content
+        .content__section-slide
+            section(data-bs-ride="carousel").content__slides.carousel.slide.carousel-fade#carouselExampleFade
+                .carousel-inner
+                    .carousel-item.active
+                        picture.carousel-item__img
+                            source(media="(min-width:1110px)" srcset="images/Desktop/desktopSlidesIndex-1920x466.jpg")
+                            source(media="(min-width:768px)" srcset="images/Tablet/tabletSlidesIndex-1110x466.jpg")
+                            img(src="images/Mobile/mobileSlidesIndex_1-722x1048.jpg" alt="Imgagen de pallets").d-block.w-100
+                        .slideContent
+                            .slideContent__box
+                                p CONOCE
+                                h2 NUESTRA ÁREA DE #[strong VIALIDAD]
+                                p SEMÁFOROS, POSTES, SEÑALAMIENTOS Y MUCHO MÁS...
+                                .slideContent__box__link
+                                    a(href="http://catalogo.html" target="_blank") Catálogo
+                                    img(src="images/iconos/arrow-circle-right.svg", alt="", srcset="")
+                    .carousel-item
+                        picture.carousel-item__img
+                            source(media="(min-width:1110px)" srcset="images/Desktop/desktopSlidesIndex2-1920x466.jpg")
+                            source(media="(min-width:768px)" srcset="images/Tablet/tabletSlidesIndex2-1110x466.jpg")
+                            img(src="images/Mobile/mobileSlidesIndex_2-722x1048.jpg" alt="Imgagen de un montacargas").d-block.w-100
+                        .slideContent
+                            .slideContent__box
+                                p NUESTROS SERVICIOS
+                                h2 DESARROLLO URBANO Y VIAL
+                                .slideContent__box__link
+                                    a(href="http://catalogo.html" target="_blank") Contáctanos
+                                    img(src="images/iconos/arrow-circle-right.svg")
+
+
+                button(type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev").carousel-control-prev.hidden
+                    span(aria-hidden="true").carousel-control-prev-icon.hidden
+                    span.visually-hidden.hidden Previous
+                button(type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next").carousel-control-next.hidden
+                    span(aria-hidden="true").carousel-control-next-icon.hidden
+                    span.visually-hidden.hidden Next
+        .content__section-nosotros
+            p.content__section-nosotros-title.title ACERCA DE NOSOTROS
+            p.content__section-nosotros-txt #[strong STEROWANIA] es una empresa mexicana, fundada en el año 2010 con el nombre de AUTEN MEXICO, que gracias a la preferencia de nuestros clientes, demandas de nuevos productos y servicios en el 2017, renovamos la sociedad creando e nueva sociedad con el nombre STEROWANIA MEXICO S. DE R.L DE C.V, enfocada en ofrecer servicios industriales,
+        .content__section-contactanos
+            .content__section-contactanos-txt
+                p EN #[strong STEROWANIA], #[br]ESTAMOS PARA SERVIRLE
+                p #[strong CONTÁCTANOS]
+        .content__section-soporte
+            p.content__section-soporte-title.title ¿POR QUÉ SOPORTE?
+            p.content__section-soporte-txt  #[strong Sterowania] tiene como base el conocimiento de lo que una empresa necesita, independientemente de su capacidad, nivel de producción o de especialización, esto nos permite ser un aliado estratégico de cualquier tipo de empresa y garantizar que no somos un costo sino una inversión.
+        .content__section-catalogo
+            .content__section-catalogo-txt
+                .content__section-catalogo-txt-box
+                    p NUESTRO
+                    p CATÁLOGO
+                    .content__section-catalogo-txt-box-link
+                        a(href="catalgo.html") VER
+                        img(src="images/iconos/arrow-circle-right.svg", alt="", srcset="") 
+        .content__section-especializado
+            p.content__section-especializado-title.title Equipo especializado
+            p.content__section-especializado-txt  Contamos con un grupo de Ingenieros y especialistas en procesos los cuales son capacitados constantemente.
+        .content__section-innovacion
+            .content__section-innovacion-txt
+                .content__section-innovacion-txt-box
+                    p Innovación
+                    p Uno de nuestros pilares que permiten, proporcionar servicios de clase mundial.
+        .content__section-soporte2
+            p.content__section-soporte2-title.title Soporte
+            p.content__section-soporte2-txt  Somos un aliado que permite eficientar el cumplimientode los Sistemas de Gestion de Calidad.
