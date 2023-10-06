@@ -274,6 +274,7 @@ header {
 }
 .content {
   color: #6C6864;
+  margin-top: 30px;
 }
 .content__section-nosotros {
   margin: 20px auto;
