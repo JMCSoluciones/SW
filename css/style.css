@@ -758,3 +758,91 @@ footer .footer__foot .link__jmc a {
   text-decoration: none;
   color: #ffffff;
 }
+.slide {
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 466px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.slide__box {
+  background-color: rgba(30, 30, 30, 0.7);
+  height: 300px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 40px;
+}
+.slide__box p {
+  color: #ffffff;
+}
+.slide__box p:nth-child(1) {
+  border-bottom: 2px solid #f6b100;
+  font-size: 2rem;
+  width: 190px;
+  margin-bottom: 0;
+  font-weight: 100;
+}
+.slide__box p:nth-child(2) {
+  font-size: 4rem;
+  width: 190px;
+  line-height: 3.7rem;
+  font-weight: 100;
+  margin-top: 5px;
+}
+.slide__box p:nth-child(2) strong {
+  font-size: 4.2rem;
+}
+.categoriaIntro {
+  width: 100vw;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6C6864;
+}
+.categoriaIntro p:nth-child(1) {
+  border-bottom: 2px solid #f6b100;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.categoriaIntro p:nth-child(2) {
+  font-size: 4rem;
+}
+.slideCatalogo {
+  background-image: url(/images//Mobile/mobileSlideProductos-722x1048.jpg);
+}
+.slideComplementos {
+  background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+}
