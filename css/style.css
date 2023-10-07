@@ -521,6 +521,7 @@ header {
   font-size: 1.4rem;
 }
 footer {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
