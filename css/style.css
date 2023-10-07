@@ -71,7 +71,7 @@ body {
   opacity: none;
 }
 #semaforo {
-  background-image: url(/images/Mobile/mobileItemSemaforos480x520.jpg);
+  background-image: url(../images/Mobile/mobileItemSemaforos480x520.jpg);
 }
 #semaforo h3 {
   font-size: 34px;
@@ -79,7 +79,7 @@ body {
   border-bottom: 1px solid #f6b100;
 }
 #postes {
-  background-image: url(/images/Mobile/mobileItemPostes480x520.jpg);
+  background-image: url(../images/Mobile/mobileItemPostes480x520.jpg);
 }
 #postes h3 {
   font-size: 34px;
@@ -87,7 +87,7 @@ body {
   border-bottom: 1px solid #f6b100;
 }
 #senalamientos {
-  background-image: url(/images/Mobile/mobileItemSenalamientos480x520.jpg);
+  background-image: url(../images/Mobile/mobileItemSenalamientos480x520.jpg);
 }
 #senalamientos h3 {
   font-size: 24px;
@@ -95,7 +95,7 @@ body {
   border-bottom: 1px solid #f6b100;
 }
 #complementos {
-  background-image: url(/images/Mobile/mobileItemComplementos480x520.jpg);
+  background-image: url(../images/Mobile/mobileItemComplementos480x520.jpg);
 }
 #complementos h3 {
   font-size: 20px;
@@ -107,7 +107,7 @@ body {
   border-bottom: 1px solid #f6b100;
 }
 #servicios {
-  background-image: url(/images/Mobile/mobileItemDiseno480x520.jpg);
+  background-image: url(../images/Mobile/mobileItemDiseno480x520.jpg);
 }
 #servicios h3 {
   font-size: 20px;
@@ -842,7 +842,7 @@ footer .footer__foot .link__jmc a {
   font-size: 4rem;
 }
 .slideCatalogo {
-  background-image: url(/images//Mobile/mobileSlideProductos-722x1048.jpg);
+  background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
 }
 .slideComplementos {
   background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
