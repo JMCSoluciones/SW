@@ -859,6 +859,9 @@ footer .footer__foot .link__jmc a {
 .slideServicios {
   background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
 }
+.slideCotizarGral {
+  background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
+}
 .link-categorias {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -968,4 +971,30 @@ footer .footer__foot .link__jmc a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.content-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+.content-form label {
+  font-size: 1.4rem;
+}
+.content-form input {
+  width: 300px;
+}
+.content-form button {
+  text-align: center;
+  width: 100%;
+  background-color: #f6b100;
+  border: none;
+  font-size: 1.4rem;
+  margin: 20px auto;
 }
