@@ -1,0 +1,14 @@
+button(class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal") 
+  | Enviar cotizacion
+
+.modal.fade#exampleModalToggle2(aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1")
+    .modal-dialog.modal-dialog-centered
+        .modal-content
+            .modal-header
+                h5#exampleModalToggleLabel2.modal-title Modal 2
+                button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+            .modal-body
+                | Hide this modal and show the first with the button below.
+            .modal-footer
+                button(class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal") Back to first
+
