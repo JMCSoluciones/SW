@@ -44,7 +44,7 @@
 }
 //id para personalizar las cajas de las distintas categorias (imagen y titulo)
 #semaforo {
-	background-image: url(/images/Mobile/mobileItemSemaforos480x520.jpg);
+	background-image: url(../images/Mobile/mobileItemSemaforos480x520.jpg);
 	h3 {
 		font-size: 34px;
 		font-weight: 500;
@@ -52,7 +52,7 @@
 	}
 }
 #postes {
-	background-image: url(/images/Mobile/mobileItemPostes480x520.jpg);
+	background-image: url(../images/Mobile/mobileItemPostes480x520.jpg);
 	h3 {
 		font-size: 34px;
 		font-weight: 500;
@@ -60,7 +60,7 @@
 	}
 }
 #senalamientos {
-	background-image: url(/images/Mobile/mobileItemSenalamientos480x520.jpg);
+	background-image: url(../images/Mobile/mobileItemSenalamientos480x520.jpg);
 	h3 {
 		font-size: 24px;
 		font-weight: 500;
@@ -68,7 +68,7 @@
 	}
 }
 #complementos {
-	background-image: url(/images/Mobile/mobileItemComplementos480x520.jpg);
+	background-image: url(../images/Mobile/mobileItemComplementos480x520.jpg);
 	h3 {
 		font-size: 20px;
 		font-weight: 500;
@@ -80,7 +80,7 @@
 	}
 }
 #servicios {
-	background-image: url(/images/Mobile/mobileItemDiseno480x520.jpg);
+	background-image: url(../images/Mobile/mobileItemDiseno480x520.jpg);
 	h3 {
 		font-size: 20px;
 		font-weight: 500;
@@ -234,6 +234,7 @@ header{
 }
 .content{
     color: @color-text;
+    margin-top: 30px;
     &__section-nosotros{
         margin: 20px auto;
         text-align: justify;
@@ -440,6 +441,7 @@ header{
 
 }
 footer{
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     color: @color-white;
@@ -636,4 +638,190 @@ footer{
         }
     }
 
+}
+
+// Diseño del Slide de catálogo y categorias
+.slide{
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 466px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        background-color: rgba(30, 30, 30, 0.7);
+        height: 300px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 20px;
+        p{
+            color: @color-white;
+        }
+        p:nth-child(1){
+            border-bottom: 2px solid @color-primary;
+            font-size: 2rem;
+            width: 190px;
+            margin-bottom: 0;
+            font-weight: @font-extralight;
+
+        }
+        p:nth-child(2){
+            font-size: 4rem;
+            width: 190px;
+            line-height: 3.7rem;
+            font-weight: @font-extralight;
+            margin-top: 5px;
+            strong{
+                font-size: 4.2rem;
+            }
+
+
+        }
+    }
+}
+.categoriaIntro{
+    width: 100vw;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: @color-text;
+    p:nth-child(1){
+        border-bottom: 2px solid @color-primary;
+        font-size: 2rem;
+        font-weight: @font-light;
+        margin-bottom: 0;
+    }
+    p:nth-child(2){
+        font-size: 4rem;
+    }
+}
+.slideCatalogo{
+    background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
+    
+}
+.slideComplementos{
+    background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+}
+.slidePostes{
+    background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
+}
+.slideSemaforos{
+    background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
+}
+.slideSenalamientos{
+    background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
+}
+.slideServicios{
+    background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
+}
+.slideCotizarGral{
+    background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
+}
+
+.link-categorias{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin: 30px auto;
+    width: 80vw;
+    gap:10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: @color-text;
+    p{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    .dropdown{
+        a{
+            font-size: 1.4rem;
+        
+        }
+    }
+}
+.login{
+    background: linear-gradient(180deg, rgba(0,0,0,1) 29%, rgba(246,177,0,0.9490740740740741) 89%);
+    .titulologin{
+        font-size: 24px;
+        font-family: @font-family;
+        text-align: center;
+        font-weight: @font-semibold;
+        color: @color-white;
+    
+    }
+    
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        height: 400px;
+        
+    }
+    .form-group{
+        margin: auto;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        width: 250px;
+        position: relative;
+        color: white;
+        font-size: 14px;
+        font-family: @font-family;
+    }
+    .icono{
+        display: flex;
+        gap:10px;
+        img{
+            width: 20px;
+            height:20px;
+            top: 22px;
+            left: 10px;
+        }
+    }
+    button{
+        color: white !important;
+        font-weight: @font-semibold;
+        width: 100px;
+        height:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+       
+    }
+    .form-group.form-check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.content-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    label{
+        font-size: 1.4rem;
+    }
+    input{
+        width: 300px;
+    }
+    button{
+        text-align: center;
+        width: 100%;
+        background-color: @color-primary;
+        border: none;
+        font-size: 1.4rem;
+        margin: 20px auto;
+    }
 }

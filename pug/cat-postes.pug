@@ -1,7 +1,13 @@
 extend ../components/template.pug
 block content
+    .slidePostes.slide
+        .slide__box
+            p CATÁLOGO DE  
+            p #[strong POSTES]
+    include link-categorias.pug
+    .categoriaIntro
         .titulo Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        .container
+    .container
             .accordion#accordionExample
                 .accordion-item
                     h2.accordion-header
@@ -12,38 +18,38 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar                                              
+                                    include modal-cotizacion.pug                                              
                 .accordion-item
                     h2.accordion-header
                         button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo") Poste semáforo vehicular tipo bandera 
@@ -53,38 +59,38 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                 .accordion-item
                     h2.accordion-header
                         button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree") Poste semáforo peatonal
@@ -94,38 +100,38 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar         
+                                    include modal-cotizacion.pug         
                 .accordion-item
                     h2.accordion-header
                         button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour") Poste autopista
@@ -135,38 +141,38 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar              
+                                    include modal-cotizacion.pug              
                 .accordion-item
                     h2.accordion-header
                         button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive") Poste tipo Puente
@@ -176,38 +182,38 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar              
+                                    include modal-cotizacion.pug              
                 .accordion-item
                     h2.accordion-header
                         button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix") Poste Control semáforo
@@ -217,36 +223,36 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/6.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar              
+                                    include modal-cotizacion.pug              
                 

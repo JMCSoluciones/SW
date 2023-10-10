@@ -1,9 +1,14 @@
 extend ../components/template.pug
 block content 
- //-Boton desplegable para la subcategoria de servicios-->
- -//
+    .slideServicios.slide
+        .slide__box
+            p SERVICIOS DE DISEÑO  
+            p VIAL Y #[br] #[strong URBANO]
+    include link-categorias.pug
+    .categoriaIntro
         .titulo Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        .container
+    
+    .container
             .accordion#accordionExample
                 .accordion-item
                     h2.accordion-header
@@ -14,29 +19,29 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             
                 .accordion-item
                     h2.accordion-header
@@ -47,26 +52,26 @@ block content
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar
+                                    include modal-cotizacion.pug
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
                             .accordion-body__item
                                 .accordion-body__item-title
                                     p titulo
                                 .accordion-body__item-img
-                                    img(src="/images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                                    img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                                 .accordion-body__item-txt
                                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae
                                 .accordion-body__item-link
-                                    a(href="#") Cotizar 
+                                    include modal-cotizacion.pug 
