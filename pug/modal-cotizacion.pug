@@ -1,45 +1,49 @@
 button(type="button" class="btn btn-secundary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle") Cotizar
+.modal-cotizacion
+    #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel' tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5#exampleModalToggleLabel.modal-title SOLICITUD DE COTIZACIÓN
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .producto_cotizado
+                        img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                    .content-form
+                        form(action = "")
+                            .mb-3
+                                label.form-label(for="exampleInputEmail1") Nombre
+                                input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                                .form-text#emailHelp We'll never share your email with anyone else.
+                            .mb-3
+                                label.form-label(for="exampleInputEmail1") Teléfono
+                                input.form-control(type="num" aria-describedby="emailHelp")#exampleInputEmail1
+                                .form-text#emailHelp 
+                            .mb-3
+                                label.form-label(for="exampleInputEmail1") Email
+                                input.form-control(type="email" aria-describedby="emailHelp")#exampleInputEmail1
+                                .form-text#emailHelp 
+                            .mb-3
+                                label.form-label(for="exampleInputEmail1") Nombre de la empresa
+                                input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                                .form-text#emailHelp 
+                            .mb-3
+                                label.form-label(for="exampleInputEmail1") Mensaje
+                                textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                                .form-text#emailHelp 
+                    button.btn.btn-warning(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Enviar
+                        
+                .modal-footer
+                    button.btn.btn-primary(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Open second modal
+    #exampleModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel2' tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5#exampleModalToggleLabel2.modal-title Solicitud 
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    | Cotización realizada con exito!
+                .modal-footer
+                    button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Cancelar 
+                    button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Aceptar
 
-#exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel' tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-        .modal-content
-            .modal-header
-                h5#exampleModalToggleLabel.modal-title SOLICITUD DE COTIZACIÓN
-                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-            .modal-body
-                .content-form
-                    form(action = "")
-                        .mb-3
-                            label.form-label(for="exampleInputEmail1") Nombre
-                            input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-                            .form-text#emailHelp We'll never share your email with anyone else.
-                        .mb-3
-                            label.form-label(for="exampleInputEmail1") Teléfono
-                            input.form-control(type="num" aria-describedby="emailHelp")#exampleInputEmail1
-                            .form-text#emailHelp 
-                        .mb-3
-                            label.form-label(for="exampleInputEmail1") Email
-                            input.form-control(type="email" aria-describedby="emailHelp")#exampleInputEmail1
-                            .form-text#emailHelp 
-                        .mb-3
-                            label.form-label(for="exampleInputEmail1") Nombre de la empresa
-                            input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-                            .form-text#emailHelp 
-                        .mb-3
-                            label.form-label(for="exampleInputEmail1") Mensaje
-                            textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-                            .form-text#emailHelp 
-                button.btn.btn-success(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Open second modal
-                    
-            .modal-footer
-                button.btn.btn-primary(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Open second modal
-#exampleModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel2' tabindex='-1')
-    .modal-dialog.modal-dialog-centered
-        .modal-content
-            .modal-header
-                h5#exampleModalToggleLabel2.modal-title Solicitud de cotización
-                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-            .modal-body
-                | Cotización realizada con exito!
-            .modal-footer
-                button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Back to first
