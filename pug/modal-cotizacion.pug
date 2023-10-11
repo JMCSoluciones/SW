@@ -1,4 +1,4 @@
-button(type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle") Cotizar
+button(type="button" class="btn btn-secundary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle") Cotizar
 
 #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel' tabindex='-1')
     .modal-dialog.modal-dialog-centered
@@ -29,16 +29,17 @@ button(type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-targ
                             label.form-label(for="exampleInputEmail1") Mensaje
                             textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
                             .form-text#emailHelp We'll never share your email with anyone else.
+                            button.btn.btn-primary(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Enviar
             .modal-footer
                 button.btn.btn-primary(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Open second modal
 #exampleModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel2' tabindex='-1')
     .modal-dialog.modal-dialog-centered
         .modal-content
             .modal-header
-                h5#exampleModalToggleLabel2.modal-title Modal 2
+                h5#exampleModalToggleLabel2.modal-title Cotización
                 button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
             .modal-body
-                | Hide this modal and show the first with the button below.
+                | Solicitud de cotización exitosa
             .modal-footer
-                button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Back to first
-                a.btn.btn-primary(data-bs-toggle='modal' href='#exampleModalToggle' role='button') Open first modal
+                button.btn.btn-danger(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Cancelar
+                button.btn.btn-success(type="button" data-bs-dismiss="modal") Aceptar
