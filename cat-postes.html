@@ -68,12 +68,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -102,30 +102,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -141,12 +138,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -175,30 +172,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -214,12 +208,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -248,30 +242,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -287,12 +278,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -321,30 +312,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -369,12 +357,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -403,30 +391,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -442,12 +427,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -476,30 +461,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -515,12 +497,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -549,30 +531,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -588,12 +567,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -622,30 +601,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -670,12 +646,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -704,30 +680,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -743,12 +716,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -777,30 +750,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -816,12 +786,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -850,30 +820,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -889,12 +856,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -923,30 +890,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -971,12 +935,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1005,30 +969,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1044,12 +1005,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1078,30 +1039,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1117,12 +1075,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1151,30 +1109,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1190,12 +1145,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1224,30 +1179,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1272,12 +1224,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1306,30 +1258,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1345,12 +1294,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1379,30 +1328,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1418,12 +1364,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1452,30 +1398,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1491,12 +1434,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1525,30 +1468,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1573,12 +1513,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1607,30 +1547,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1646,12 +1583,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1680,30 +1617,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1719,12 +1653,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1753,30 +1687,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
@@ -1792,12 +1723,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cotizar</button>
-                  <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" id="staticBackdrop">
-                    <div class="modal-dialog">
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                          <h5 class="modal-title" id="exampleModalToggleLabel">Modal 1</h5>
                           <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1826,30 +1757,27 @@
                               <div class="mb-3">
                                 <label class="form-label" for="exampleInputEmail1">Mensaje</label>
                                 <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else </div>
-                              </div>
-                              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
-                                 Enviar cotizacion</button>
-                              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-                                <div class="modal-dialog modal-dialog-centered">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Hide this modal and show the first with the button below.</div>
-                                    <div class="modal-footer">
-                                      <button class="btn btn-primary" data-bs-target="#staticBackdrop" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
-                                    </div>
-                                  </div>
-                                </div>
+                                <div class="form-text" id="emailHelp">We'll never share your email with anyone else.</div>
                               </div>
                             </form>
                           </div>
                         </div>
                         <div class="modal-footer">
-                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                          <button class="btn btn-primary" type="button">Understood</button>
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Hide this modal and show the first with the button below.</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button><a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
                         </div>
                       </div>
                     </div>
