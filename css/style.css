@@ -867,12 +867,16 @@ footer .footer__foot .link__jmc a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
   height: 30px;
   margin: 30px auto;
   width: 80vw;
@@ -999,6 +1003,23 @@ footer .footer__foot .link__jmc a {
   font-size: 1.4rem;
   margin: 20px auto;
 }
+.modal-title {
+  font-size: 2rem;
+  color: #6C6864;
+}
+.btn-cotizacion {
+  font-size: 12px !important;
+  font-family: 'Raleway', sans-serif !important;
+  color: #6C6864 !important;
+  font-weight: 600 !important;
+}
+.btn-warning {
+  font-size: 12px !important;
+  font-family: 'Raleway', sans-serif !important;
+  color: #6C6864 !important;
+  font-weight: 600 !important;
+  width: 250px !important;
+}
 .producto_cotizado {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1018,6 +1039,28 @@ footer .footer__foot .link__jmc a {
   width: 50px;
   height: auto;
 }
+.informacion_producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #6C6864;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+}
 .content-form {
   text-align: left !important;
 }
+/*#inlineFormCustomSelect{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    height: 24px;
+   border-color: #e3e4e5!important;
+    border-radius: 4px !important;
+    
+}*/
