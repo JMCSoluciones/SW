@@ -1018,3 +1018,6 @@ footer .footer__foot .link__jmc a {
   width: 50px;
   height: auto;
 }
+.content-form {
+  text-align: left !important;
+}
