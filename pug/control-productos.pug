@@ -1,0 +1,189 @@
+extend ../components/template.pug
+block content
+    .control_productos
+        include control-menuAdmin.pug
+        h2 control de productos
+        
+    .container_controlProductos
+        .table-wrapper
+            .table-title
+                .row
+                    .col-sm-6
+                        .topnav
+                            .search-container
+                                form(action='/action_page.php')
+                                    input(type='text' placeholder='Search..' name='search')
+                                    button(type='submit')
+                                        i.fa.fa-search
+                    .col-sm-6
+                        a.btn.btn-success(href='#addProductoModal' data-toggle='modal')
+                            i.material-icons &#xE147;
+                            span Agregar Producto
+            table.table.table-striped.table-hover
+                thead 
+                    tr                  
+                        th id
+                        th Nombre 
+                        th Detalles 
+                        th Acciones
+                tbody 
+                    tr 
+                        td 001
+                        td Semáforo Vehicular una sección
+                        td 
+                            a(href="#verzualizarProductoModal" data-toggle='modal') detalles...  
+                        td
+                            a.edit(href="#editProductoModal" data-toggle='modal')
+                                i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                            a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                    tr 
+                        td 002
+                        td Semáforo Vehicular dos secciones 
+                        td 
+                             a(href="#verzualizarProductoModal" data-toggle='modal') detalles...  
+                        td
+                            a.edit(href="#editProductoModal" data-toggle='modal')
+                                i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                            a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                    tr 
+            .clearfix
+                .hint-text
+                    | Showing 
+                    b 5
+                    |  out of 
+                    b 25
+                    |  entries
+                ul.pagination
+                    li.page-item.disabled
+                        a(href="#") Previous 
+                    li.page-item
+                        a.page-link(href="#") 1
+                    li.page-item
+                        a.page-link(href="#") 2
+                    li.page-item
+                        a.page-link(href="#") 3
+                    li.page-item
+                        a.page-link(href="#") Next
+
+        
+
+    #verzualizarProductoModal.modal.fade(aria-hidden='true' aria-labelledby='#verzualizarProductoModalLabel' tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h4#verzualizarProductoModalLabel.modal-title PRODUCTO
+                    button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                .modal-body
+                    .form-group
+                        label Nombre
+                        input.form-control(type="text" required="")
+                    .form-group
+                        label Categoria
+                        select.form-select(aria-label='Default select example')
+                            option(selected='') Seleccionar
+                            option(value='1') One
+                            option(value='2') Two
+                            option(value='3') Three
+                    .form-group
+                        label Subcategoria
+                        select.form-select(aria-label='Default select example')
+                            option(selected='') Seleccionar
+                            option(value='1') One
+                            option(value='2') Two
+                            option(value='3') Three
+                    .form-group
+                        label.form-label(for="exampleInputEmail1") Detalles
+                        textarea.form-control(type="text" name="mensaje" aria-describedby="emailHelp")#exampleInputEmail1
+                .modal-footer
+                    button.btn.btn-default(data-bs-target='#editProductoModal' data-bs-toggle='modal' data-bs-dismiss='modal') Mofidicar
+                    input.btn.btn-success(href="#deleteProductoModal" type='submit' value='Eliminar')
+
+    #addProductoModal.modal.fade 
+        .modal-dialog
+            .modal-content
+                form
+                    .modal-header
+                        h4.modal-title AGREGAR UN NUEVO PRODUCTO
+                        button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                    .modal-body
+                        .form-group
+                            label Nombre
+                            input.form-control(type="text" required="")
+                        .form-group
+                            label Categoria
+                            select.form-select(aria-label='Default select example')
+                                option(selected='') Seleccionar
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                        .form-group
+                            label Subcategoria
+                            select.form-select(aria-label='Default select example')
+                                option(selected='') Seleccionar
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                        .form-group
+                            label.form-label(for="exampleInputEmail1") Detalles
+                            textarea.form-control(type="text" name="mensaje" aria-describedby="emailHelp")#exampleInputEmail1
+                    .modal-footer
+                        input.btn.btn-default(type='button' data-dismiss='modal' value='Cancel')
+                        input.btn.btn-success(type='submit' value='Add')
+                    
+                            
+        
+    #editProductoModal.modal.fade
+        .modal-dialog
+            .modal-content
+                form
+                    .modal-header
+                        h4.modal-title EDITAR PRODUCTO
+                        button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                    .modal-body
+                        .form-group
+                            label Nombre
+                            input.form-control(type="text" required="")
+                        .form-group
+                            label Categoria
+                            select.form-select(aria-label='Default select example')
+                                option(selected='') Seleccionar
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                        .form-group
+                            label Subcategoria
+                            select.form-select(aria-label='Default select example')
+                                option(selected='') Seleccionar
+                                option(value='1') One
+                                option(value='2') Two
+                                option(value='3') Three
+                        .form-group
+                            label.form-label(for="exampleInputEmail1") Detalles
+                            textarea.form-control(type="text" name="mensaje" aria-describedby="emailHelp")#exampleInputEmail1
+                    .modal-footer
+                        input.btn.btn-default(type='button' data-dismiss='modal' value='Cancel')
+                        input.btn.btn-info(type='submit' value='Save')
+
+    #deleteProductoModal.modal.fade
+        .modal-dialog
+            .modal-content
+                form
+                    .modal-header
+                        h4.modal-title ELIMINAR PRODUCTO
+                        button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+                    .modal-body
+                        p ¿Está seguro de que desea eliminar estos registros?
+                        P.text-warning 
+                            small Esta acción no se puede deshacer.
+                    .modal-footer 
+                            input.btn.btn-default(type='button' data-dismiss='modal' value='Cancel')
+                            input.btn.btn-danger(type='submit' value='Delate')
+
+
+
+
+
+                
+        
