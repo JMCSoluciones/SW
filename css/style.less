@@ -1,96 +1,55 @@
 @import "globals.less";
 @import "variables.less";
 
+// Diseño del Slide de catálogo y categorias
+.slide{
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box{
+        background-color: rgba(30, 30, 30, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 20px;
+        width: 100%;
+        height: 300px;
+
+        p{
+            color: @color-white;
+        }
+        p:nth-child(1){
+            border-bottom: 2px solid @color-primary;
+            font-size: 2rem;
+            width: 190px;
+            margin-bottom: 0;
+            font-weight: @font-extralight;
+
+        }
+        p:nth-child(2){
+            font-size: 4rem;
+            width: 190px;
+            line-height: 3.7rem;
+            font-weight: @font-extralight;
+            margin-top: 5px;
+            strong{
+                font-size: 4.2rem;
+            }
+
+
+        }
+    }
+}
 //Style para la pagina de Categorias
 
-.contenido {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-	color: @color-white;
-}
-.caja {
-	max-width: 100%;
-	margin: 50px 20px;
-	background-position: center top;
-	background-size: cover;
-	background-repeat: no-repeat;
-	width: 253px;
-	height: 260px;
-	border-radius: 1em;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-		&__elementos {
-		background-color: rgba(61, 102, 131, .8);
-		width: 100%;
-		padding: 20px;
-		}
-			a {
-				color: @color-text;
-				text-decoration: none;
-				background-color: @color-primary;
-				font-size: 1.4rem;
-				width: 100%;
-				padding: 2px;
-				border-radius: 0.2em;
-				opacity: none;
-			}
-}
-//id para personalizar las cajas de las distintas categorias (imagen y titulo)
-#semaforo {
-	background-image: url(../images/Mobile/mobileItemSemaforos480x520.jpg);
-	h3 {
-		font-size: 34px;
-		font-weight: 500;
-		border-bottom: 1px solid @color-primary;
-	}
-}
-#postes {
-	background-image: url(../images/Mobile/mobileItemPostes480x520.jpg);
-	h3 {
-		font-size: 34px;
-		font-weight: 500;
-		border-bottom: 1px solid @color-primary;
-	}
-}
-#senalamientos {
-	background-image: url(../images/Mobile/mobileItemSenalamientos480x520.jpg);
-	h3 {
-		font-size: 24px;
-		font-weight: 500;
-		border-bottom: 1px solid @color-primary;
-	}
-}
-#complementos {
-	background-image: url(../images/Mobile/mobileItemComplementos480x520.jpg);
-	h3 {
-		font-size: 20px;
-		font-weight: 500;
-	}
-	h2 {
-		font-size: 20px;
-		font-weight: 700;
-		border-bottom: 1px solid @color-primary;
-	}
-}
-#servicios {
-	background-image: url(../images/Mobile/mobileItemDiseno480x520.jpg);
-	h3 {
-		font-size: 20px;
-		font-weight: 500;
-	}
-	h2 {
-		font-size: 20px;
-		font-weight: 700;
-		border-bottom: 1px solid @color-primary;
-	}
-}
+
+
 
 // ACORDEON, Style para las subcategorias de cada categoria
 .titulo {
@@ -211,21 +170,23 @@
                     text-decoration: none;
                     font-size: 2rem;
                     font-weight: @font-semibold;
+                    img{
+                        margin-left: 5px;
+                        width: 25px;
+                    }
                 }
-                img{
-                    width: 25px;
-                }
+               
             }
         }
        
     }
 
 }
-header{
-    height: 48px;
-}
+// header{
+//     height: 109px;
+// }
 .title{
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     color: @color-text;
     border-bottom: 3px solid @color-primary;
     margin: 30px 10px;
@@ -233,15 +194,37 @@ header{
     text-transform: uppercase;
 }
 .content{
+   display: flex;
+   flex-direction: column;
+   margin: 60px auto;
+   padding: 30px;
+   justify-content: center;
+   align-items: center;
+   &__intro{
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: @color-text;
-    margin-top: 30px;
+    p:nth-child(1){
+        border-bottom: 2px solid @color-primary;
+        font-size: 2rem;
+        font-weight: @font-light;
+        margin-bottom: 0;
+    }
+    p:nth-child(2){
+        font-size: 4rem;
+    }
+   }
+}
+
+.contentIndex{
+    color: @color-text;
     &__section-nosotros{
-        margin: 20px auto;
         text-align: justify;
-        width: 300px;
         &-txt{
             font-size: 1.6rem;
-
         }
     }
     &__section-contactanos{
@@ -250,7 +233,7 @@ header{
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 379px;
+        height: 460px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -280,12 +263,9 @@ header{
         }
     }
     &__section-soporte{
-        margin: 20px auto;
         text-align: justify;
-        width: 300px;
         &-txt{
             font-size: 1.6rem;
-
         }
     }
     &__section-catalogo{
@@ -294,7 +274,7 @@ header{
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 379px;
+        height: 460px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -317,7 +297,6 @@ header{
                 text-align: left;
                 padding: 5px 10px;
                 p:nth-child(1){
-                    margin: 0;
                     font-size: 1.6rem;
                     color: #D6D6D6;
                     font-weight: @font-semibold;
@@ -326,8 +305,6 @@ header{
                 p:nth-child(2){
                     font-size: 3rem;
                     font-weight: @font-bold;
-                    margin: 0;
-
                 }
                 strong{
                     font-weight: @font-semibold;
@@ -354,12 +331,9 @@ header{
        
     }
     &__section-especializado{
-        margin: 20px auto;
         text-align: center;
-        width: 300px;
         &-txt{
             font-size: 1.4rem;
-
         }
     }
     &__section-innovacion{
@@ -368,7 +342,7 @@ header{
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 379px;
+        height: 460px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -388,7 +362,6 @@ header{
                 text-align: left;
                 padding: 5px 10px;
                 p:nth-child(1){
-                    margin: 0;
                     font-size: 3.2rem;
                     color: @color-white;
                     font-weight: @font-light;
@@ -429,9 +402,7 @@ header{
        
     }
     &__section-soporte2{
-        margin: 20px auto;
         text-align: center;
-        width: 300px;
         &-txt{
             font-size: 1.4rem;
 
@@ -440,6 +411,258 @@ header{
 
 
 }
+.contentCatalogo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	color: @color-white;
+    &__box {
+        max-width: 100%;
+        margin: 50px 20px;
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 334px;
+        height: 300px;
+        border-radius: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+            &-item {
+            background-color: rgba(61, 102, 131, .8);
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                border-bottom: 1px solid @color-primary;
+                width: 100%;
+                padding: 20px;
+                font-size: 2.8rem;
+                font-weight: @font-extralight;
+            }
+            a {
+                color: @color-text;
+                text-decoration: none;
+                background-color: @color-primary;
+                font-size: 1.4rem;
+                width: 200px;
+                padding: 2px;
+                border-radius: 0.2em;
+                margin: 20px auto;
+            }
+            }
+                
+    }
+    //id para personalizar las cajas de las distintas categorias (imagen y titulo)
+    #semaforo {
+        background-image: url(../images/Mobile/mobileItemSemaforos480x520.jpg);
+    }
+    #postes {
+        background-image: url(../images/Mobile/mobileItemPostes480x520.jpg);
+    }
+    #senalamientos {
+        background-image: url(../images/Mobile/mobileItemSenalamientos480x520.jpg);
+    }
+    #complementos {
+        background-image: url(../images/Mobile/mobileItemComplementos480x520.jpg);
+    }
+    #servicios {
+        background-image: url(../images/Mobile/mobileItemDiseno480x520.jpg);
+    }
+
+}
+
+.slideCatalogo{
+    background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
+    height: 466px;
+}
+.slideComplementos{
+    background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+    height: 466px;
+
+}
+.slidePostes{
+    background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
+    height: 466px;
+
+}
+.slideSemaforos{
+    background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
+    height: 466px;
+
+}
+.slideSenalamientos{
+    height: 466px;
+    background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
+}
+.slideServicios{
+    background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
+    height: 466px;
+
+}
+.slideCotizarGral{
+    background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
+    height: 466px;
+}
+
+.link-categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 30px;
+    margin: 30px auto;
+    width: 80vw;
+    gap:10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: @color-text;
+    p{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    .dropdown{
+        a{
+            font-size: 1.4rem;
+        
+        }
+    }
+}
+.login{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 60px 30px;
+    padding: 20px;
+    border-radius: 20px;
+
+    &__title{
+    }  
+    &__formLogin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    &__box{
+
+        .form-group{
+            color: @color-text;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 5px;
+            width: 300px;
+            font-size: 14px;
+            font-family: @font-family;
+           
+            label{
+                text-align: center;
+                font-size: 1.6rem;
+            }
+
+            .icono{
+                display: flex;
+                gap:10px;
+                img{
+                    width: 20px;
+            }
+            
+        }
+    }
+    
+    }
+   
+   
+    button{
+        color: white !important;
+        font-weight: @font-semibold;
+        width: 100px;
+        height:auto;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+       
+    }
+    .form-group.form-check{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.content-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    label{
+        font-size: 1.4rem;
+    }
+    input{
+        width: 300px;
+    }
+    button{
+        text-align: center;
+        width: 100%;
+        background-color: @color-primary;
+        border: none;
+        font-size: 1.4rem;
+        margin: 20px auto;
+    }
+}
+.modal-title{
+    font-size: 2rem;
+    color: @color-text;
+}
+
+.btn-cotizacion{
+    font-size: 12px !important;
+    font-family: @font-family !important;
+    color: @color-text !important;
+    font-weight: @font-semibold !important;
+}
+.btn-warning{
+    font-size: 12px !important;
+    font-family: @font-family !important;
+    color: @color-text !important;
+    font-weight: @font-semibold !important;
+    width: 250px !important;
+}
+.producto_cotizado{
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+
+img{
+    width: 50px;
+    height: auto;
+    
+}
+}
+.informacion_producto{
+    display: flex;
+    flex-direction: row;
+    color: @color-text;
+    font-weight: @font-regular;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.content-form{
+   text-align: left !important;
+}
+
 footer{
     margin-top: 40px;
     display: flex;
@@ -639,240 +862,3 @@ footer{
     }
 
 }
-
-// Diseño del Slide de catálogo y categorias
-.slide{
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 466px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &__box{
-        background-color: rgba(30, 30, 30, 0.7);
-        height: 300px;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding-left: 20px;
-        p{
-            color: @color-white;
-        }
-        p:nth-child(1){
-            border-bottom: 2px solid @color-primary;
-            font-size: 2rem;
-            width: 190px;
-            margin-bottom: 0;
-            font-weight: @font-extralight;
-
-        }
-        p:nth-child(2){
-            font-size: 4rem;
-            width: 190px;
-            line-height: 3.7rem;
-            font-weight: @font-extralight;
-            margin-top: 5px;
-            strong{
-                font-size: 4.2rem;
-            }
-
-
-        }
-    }
-}
-.categoriaIntro{
-    width: 100vw;
-    margin: 30px auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: @color-text;
-    p:nth-child(1){
-        border-bottom: 2px solid @color-primary;
-        font-size: 2rem;
-        font-weight: @font-light;
-        margin-bottom: 0;
-    }
-    p:nth-child(2){
-        font-size: 4rem;
-    }
-}
-.slideCatalogo{
-    background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
-    
-}
-.slideComplementos{
-    background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
-}
-.slidePostes{
-    background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
-}
-.slideSemaforos{
-    background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
-}
-.slideSenalamientos{
-    background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
-}
-.slideServicios{
-    background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
-}
-.slideCotizarGral{
-    background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
-}
-
-.link-categorias{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    height: 30px;
-    margin: 30px auto;
-    width: 80vw;
-    gap:10px;
-    padding: 10px;
-    border-radius: 10px;
-    color: @color-text;
-    p{
-        font-size: 1.4rem;
-        margin: 0;
-    }
-    .dropdown{
-        a{
-            font-size: 1.4rem;
-        
-        }
-    }
-}
-.login{
-    background: linear-gradient(180deg, rgba(0,0,0,1) 29%, rgba(246,177,0,0.9490740740740741) 89%);
-    .titulologin{
-        font-size: 24px;
-        font-family: @font-family;
-        text-align: center;
-        font-weight: @font-semibold;
-        color: @color-white;
-    
-    }
-    
-    form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; 
-        height: 400px;
-        
-    }
-    .form-group{
-        margin: auto;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 5px;
-        width: 250px;
-        position: relative;
-        color: white;
-        font-size: 14px;
-        font-family: @font-family;
-    }
-    .icono{
-        display: flex;
-        gap:10px;
-        img{
-            width: 20px;
-            height:20px;
-            top: 22px;
-            left: 10px;
-        }
-    }
-    button{
-        color: white !important;
-        font-weight: @font-semibold;
-        width: 100px;
-        height:auto;
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-       
-    }
-    .form-group.form-check{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.content-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    label{
-        font-size: 1.4rem;
-    }
-    input{
-        width: 300px;
-    }
-    button{
-        text-align: center;
-        width: 100%;
-        background-color: @color-primary;
-        border: none;
-        font-size: 1.4rem;
-        margin: 20px auto;
-    }
-}
-.modal-title{
-    font-size: 2rem;
-    color: @color-text;
-}
-
-.btn-cotizacion{
-    font-size: 12px !important;
-    font-family: @font-family !important;
-    color: @color-text !important;
-    font-weight: @font-semibold !important;
-}
-.btn-warning{
-    font-size: 12px !important;
-    font-family: @font-family !important;
-    color: @color-text !important;
-    font-weight: @font-semibold !important;
-    width: 250px !important;
-}
-.producto_cotizado{
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: center;
-
-img{
-    width: 50px;
-    height: auto;
-    
-}
-}
-.informacion_producto{
-    display: flex;
-    flex-direction: row;
-    color: @color-text;
-    font-weight: @font-regular;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-.content-form{
-   text-align: left !important;
-}
-/*#inlineFormCustomSelect{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    height: 24px;
-   border-color: #e3e4e5!important;
-    border-radius: 4px !important;
-    
-}*/

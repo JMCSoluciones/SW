@@ -1,13 +1,13 @@
 extend ../components/template.pug
 block content 
     .login
-        .titulologin  Iniciar sesión
-        form
-            .box
+        .login__title.title  Iniciar sesión
+        form.login__formLogin
+            .login__formLogin__box.box
                 .form-group
                     label(for='exampleInputEmail1') Email address
                     .icono 
-                        img(src="images/iconos/emial-login.svg", alt="")
+                        img(src="/images/iconos/email-login.svg", alt="")
                         input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email')
                     small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
                 .form-group
