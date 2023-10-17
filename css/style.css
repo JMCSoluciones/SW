@@ -1408,3 +1408,43 @@ table.table.avatar {
 .modal form label {
   font-weight: normal;
 }
+/*CONTROL DE COTIZACIONES*/
+.control_cotizaciones .inicio_cotizaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.control_cotizaciones .inicio_cotizaciones h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  padding: 20px;
+  margin: auto;
+  font-weight: 600;
+  color: #6C6864;
+  text-transform: uppercase;
+}
+.control_cotizaciones .btnStatus_cotizaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
