@@ -22,9 +22,12 @@ ul {
   height: 87px;
 }
 .menu-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  width: 1110px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .menu__logo {
   max-width: 100px;
@@ -42,7 +45,6 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  max-width: 1200px;
   height: 100%;
   margin: 0 auto;
   background-color: #000000;

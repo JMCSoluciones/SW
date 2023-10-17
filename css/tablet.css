@@ -20,12 +20,57 @@ body {
   margin: 10px 0;
   width: 340px;
 }
+.slideCatalogo {
+  background-image: url(../images/Tablet/tabletSlidesProductos-1110x466.jpg);
+  height: 466px;
+  background-position: center;
+  background-size: cover;
+}
+.slideComplementos {
+  background-image: url("../images/Tablet/tabletSlidesComplementos-1110x466.jpg");
+  height: 466px;
+  background-attachment: unset;
+}
+.slidePostes {
+  background-image: url("../images/Tablet/tabletSlidesPostes-1110x466.jpg");
+  height: 466px;
+  background-attachment: unset;
+}
+.slideSemaforos {
+  background-image: url("../images/Tablet/tabletSlidesSemaforos-1110x466.jpg");
+  height: 466px;
+  background-attachment: unset;
+}
+.slideSenalamientos {
+  height: 466px;
+  background-image: url("../images/Tablet/tabletSlidesSenalamientos-1110x466.jpg");
+  background-attachment: unset;
+}
+.slideServicios {
+  background-image: url("../images/Tablet/tabletSlidesDiseno-1110x466.jpg");
+  height: 466px;
+  background-attachment: unset;
+}
+.slideCotizarGral {
+  background-image: url("../images/Tablet/tabletSlidesCotizacion-1110x466.jpg");
+  height: 466px;
+  background-attachment: unset;
+}
 .content {
   margin: 0px auto;
   gap: 40px;
 }
 .content p {
   font-size: 1.8rem;
+}
+.contentIndex__section-contactanos {
+  background-image: url("../images/Tablet/tabletItemContactanos1440x900.jpg");
+}
+.contentIndex__section-catalogo {
+  background-image: url("../images/Tablet/tabletItemCatalogo1440x900.jpg");
+}
+.contentIndex__section-innovacion {
+  background-image: url("../images/Tablet/tabletItemInovacion1440x900.jpg");
 }
 .contentCatalogo {
   display: -webkit-box;
