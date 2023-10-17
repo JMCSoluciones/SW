@@ -67,6 +67,34 @@ body {
 .slide__box p:nth-child(2) strong {
   font-size: 4.2rem;
 }
+.slideCatalogo {
+  background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
+  height: 466px;
+}
+.slideComplementos {
+  background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+  height: 466px;
+}
+.slidePostes {
+  background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
+  height: 466px;
+}
+.slideSemaforos {
+  background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
+  height: 466px;
+}
+.slideSenalamientos {
+  height: 466px;
+  background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
+}
+.slideServicios {
+  background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
+  height: 466px;
+}
+.slideCotizarGral {
+  background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
+  height: 466px;
+}
 .titulo {
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
@@ -590,63 +618,6 @@ body {
 .contentCatalogo #servicios {
   background-image: url(../images/Mobile/mobileItemDiseno480x520.jpg);
 }
-.slideCatalogo {
-  background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
-  height: 466px;
-}
-.slideComplementos {
-  background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
-  height: 466px;
-}
-.slidePostes {
-  background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
-  height: 466px;
-}
-.slideSemaforos {
-  background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
-  height: 466px;
-}
-.slideSenalamientos {
-  height: 466px;
-  background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
-}
-.slideServicios {
-  background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
-  height: 466px;
-}
-.slideCotizarGral {
-  background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
-  height: 466px;
-}
-.link-categorias {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  height: 30px;
-  margin: 30px auto;
-  width: 80vw;
-  gap: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  color: #6C6864;
-}
-.link-categorias p {
-  font-size: 1.4rem;
-  margin: 0;
-}
-.link-categorias .dropdown a {
-  font-size: 1.4rem;
-}
 .login {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -712,11 +683,8 @@ body {
 }
 .login__formLogin__box .form-group .icono img {
   width: 20px;
-  height: 20px;
-  top: 22px;
-  left: 10px;
 }
-.login button {
+.login__formLogin button {
   color: white !important;
   font-weight: 600;
   width: 100px;
@@ -731,7 +699,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.login .form-group.form-check {
+.login__formLogin .form-group.form-check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,7 +710,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.content-form {
+.login .content-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -754,13 +722,13 @@ body {
           align-items: center;
   margin: 20px auto;
 }
-.content-form label {
+.login .content-form label {
   font-size: 1.4rem;
 }
-.content-form input {
+.login .content-form input {
   width: 300px;
 }
-.content-form button {
+.login .content-form button {
   text-align: center;
   width: 100%;
   background-color: #f6b100;
@@ -768,24 +736,24 @@ body {
   font-size: 1.4rem;
   margin: 20px auto;
 }
-.modal-title {
+.login .modal-title {
   font-size: 2rem;
   color: #6C6864;
 }
-.btn-cotizacion {
+.login .btn-cotizacion {
   font-size: 12px !important;
   font-family: 'Raleway', sans-serif !important;
   color: #6C6864 !important;
   font-weight: 600 !important;
 }
-.btn-warning {
+.login .btn-warning {
   font-size: 12px !important;
   font-family: 'Raleway', sans-serif !important;
   color: #6C6864 !important;
   font-weight: 600 !important;
   width: 250px !important;
 }
-.producto_cotizado {
+.login .producto_cotizado {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -800,11 +768,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.producto_cotizado img {
+.login .producto_cotizado img {
   width: 50px;
   height: auto;
 }
-.informacion_producto {
+.login .informacion_producto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,8 +785,37 @@ body {
   text-transform: uppercase;
   font-size: 12px;
 }
-.content-form {
+.login .content-form {
   text-align: left !important;
+}
+.link-categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  height: 30px;
+  margin: 30px auto;
+  width: 80vw;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6C6864;
+}
+.link-categorias p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.link-categorias .dropdown a {
+  font-size: 1.4rem;
 }
 footer {
   margin-top: 40px;
@@ -876,9 +873,9 @@ footer .footer__header__box__cellphone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

@@ -1,7 +1,7 @@
 @import "globals.less";
 @import "variables.less";
 
-// Diseño del Slide de catálogo y categorias
+//SLIDES
 .slide{
     background-position: center;
     background-attachment: fixed;
@@ -46,10 +46,38 @@
         }
     }
 }
-//Style para la pagina de Categorias
+.slideCatalogo{
+    background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
+    height: 466px;
+}
+.slideComplementos{
+    background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
+    height: 466px;
 
+}
+.slidePostes{
+    background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
+    height: 466px;
 
+}
+.slideSemaforos{
+    background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
+    height: 466px;
 
+}
+.slideSenalamientos{
+    height: 466px;
+    background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
+}
+.slideServicios{
+    background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
+    height: 466px;
+
+}
+.slideCotizarGral{
+    background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
+    height: 466px;
+}
 
 // ACORDEON, Style para las subcategorias de cada categoria
 .titulo {
@@ -182,9 +210,6 @@
     }
 
 }
-// header{
-//     height: 109px;
-// }
 .title{
     font-size: 2.8rem;
     color: @color-text;
@@ -219,6 +244,7 @@
    }
 }
 
+// INDEX
 .contentIndex{
     color: @color-text;
     &__section-nosotros{
@@ -411,6 +437,7 @@
 
 
 }
+//CATÁLOGO
 .contentCatalogo {
 	display: flex;
 	flex-direction: column;
@@ -479,38 +506,130 @@
     }
 
 }
+// LOGIN
+.login{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 60px 30px;
+    padding: 20px;
+    border-radius: 20px;
+    &__formLogin{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        &__box{
 
-.slideCatalogo{
-    background-image: url(../images//Mobile/mobileSlideProductos-722x1048.jpg);
-    height: 466px;
-}
-.slideComplementos{
-    background-image: url(../images/Mobile/mobileSlideComplementos-722x1048.jpg);
-    height: 466px;
+            .form-group{
+                color: @color-text;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 5px;
+                width: 300px;
+                font-size: 14px;
+                font-family: @font-family;
+            
+                label{
+                    text-align: center;
+                    font-size: 1.6rem;
+                }
 
-}
-.slidePostes{
-    background-image: url(../images/Mobile/mobileSlidePostes-722x1048.jpg);
-    height: 466px;
+                .icono{
+                    display: flex;
+                    gap:10px;
+                    img{
+                        width: 20px;
+                }
+                
+                }
+            }
+        
+        }
+        
+        button{
+            color: white !important;
+            font-weight: @font-semibold;
+            width: 100px;
+            height:auto;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+        
+        }
+        .form-group.form-check{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .content-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        label{
+            font-size: 1.4rem;
+        }
+        input{
+            width: 300px;
+        }
+        button{
+            text-align: center;
+            width: 100%;
+            background-color: @color-primary;
+            border: none;
+            font-size: 1.4rem;
+            margin: 20px auto;
+        }
+    }
+    .modal-title{
+        font-size: 2rem;
+        color: @color-text;
+    }
 
-}
-.slideSemaforos{
-    background-image: url(../images/Mobile/mobileSlideSemaforos-722x1048.jpg);
-    height: 466px;
+    .btn-cotizacion{
+        font-size: 12px !important;
+        font-family: @font-family !important;
+        color: @color-text !important;
+        font-weight: @font-semibold !important;
+    }
+    .btn-warning{
+        font-size: 12px !important;
+        font-family: @font-family !important;
+        color: @color-text !important;
+        font-weight: @font-semibold !important;
+        width: 250px !important;
+    }
+    .producto_cotizado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 
-}
-.slideSenalamientos{
-    height: 466px;
-    background-image: url(../images/Mobile/mobileSlideSenalamientos-722x1048.jpg);
-}
-.slideServicios{
-    background-image: url(../images/Mobile/mobileSlideDiseno-722x1048.jpg);
-    height: 466px;
+    img{
+        width: 50px;
+        height: auto;
+        
+    }
+    }
+    .informacion_producto{
+        display: flex;
+        flex-direction: row;
+        color: @color-text;
+        font-weight: @font-regular;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .content-form{
+    text-align: left !important;
+    }
 
-}
-.slideCotizarGral{
-    background-image: url(../images/Mobile/mobileSlideCotizacion-722x1048.jpg);
-    height: 466px;
 }
 
 .link-categorias{
@@ -536,133 +655,7 @@
         }
     }
 }
-.login{
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    margin: 60px 30px;
-    padding: 20px;
-    border-radius: 20px;
-
-    &__title{
-    }  
-    &__formLogin{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; 
-    &__box{
-
-        .form-group{
-            color: @color-text;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 5px;
-            width: 300px;
-            font-size: 14px;
-            font-family: @font-family;
-           
-            label{
-                text-align: center;
-                font-size: 1.6rem;
-            }
-
-            .icono{
-                display: flex;
-                gap:10px;
-                img{
-                    width: 20px;
-            }
-            
-        }
-    }
-    
-    }
-   
-   
-    button{
-        color: white !important;
-        font-weight: @font-semibold;
-        width: 100px;
-        height:auto;
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-       
-    }
-    .form-group.form-check{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-.content-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    label{
-        font-size: 1.4rem;
-    }
-    input{
-        width: 300px;
-    }
-    button{
-        text-align: center;
-        width: 100%;
-        background-color: @color-primary;
-        border: none;
-        font-size: 1.4rem;
-        margin: 20px auto;
-    }
-}
-.modal-title{
-    font-size: 2rem;
-    color: @color-text;
-}
-
-.btn-cotizacion{
-    font-size: 12px !important;
-    font-family: @font-family !important;
-    color: @color-text !important;
-    font-weight: @font-semibold !important;
-}
-.btn-warning{
-    font-size: 12px !important;
-    font-family: @font-family !important;
-    color: @color-text !important;
-    font-weight: @font-semibold !important;
-    width: 250px !important;
-}
-.producto_cotizado{
-display: flex;
-flex-direction: column;
-justify-content: center; 
-align-items: center;
-
-img{
-    width: 50px;
-    height: auto;
-    
-}
-}
-.informacion_producto{
-    display: flex;
-    flex-direction: row;
-    color: @color-text;
-    font-weight: @font-regular;
-    text-transform: uppercase;
-    font-size: 12px;
-}
-.content-form{
-   text-align: left !important;
-}
-
+// FOOTER
 footer{
     margin-top: 40px;
     display: flex;
@@ -698,7 +691,7 @@ footer{
             &__cellphone{
                 grid-area: cellphone;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 align-items: center;
             }
             &__email{
@@ -708,10 +701,6 @@ footer{
                 padding: 10px 0px;
                 align-items: center;
             }
-        }
-        
-        &-icon{
-            
         }
         &-icon img{
             width: 30px;
@@ -727,10 +716,10 @@ footer{
             background-color: @color-text;
             padding: 30px;
             align-items: center;
-            &-logo{
-                width: 200px;
-            }
-            &-links{
+                &-logo{
+                    width: 200px;
+                }
+                &-links{
                 margin: 30px auto;
                 text-align: center;
 
@@ -860,5 +849,4 @@ footer{
             }
         }
     }
-
 }
