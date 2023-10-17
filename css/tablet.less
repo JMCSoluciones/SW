@@ -19,7 +19,26 @@
     }
 
 }
-
+.contentCatalogo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__box{
+        margin: 0;
+        width: 328px;
+    }
+}
+.producto_cotizado{
+    img{
+        width: auto;
+        max-height: 60px;
+        overflow: hidden;
+        
+    }
+.mb-3{
+    text-align: left;
+}
+}
 footer{
     display: flex;
     flex-direction: column;
@@ -51,13 +70,6 @@ footer{
                 justify-content: flex-start;
                 align-items: center;
             }
-            // &__email{
-            //     grid-area: email;
-            //     display: flex;
-            //     justify-content: flex-start;
-            //     padding: 10px 0px;
-            //     align-items: center;
-            // }
         }
         &-icon img{
             width: 30px;
@@ -218,3 +230,4 @@ footer{
         }
     }
 }
+

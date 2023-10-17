@@ -769,8 +769,9 @@ body {
           align-items: center;
 }
 .login .producto_cotizado img {
-  width: 50px;
-  height: auto;
+  width: auto;
+  height: 60px;
+  overflow: hidden;
 }
 .login .informacion_producto {
   display: -webkit-box;
@@ -799,12 +800,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
-  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 30px auto;
-  width: 80vw;
+  width: 600px;
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
