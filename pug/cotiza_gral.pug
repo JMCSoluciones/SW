@@ -4,38 +4,38 @@ block content
         .slide__box
             p Llena este #[strong formulario] y haznos llegar tu
             p solicitud de #[strong cotización]
-    .categoriaIntro
+    .content.ContentCotizacionGral
         .titulo Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-    .content-form
-        form(action = "")
-            .mb-3
-                label.form-label(for="exampleInputEmail1") Nombre
-                input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-            .mb-3
-                label.form-label(for="exampleInputEmail1") Teléfono
-                input.form-control(type="num" aria-describedby="emailHelp")#exampleInputEmail1
-            .mb-3
-                label.form-label(for="exampleInputEmail1") Email
-                input.form-control(type="email" aria-describedby="emailHelp")#exampleInputEmail1
-            .mb-3
-                label.form-label(for="exampleInputEmail1") Nombre de la empresa
-                input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-            .mb-3
-                label.form-label(for="exampleInputEmail1") Mensaje
-                textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-            button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
-                | Enviar
-    #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
-        .modal-dialog.modal-dialog-centered(role='document')
-            .modal-content
-                .modal-header
-                    h5#exampleModalLabel.modal-title Solicitud 
-                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                .modal-body
-                    | Cotización realizada con exito!
-                .modal-footer
-                    button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Cancelar 
-                    button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Aceptar
+        .content-form
+            form(action = "")
+                .mb-3
+                    label.form-label(for="exampleInputEmail1") Nombre
+                    input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                .mb-3
+                    label.form-label(for="exampleInputEmail1") Teléfono
+                    input.form-control(type="num" aria-describedby="emailHelp")#exampleInputEmail1
+                .mb-3
+                    label.form-label(for="exampleInputEmail1") Email
+                    input.form-control(type="email" aria-describedby="emailHelp")#exampleInputEmail1
+                .mb-3
+                    label.form-label(for="exampleInputEmail1") Nombre de la empresa
+                    input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                .mb-3
+                    label.form-label(for="exampleInputEmail1") Mensaje
+                    textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+                    | Enviar
+        #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+            .modal-dialog.modal-dialog-centered(role='document')
+                .modal-content
+                    .modal-header
+                        h5#exampleModalLabel.modal-title Solicitud 
+                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                    .modal-body
+                        | Cotización realizada con exito!
+                    .modal-footer
+                        button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Cancelar 
+                        button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Aceptar
 
 
 
