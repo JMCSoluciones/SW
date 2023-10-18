@@ -1,13 +1,9 @@
-extend ../components/template.pug
-block content
-    .control_cotizaciones
-        .inicio_cotizaciones
-            include control-menuAdmin.pug
-            h3 Solicitudes de cotizaciones
-        .btnStatus_cotizaciones 
-            form(action="")
-                button.btn.btn-secondary(type='button') Todas
-                button.btn.btn-info(type='button') Pendientes
-                    a(href="solicitud-pendiente.html") 
-                button.btn.btn-success(type='button') Cotizadas
-                button.btn.btn-danger(type='button') Pendientes
+.btnStatus_cotizaciones 
+    form(action="")
+        button.btn.btn-secondary(type='button') Todas
+        button.btn.btn-info(type='button') 
+            a(href="solicitud-pendiente.html") Pendientes 
+        button.btn.btn-success(type='button') 
+            a(href="solicitud-cotizada.html") Cotizadas
+        button.btn.btn-danger(type='button') Pendientes
+        

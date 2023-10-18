@@ -6,20 +6,22 @@ block content
             h3 Solicitudes de cotizaciones
         include control-cotizaciones.pug
         .title_cotizacion
-            h4 Pendientes
-        .solicitud_pendiente
+            h4 Cotizadas
+        .solicitud_cotizada
             .table-wrapper
                 table.table.table-striped.table-hover
                     thead 
                         tr                  
                             th #
                             th Cliente
+                            th Estatus
                             th Destalles
                             th Acciones
                     tbody 
                         tr 
                             td 01
                             td Nombre cliente 
+                            th pendiente 
                             td 
                                 a(href="#verzualizarProductoModal" data-toggle='modal') ver más...  
                             td
@@ -30,6 +32,7 @@ block content
                         tr 
                             td 02
                             td cliente 2
+                            th cotizada
                             td 
                                 a(href="#verzualizarProductoModal" data-toggle='modal') ver más... 
                             td
@@ -37,5 +40,5 @@ block content
                                     i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
                                 a.delete(href='#deleteProductoModal' data-toggle='modal')
                                     i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
-                                       
+                        tr                
         

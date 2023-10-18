@@ -1,0 +1,32 @@
+extend ../components/template.pug
+block content
+    .agregar__producto
+        include control-menuAdmin.pug
+        .agregar__producto__form
+            .agregar__producto__form-titulo
+                p informacion de la 
+                p #[strong solicitud de cotización]
+            .agregar__producto__form-infoProducto
+                p #[strong Solicitud de cotización:] 1003
+                p #[strong id del producto:] 001
+                p #[strong Producto:] Semáforo vehicular una sección
+            .content-form
+                form(action = "")
+                    .mb-3
+                        label.form-label(for="exampleInputEmail1") Nombre
+                        input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                    .mb-3
+                        label.form-label(for="exampleInputEmail1") Teléfono
+                        input.form-control(type="num" aria-describedby="emailHelp")#exampleInputEmail1
+                    .mb-3
+                        label.form-label(for="exampleInputEmail1") Email
+                        input.form-control(type="email" aria-describedby="emailHelp")#exampleInputEmail1
+                    .mb-3
+                        label.form-label(for="exampleInputEmail1") Nombre de la empresa
+                        input.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                    .mb-3
+                        label.form-label(for="exampleInputEmail1") Mensaje
+                        textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
+                    button.btn.btn-success(type="button") Atender
+                    button.btn.btn-danger(type="button") Eliminar
+            

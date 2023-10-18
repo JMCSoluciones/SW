@@ -1366,7 +1366,7 @@ table.table.avatar {
   font-size: 13px;
   margin-top: 10px;
 }
-/* MODALES */
+/* CONTROL DE PRODUCTOS MODALES */
 .modal .modal-dialog {
   max-width: 400px;
 }
@@ -1447,4 +1447,77 @@ table.table.avatar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.control_cotizaciones .title_cotizacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 110px;
+  border-bottom: 3px solid #2196F3;
+}
+.control_cotizaciones .title_cotizacion h4 {
+  font-size: 18px;
+  color: #6C6864;
+  font-weight: 600;
+}
+/*FORMULARIO AGREGAR PRODUCTO*/
+.agregar__producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.agregar__producto__form-titulo {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  color: #6C6864;
+  text-transform: uppercase;
+  text-align: center;
+}
+.agregar__producto__form-contenet {
+  color: #0397d6 !important;
+}
+.agregar__producto .content-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+.agregar__producto .content-form label {
+  font-size: 1.4rem;
+  color: #6C6864;
+}
+.agregar__producto .content-form input {
+  width: 500px;
+}
+.agregar__producto .content-form button {
+  text-align: center;
+  width: 100%;
+  border: none;
+  font-size: 1.4rem;
+  margin: 20px auto;
 }

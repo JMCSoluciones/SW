@@ -40,54 +40,49 @@
         </section>
       </nav>
     </header>
-    <div class="control_cotizaciones">
-      <div class="inicio_cotizaciones">
-        <div class="control_productos_admin"> 
-          <div class="menu_control"> 
-            <div class="icono_productos"> <img src="images/iconos/iconmonstr-tiles-list-lined.svg" alt=""/><a href="cat-semaforos.html">Control de productos</a></div>
-            <div class="icono_subcategorias"> <img src="images/iconos/gear-wide-connected.svg" alt=""/><a href="login.html">Control de subcategorias</a></div>
-            <div class="icono_cotizaciones"> <img src="images/iconos/iconmonstr-credit-card-thin.svg" alt=""/><a href="#">Control de cotizaciones</a></div>
-          </div>
+    <div class="agregar__producto">
+      <div class="control_productos_admin"> 
+        <div class="menu_control"> 
+          <div class="icono_productos"> <img src="images/iconos/iconmonstr-tiles-list-lined.svg" alt=""/><a href="cat-semaforos.html">Control de productos</a></div>
+          <div class="icono_subcategorias"> <img src="images/iconos/gear-wide-connected.svg" alt=""/><a href="login.html">Control de subcategorias</a></div>
+          <div class="icono_cotizaciones"> <img src="images/iconos/iconmonstr-credit-card-thin.svg" alt=""/><a href="#">Control de cotizaciones</a></div>
         </div>
-        <h3>Solicitudes de cotizaciones</h3>
       </div>
-      <div class="btnStatus_cotizaciones"> 
-        <form action="">
-          <button class="btn btn-secondary" type="button">Todas</button>
-          <button class="btn btn-info" type="button"> <a href="solicitud-pendiente.html">Pendientes </a></button>
-          <button class="btn btn-success" type="button"> <a href="solicitud-cotizada.html">Cotizadas</a></button>
-          <button class="btn btn-danger" type="button">Pendientes</button>
-        </form>
-      </div>
-      <div class="title_cotizacion">
-        <h4>Pendientes</h4>
-      </div>
-      <div class="solicitud_pendiente">
-        <div class="table-wrapper">
-          <table class="table table-striped table-hover">
-            <thead> 
-              <tr>                 
-                <th>#</th>
-                <th>Cliente</th>
-                <th>Destalles</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody> 
-              <tr> 
-                <td>01</td>
-                <td>Nombre cliente </td>
-                <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
-                <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-              </tr>
-              <tr> 
-                <td>02</td>
-                <td>cliente 2</td>
-                <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
-                <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="agregar__producto__form">
+        <div class="agregar__producto__form-titulo">
+          <p>informacion de la </p>
+          <p><strong>solicitud de cotización</strong></p>
+        </div>
+        <div class="agregar__producto__form-infoProducto">
+          <p><strong>Solicitud de cotización:</strong> 1003</p>
+          <p><strong>id del producto:</strong> 001</p>
+          <p><strong>Producto:</strong> Semáforo vehicular una sección</p>
+        </div>
+        <div class="content-form">
+          <form action="">
+            <div class="mb-3">
+              <label class="form-label" for="exampleInputEmail1">Nombre</label>
+              <input class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="exampleInputEmail1">Teléfono</label>
+              <input class="form-control" type="num" aria-describedby="emailHelp" id="exampleInputEmail1"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="exampleInputEmail1">Email</label>
+              <input class="form-control" type="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+              <input class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"/>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+              <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
+            </div>
+            <button class="btn btn-success" type="button">Atender</button>
+            <button class="btn btn-danger" type="button">Eliminar</button>
+          </form>
         </div>
       </div>
     </div>

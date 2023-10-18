@@ -1151,7 +1151,7 @@ table{
 	font-size: 13px;
 	margin-top: 10px;
 }
-/* MODALES */
+/* CONTROL DE PRODUCTOS MODALES */
 .modal {
 	.modal-dialog {
 		max-width: 400px;
@@ -1226,5 +1226,65 @@ table{
         align-items:center ;
         justify-content: center;
     }
+
+    .title_cotizacion{
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+        margin-left: 50px;
+        margin-top: 50px;
+        width: 110px;
+        border-bottom: 3px solid #2196F3;
+
+        h4{
+        font-size: 18px;
+        color: @color-text;
+        font-weight: @font-semibold;
+        color: @color-text;
+        font-weight: @font-semibold;
+        }
+    }
 }
+/*FORMULARIO AGREGAR PRODUCTO*/
+.agregar__producto{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    &__form{
+        &-titulo{
+            font-size: 14px;
+            font-family: @font-family;
+            color:@color-text;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &-contenet{
+            color: #0397d6 !important;
+            
+        }
+    }
+    .content-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        label{
+            font-size: 1.4rem;
+            color: @color-text;
+        }
+        input{
+            width: 500px;
+        }
+        button{
+            text-align: center;
+            width: 100%;
+            border: none;
+            font-size: 1.4rem;
+            margin: 20px auto;
+            
+        }
+    }
+}
+
 
