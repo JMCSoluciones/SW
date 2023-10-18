@@ -1497,37 +1497,70 @@ table{
 }
 
 /*CONTROL DE SUBACTEGORIAS*/
-
 .control__subcategoria{
     display: flex;
     flex-direction: column;
     align-items:center ;
     justify-content: center;
-    .control__subcategoria-title {
+    h2{
+        font-size: 20px;
+        font-family: @font-family;
+        color: @color-text;
+        font-weight: @font-semibold;
+        text-transform: uppercase;
+    }
+    .control__content{
+        display: flex;
+        flex-direction: column;
+        .btn-group{
+            width: 500px !important;
+            margin: 2px;
+            .btn{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.control__lista-subcategoria{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    .control__lista-subcategoria-title  {
         h3{
             font-size: 24px;
             color: @color-text;
             text-transform: uppercase;
             font-family: @font-family;
             font-weight: @font-semibold;
+            margin: 20px;
         }
     }
     .content-form-subcategoria{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: center !important;
         align-items: center;
         margin-bottom: 100px;
+
         label{
             font-size: 1.4rem;
             color: @color-text;
         }
         input{
             width: 500px;
+            height: 30px;
         }
         select{
             height: auto;
             font-size: 1.4rem;
             color: @color-text;
+            height: 30px;
+        }
+        button{
+            width: 150px;
+            margin-top: 50px;
         }
     }
 }

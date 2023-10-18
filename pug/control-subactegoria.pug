@@ -1,0 +1,86 @@
+extend ../components/template.pug
+block content
+    .control__subcategoria
+        include control-menuAdmin.pug
+        h2 control de subcategorias 
+        .control__content
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Semáforo
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                            .table-wrapper
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th #
+                                            th Cliente
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr 
+                                            td 01
+                                            td Nombre cliente 
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr 
+                                            td 02
+                                            td cliente 2
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más... 
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Señalamientos
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                            .table-wrapper
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th #
+                                            th Cliente
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr 
+                                            td 01
+                                            td Nombre cliente 
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr 
+                                            td 02
+                                            td cliente 2
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más... 
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+
+                                
+                            
+
+
+                                
+                            
+
