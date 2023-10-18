@@ -13,3 +13,14 @@ body {
 .hidden {
   display: none !important;
 }
+.menu__container {
+  max-width: none;
+}
+.content {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+.contentIndex {
+  max-width: 1110px;
+  overflow: hidden;
+}
