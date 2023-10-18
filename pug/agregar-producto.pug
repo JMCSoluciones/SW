@@ -10,7 +10,7 @@ block content
                 p #[strong Solicitud de cotización:] 1003
                 p #[strong id del producto:] 001
                 p #[strong Producto:] Semáforo vehicular una sección
-            .content-form
+            .content-form-producto
                 form(action = "")
                     .mb-3
                         label.form-label(for="exampleInputEmail1") Nombre
@@ -27,6 +27,17 @@ block content
                     .mb-3
                         label.form-label(for="exampleInputEmail1") Mensaje
                         textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-                    button.btn.btn-success(type="button") Atender
-                    button.btn.btn-danger(type="button") Eliminar
-            
+                    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+                        | Enviar
+    #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+        .modal-dialog.modal-dialog-centered(role='document')
+            .modal-content
+                .modal-header
+                    h5#exampleModalLabel.modal-title Solicitud 
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    | Cotización realizada con exito!
+                .modal-footer
+                    button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Cancelar 
+                    button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Aceptar
+
