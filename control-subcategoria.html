@@ -72,19 +72,37 @@
             <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Agregar </button>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-            <button class="btn btn-primary" type="button">Understood</button>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Nombre</label>
+                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder="Nombre de la nueva subcategoría"/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Categoría</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">Selecciona la subcategoría</option>
+                      <option value="1">Semáforo</option>
+                      <option value="2">Postes</option>
+                      <option value="3">Señalamientos</option>
+                      <option value="4">Complementos viales </option>
+                      <option value="5">Servicios de diseño vial y urbano</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-primary" type="button">Guardar</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

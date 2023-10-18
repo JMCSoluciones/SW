@@ -1057,7 +1057,6 @@ footer .footer__foot .link__jmc a {
   text-decoration: none;
   color: #ffffff;
 }
-<<<<<<< HEAD
 .slide {
   background-position: center;
   background-attachment: fixed;
@@ -1819,5 +1818,50 @@ table.table.avatar {
   font-size: 1.4rem;
   margin: 20px auto;
 }
-=======
->>>>>>> f6e59d448387008de699b20e9eb53777ae4cab5d
+/*CONTROL DE SUBACTEGORIAS*/
+.control__subcategoria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.control__subcategoria .control__subcategoria-title h3 {
+  font-size: 24px;
+  color: #6C6864;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+.control__subcategoria .content-form-subcategoria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+.control__subcategoria .content-form-subcategoria label {
+  font-size: 1.4rem;
+  color: #6C6864;
+}
+.control__subcategoria .content-form-subcategoria input {
+  width: 500px;
+}
+.control__subcategoria .content-form-subcategoria select {
+  height: auto;
+  font-size: 1.4rem;
+  color: #6C6864;
+}
