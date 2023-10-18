@@ -27,8 +27,10 @@ block content
                     .mb-3
                         label.form-label(for="exampleInputEmail1") Mensaje
                         textarea.form-control(type="text" aria-describedby="emailHelp")#exampleInputEmail1
-                    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
-                        | Enviar
+                    button.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+                        | Atender
+                    button.btn.btn-danger(type='button' data-bs-toggle='modal' data-bs-target='#exampleModal')
+                        | Elimnar
     #exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
         .modal-dialog.modal-dialog-centered(role='document')
             .modal-content
