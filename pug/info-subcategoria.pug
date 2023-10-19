@@ -1,0 +1,88 @@
+extend ../components/template.pug
+block content
+    .control__lista-subcategoria
+        .control__lista-subcategoria-title 
+            h3 Informacion de la subcategoria
+        .content.infoSubcategoria 
+            .content-form-subcategoria
+                form(action = "")
+                    .mb-3
+                        label(for='exampleInputPassword1') Nombre
+                        input#exampleInputPassword1.form-control(type='text' placeholder='')
+                    .mb-3
+                        label(for='exampleInputPassword1') Categoría
+                        select.form-select(aria-label='Default select example')
+                            option(selected='') Selecciona la categoría
+                            option(value='1') Semáforo
+                            option(value='2') Postes
+                            option(value='3') Señalamientos
+                            option(value='4') Complementos viales 
+                            option(value='5') Servicios de diseño vial y urbano
+                    button.btn.btn-success(type="button" data-bs-toggle="modal" data-bs-target="#agregar") Agregar 
+                    button.btn.btn-primary(type="button" data-bs-toggle="modal" data-bs-target="#modiificar") Modificar
+                    button.btn.btn-danger(type="button" data-bs-toggle="modal" data-bs-target="#eliminar") Eliminar 
+                     
+                        
+                            
+            #agregar.modal.fade(data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+                .modal-dialog
+                    .modal-content
+                        .modal-header
+                            h5#staticBackdropLabel.modal-title Agregar
+                            button.btn-close(type="button" data-bs-dismiss="modal" aria-label='Close')
+                        .modal-body
+                            form(action = "")
+                                .mb-3
+                                    label(for="exampleInputPassword1") Nombre
+                                    input#exampleInputPassword1.form-control(type="text" placeholder="Nombre de la nueva subcategoría")
+                                .mb-3
+                                    label(for="exampleInputPassword1") Categoría
+                                    select.form-select(aria-label="Default select example")
+                                        option(selected='') Selecciona la categoría
+                                        option(value='1') Semáforo
+                                        option(value='2') Postes
+                                        option(value='3') Señalamientos
+                                        option(value='4') Complementos viales 
+                                        option(value='5') Servicios de diseño vial y urbano
+                        .modal-footer
+                            button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cancelar
+                            button.btn.btn-success(type="button") Guardar
+
+            #modiificar.modal.fade(data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+                .modal-dialog
+                    .modal-content
+                        .modal-header
+                            h5#staticBackdropLabel.modal-title Modificar
+                            button.btn-close(type="button" data-bs-dismiss="modal" aria-label='Close')
+                        .modal-body
+                            form(action = "")
+                                .mb-3
+                                    label(for="exampleInputPassword1") Nombre
+                                    input#exampleInputPassword1.form-control(type="text" placeholder="")
+                                .mb-3
+                                    label(for="exampleInputPassword1") Categoría
+                                    select.form-select(aria-label="Default select example")
+                                        option(selected='') 
+                                        option(value='1') Semáforo
+                                        option(value='2') Postes
+                                        option(value='3') Señalamientos
+                                        option(value='4') Complementos viales 
+                                        option(value='5') Servicios de diseño vial y urbano
+                        .modal-footer
+                            button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Cancelar
+                            button.btn.btn-success(type="button") Guardar
+
+            #eliminar.modal.fade(data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true")
+                .modal-dialog
+                    .modal-content
+                        .modal-header
+                            h5#staticBackdropLabel.modal-title Eliminar
+                            button.btn-close(type="button" data-bs-dismiss="modal" aria-label='Close')
+                        .modal-body
+                            |¿Estas seguro que deseas eliminar esta subcategoría?
+                        .modal-footer
+                            button.btn.btn-danger(type="button") Eliminar
+
+
+
+
