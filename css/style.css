@@ -1057,6 +1057,136 @@ footer .footer__foot .link__jmc a {
   text-decoration: none;
   color: #ffffff;
 }
+.categoriaIntro {
+  width: 100vw;
+  margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6C6864;
+}
+.categoriaIntro p:nth-child(1) {
+  border-bottom: 2px solid #f6b100;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+.categoriaIntro p:nth-child(2) {
+  font-size: 4rem;
+}
+.link-categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  height: 30px;
+  margin: 30px auto;
+  width: 80vw;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #6C6864;
+}
+.link-categorias p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+.link-categorias .dropdown a {
+  font-size: 1.4rem;
+}
+.content-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+.content-form label {
+  font-size: 1.4rem;
+}
+.content-form input {
+  width: 300px;
+}
+.content-form button {
+  text-align: center;
+  width: 100%;
+  background-color: #f6b100;
+  border: none;
+  font-size: 1.4rem;
+  margin: 20px auto;
+}
+.modal-title {
+  font-size: 2rem;
+  color: #6C6864;
+}
+.btn-cotizacion {
+  font-size: 12px !important;
+  font-family: 'Raleway', sans-serif !important;
+  color: #6C6864 !important;
+  font-weight: 600 !important;
+}
+.btn-warning {
+  font-size: 12px !important;
+  font-family: 'Raleway', sans-serif !important;
+  color: #6C6864 !important;
+  font-weight: 600 !important;
+  width: 250px !important;
+}
+.producto_cotizado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.informacion_producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #6C6864;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.content-form {
+  text-align: left !important;
+}
 .control_productos_admin {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1368,7 +1498,7 @@ table.table.avatar {
   font-size: 13px;
   margin-top: 10px;
 }
-/* MODALES */
+/* CONTROL DE PRODUCTOS MODALES */
 .modal .modal-dialog {
   max-width: 400px;
 }
@@ -1409,4 +1539,117 @@ table.table.avatar {
 }
 .modal form label {
   font-weight: normal;
+}
+/*CONTROL DE COTIZACIONES*/
+.control_cotizaciones .inicio_cotizaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.control_cotizaciones .inicio_cotizaciones h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  padding: 20px;
+  margin: auto;
+  font-weight: 600;
+  color: #6C6864;
+  text-transform: uppercase;
+}
+.control_cotizaciones .btnStatus_cotizaciones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.control_cotizaciones .title_cotizacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin-left: 50px;
+  margin-top: 50px;
+  width: 110px;
+  border-bottom: 3px solid #2196F3;
+}
+.control_cotizaciones .title_cotizacion h4 {
+  font-size: 18px;
+  color: #6C6864;
+  font-weight: 600;
+}
+/*FORMULARIO AGREGAR PRODUCTO*/
+.agregar__producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center ;
+      -ms-flex-align: center ;
+          align-items: center ;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.agregar__producto__form-titulo {
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  color: #6C6864;
+  text-transform: uppercase;
+  text-align: center;
+}
+.agregar__producto__form-contenet {
+  color: #0397d6 !important;
+}
+.agregar__producto .content-form-producto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+}
+.agregar__producto .content-form-producto label {
+  font-size: 1.4rem;
+  color: #6C6864;
+}
+.agregar__producto .content-form-producto input {
+  width: 500px;
+}
+.agregar__producto .content-form-producto button {
+  text-align: center;
+  width: 250px;
+  border: none;
+  font-size: 1.4rem;
+  margin: 20px auto;
 }

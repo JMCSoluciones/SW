@@ -848,6 +848,108 @@ footer{
             }
         }
     }
+
+
+}
+
+.categoriaIntro{
+    width: 100vw;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: @color-text;
+    p:nth-child(1){
+        border-bottom: 2px solid @color-primary;
+        font-size: 2rem;
+        font-weight: @font-light;
+        margin-bottom: 0;
+    }
+    p:nth-child(2){
+        font-size: 4rem;
+    }
+}
+.link-categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 30px;
+    margin: 30px auto;
+    width: 80vw;
+    gap:10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: @color-text;
+    p{
+        font-size: 1.4rem;
+        margin: 0;
+    }
+    .dropdown{
+        a{
+            font-size: 1.4rem;
+        
+        }
+    }
+}
+
+.content-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    label{
+        font-size: 1.4rem;
+    }
+    input{
+        width: 300px;
+    }
+    button{
+        text-align: center;
+        width: 100%;
+        background-color: @color-primary;
+        border: none;
+        font-size: 1.4rem;
+        margin: 20px auto;
+    }
+}
+.modal-title{
+    font-size: 2rem;
+    color: @color-text;
+}
+
+.btn-cotizacion{
+    font-size: 12px !important;
+    font-family: @font-family !important;
+    color: @color-text !important;
+    font-weight: @font-semibold !important;
+}
+.btn-warning{
+    font-size: 12px !important;
+    font-family: @font-family !important;
+    color: @color-text !important;
+    font-weight: @font-semibold !important;
+    width: 250px !important;
+}
+.producto_cotizado{
+display: flex;
+flex-direction: column;
+justify-content: center; 
+align-items: center;
+
+}
+.informacion_producto{
+    display: flex;
+    flex-direction: column;
+    color: @color-text;
+    font-weight: @font-regular;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.content-form{
+   text-align: left !important;
+
 }
 .control_productos_admin {
     display: flex;
@@ -1134,7 +1236,7 @@ table{
 	font-size: 13px;
 	margin-top: 10px;
 }
-/* MODALES */
+/* CONTROL DE PRODUCTOS MODALES */
 .modal {
 	.modal-dialog {
 		max-width: 400px;
@@ -1185,3 +1287,88 @@ table{
 		}
 	}
 }
+
+/*CONTROL DE COTIZACIONES*/
+.control_cotizaciones{
+    .inicio_cotizaciones{
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+        h3{
+            font-family: @font-family;
+            font-size: 24px;
+            padding: 20px;
+            margin: auto;
+            font-weight: @font-semibold;
+            color: @color-text;
+            text-transform: uppercase;
+        }
+    }
+    .btnStatus_cotizaciones {
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        justify-content: center;
+    }
+
+    .title_cotizacion{
+        display: flex;
+        flex-direction: column;
+        justify-content:left;
+        margin-left: 50px;
+        margin-top: 50px;
+        width: 110px;
+        border-bottom: 3px solid #2196F3;
+
+        h4{
+        font-size: 18px;
+        color: @color-text;
+        font-weight: @font-semibold;
+        color: @color-text;
+        font-weight: @font-semibold;
+        }
+    }
+}
+/*FORMULARIO AGREGAR PRODUCTO*/
+.agregar__producto{
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content: center;
+    &__form{
+        &-titulo{
+            font-size: 14px;
+            font-family: @font-family;
+            color:@color-text;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        &-contenet{
+            color: #0397d6 !important;
+            
+        }
+    }
+    .content-form-producto{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        label{
+            font-size: 1.4rem;
+            color: @color-text;
+        }
+        input{
+            width: 500px;
+        }
+        button{
+            text-align: center;
+            width: 250px;
+            border: none;
+            font-size: 1.4rem;
+            margin: 20px auto;
+        }
+    }
+}
+
+
