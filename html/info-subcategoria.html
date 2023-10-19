@@ -39,63 +39,111 @@
         </section>
       </nav>
     </header>
-    <div class="agregar__producto">
-      <div class="control_productos_admin"> 
-        <div class="menu_control"> 
-          <div class="icono_productos"> <img src="images/iconos/iconmonstr-tiles-list-lined.svg" alt=""/><a href="control-productos.html">Control de productos</a></div>
-          <div class="icono_subcategorias"> <img src="images/iconos/gear-wide-connected.svg" alt=""/><a href="control-subcategoria.html">Control de subcategorias</a></div>
-          <div class="icono_cotizaciones"> <img src="images/iconos/iconmonstr-credit-card-thin.svg" alt=""/><a href="control-cotizaciones.html">Control de cotizaciones</a></div>
-        </div>
+    <div class="control__lista-subcategoria">
+      <div class="control__lista-subcategoria-title"> 
+        <h3>Informacion de la subcategoria</h3>
       </div>
-      <div class="agregar__producto__form">
-        <div class="agregar__producto__form-titulo">
-          <p>informacion de la </p>
-          <p><strong>solicitud de cotización</strong></p>
-        </div>
-        <div class="agregar__producto__form-infoProducto">
-          <p><strong>Solicitud de cotización:</strong> 1003</p>
-          <p><strong>id del producto:</strong> 001</p>
-          <p><strong>Producto:</strong> Semáforo vehicular una sección</p>
-        </div>
-        <div class="content-form-producto">
+      <div class="content infoSubcategoria"> 
+        <div class="content-form-subcategoria">
           <form action="">
             <div class="mb-3">
-              <label class="form-label" for="exampleInputEmail1">Nombre</label>
-              <input class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"/>
+              <label for="exampleInputPassword1">Nombre</label>
+              <input class="form-control" id="exampleInputPassword1" type="text" placeholder=""/>
             </div>
             <div class="mb-3">
-              <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-              <input class="form-control" type="num" aria-describedby="emailHelp" id="exampleInputEmail1"/>
+              <label for="exampleInputPassword1">Categoría</label>
+              <select class="form-select" aria-label="Default select example">
+                <option selected="">Selecciona la categoría</option>
+                <option value="1">Semáforo</option>
+                <option value="2">Postes</option>
+                <option value="3">Señalamientos</option>
+                <option value="4">Complementos viales </option>
+                <option value="5">Servicios de diseño vial y urbano</option>
+              </select>
             </div>
-            <div class="mb-3">
-              <label class="form-label" for="exampleInputEmail1">Email</label>
-              <input class="form-control" type="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-              <input class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-            </div>
-            <div class="mb-3">
-              <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-              <textarea class="form-control" type="text" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-            </div>
-            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Atender</button>
-            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Elimnar</button>
+            <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#agregar">Agregar </button>
+            <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modiificar">Modificar</button>
+            <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#eliminar">Eliminar </button>
           </form>
         </div>
-      </div>
-    </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Solicitud </h5>
-            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal fade" id="agregar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Agregar</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Nombre</label>
+                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder="Nombre de la nueva subcategoría"/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Categoría</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected="">Selecciona la categoría</option>
+                      <option value="1">Semáforo</option>
+                      <option value="2">Postes</option>
+                      <option value="3">Señalamientos</option>
+                      <option value="4">Complementos viales </option>
+                      <option value="5">Servicios de diseño vial y urbano</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-success" type="button">Guardar</button>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">Cotización realizada con exito!</div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
-            <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+        <div class="modal fade" id="modiificar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modificar</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Nombre</label>
+                    <input class="form-control" id="exampleInputPassword1" type="text" placeholder=""/>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1">Categoría</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected=""> </option>
+                      <option value="1">Semáforo</option>
+                      <option value="2">Postes</option>
+                      <option value="3">Señalamientos</option>
+                      <option value="4">Complementos viales </option>
+                      <option value="5">Servicios de diseño vial y urbano</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-success" type="button">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="eliminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Eliminar</h5>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">¿Estas seguro que deseas eliminar esta subcategoría?</div>
+              <div class="modal-footer">
+                <button class="btn btn-danger" type="button">Eliminar</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
