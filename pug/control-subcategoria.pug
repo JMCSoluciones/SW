@@ -1,0 +1,262 @@
+extend ../components/template.pug
+block content
+    .control__subcategoria
+        include control-menuAdmin.pug
+        h2 control de subcategorias 
+        .control__content
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Semáforo
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th Subcategoría
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr  
+                                            td Semáforo Vehicular
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Semáforo Peatonales
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Semáforo Auditivos
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Complementos Semáforo 
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Postes
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th Subcategoría
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr  
+                                            td Poste Semáforos Vehicular Tipo Látigo
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Poste Semáforo Vehicular Tipo Bandera
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Poste Semáforo Peatonal
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Poste Autopista
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Poste Tipo Puente
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Poste Control Semáforo
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Señalamientos
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th Subcategoría
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr  
+                                            td Señalamiento Urbano
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Señalamiento Para Obra
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Señalamiento Para Carreteras
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Señalamiento Protección Civil, Seguridad ...
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Complementos Viales
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th Subcategoría
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr  
+                                            td Aditamentos Reductivos De Velocidad Boyas..
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Aditamento Para Estacionamientos
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Complementos De Seguridad 
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Complementos De Seguridad Personal
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+            .btn-group
+                button.btn.btn-secondary.dropdown-toggle(type='button' data-bs-toggle='dropdown' aria-expanded='false')
+                    | Servicios De Diseño Vial Y Urbano
+                ul.dropdown-menu
+                    li
+                    a.dropdown-item(href='#')
+                        .content-form-subcategoria
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th Subcategoría
+                                            th Destalles
+                                            th Acciones
+                                    tbody 
+                                        tr  
+                                            td Diseño Urbano
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr  
+                                            td Estudio impacto vial, Fraccionamientos...
+                                            td 
+                                                a(href="info-subcategoria.html" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                        
+                        
+                            
+                            
+                        
+                            
+
