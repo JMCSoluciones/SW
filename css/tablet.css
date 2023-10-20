@@ -161,7 +161,6 @@ footer .footer__header-icon img {
 footer .footer__box__body {
   display: -ms-grid;
   display: grid;
-  background-color: #6C6864;
   padding: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -300,7 +299,6 @@ footer .footer__box__body-socialmedia__icon img {
   width: 60px;
 }
 footer .footer__foot {
-  background-color: #f6b100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

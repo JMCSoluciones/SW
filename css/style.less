@@ -152,11 +152,13 @@
     position: relative !important;
     display: inline-block !important;
     text-align: center !important;
+    
     .slideContent{
         position: absolute;
         color: @color-white;
         top: 150px;
         background-color: rgba(30, 30, 30, 0.4);
+        
 
         &__box{
             display: flex;
@@ -175,6 +177,7 @@
                 border-bottom: 2px solid @color-primary;
                 line-height: 4rem;
                 padding-bottom: 10px;
+                visibility: hidden;
                 strong{
                     font-weight: @font-bold;
                 }
@@ -211,18 +214,22 @@
 
 }
 .title{
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: @color-text;
     border-bottom: 3px solid @color-primary;
     margin: 30px 10px;
     text-align: center;
     text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.entrance{
+    visibility: hidden;
 }
 .content{
    display: flex;
    flex-direction: column;
-   margin: 60px auto;
-   padding: 30px;
+   margin: 10px auto;
+   padding: 20px 30px;
    justify-content: center;
    align-items: center;
    &__intro{
@@ -249,6 +256,7 @@
     color: @color-text;
     &__section-nosotros{
         text-align: justify;
+        margin: 30px auto;
         &-txt{
             font-size: 1.6rem;
         }
@@ -290,6 +298,7 @@
     }
     &__section-soporte{
         text-align: justify;
+        margin: 30px auto;
         &-txt{
             font-size: 1.6rem;
         }
@@ -357,6 +366,7 @@
        
     }
     &__section-especializado{
+        margin: 30px auto;
         text-align: center;
         &-txt{
             font-size: 1.4rem;
@@ -429,6 +439,7 @@
     }
     &__section-soporte2{
         text-align: center;
+        margin: 30px auto;
         &-txt{
             font-size: 1.4rem;
 
@@ -447,6 +458,7 @@
 	margin: 0 auto;
 	text-align: center;
 	color: @color-white;
+    
     &__box {
         max-width: 100%;
         margin: 50px 20px;
@@ -712,7 +724,7 @@ footer{
         &__body{
             display: flex;
             flex-direction: column;
-            background-color: @color-text;
+            background-color: @color-black;
             padding: 30px;
             align-items: center;
                 &-logo{
@@ -816,7 +828,8 @@ footer{
         }
     }   
     .footer__foot{
-        background-color: @color-primary;
+        border-top: 1px solid @color-primary;
+        background-color: @color-black;
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -16,6 +16,16 @@ body {
 .menu__container {
   max-width: none;
 }
+.carousel-item .slideContent {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-left: 200px;
+  padding-right: 100px;
+  top: 0;
+  padding-top: 100px;
+  width: 100%;
+  height: 100%;
+}
 .content {
   max-width: 1110px;
   margin: 0 auto;
@@ -23,6 +33,33 @@ body {
 .contentIndex {
   max-width: 1110px;
   overflow: hidden;
+}
+.contentIndex__section-contactanos-txt p {
+  font-size: 3rem;
+  font-weight: 100;
+}
+.contentIndex__section-contactanos-txt strong {
+  font-size: 4.3rem;
+}
+.contentIndex__section-catalogo-txt-box {
+  width: 286px;
+  line-height: 3rem;
+}
+.contentIndex__section-catalogo-txt-box p:nth-child(1) {
+  font-size: 3rem;
+}
+.contentIndex__section-catalogo-txt-box p:nth-child(2) {
+  font-size: 4.8rem;
+}
+.contentIndex__section-innovacion-txt-box {
+  width: 400px;
+}
+.contentIndex__section-innovacion-txt-box p:nth-child(1) {
+  font-size: 4rem;
+}
+.contentIndex__section-innovacion-txt-box p:nth-child(2) {
+  font-size: 2.8rem;
+  line-height: 2.6rem;
 }
 footer .footer__box__body {
   display: -webkit-box;
