@@ -95,6 +95,13 @@ body {
 .producto_cotizado .mb-3 {
   text-align: left;
 }
+.modal-content {
+  border-radius: 20px;
+  padding: 20px 10px;
+}
+.modal-content textarea {
+  resize: none !important;
+}
 footer {
   display: -webkit-box;
   display: -ms-flexbox;

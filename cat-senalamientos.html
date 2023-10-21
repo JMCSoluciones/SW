@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 1024px)"/>
     <link rel="stylesheet" href="css/menu.css"/>
     <link rel="stylesheet" href="css/form.css"/>
-    <link rel="shortcut icon" href="images/favIcon.png"/>
+    <link rel="stylesheet" href="css/animations.css"/>
+    <link rel="shortcut icon" href="images/favIcon1.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
@@ -43,6 +44,66 @@
       <div class="slide__box">
         <p>CATÁLOGO DE  </p>
         <p><strong>SEÑALAMIENTOS</strong></p>
+        <div class="slide__box__link">
+          <button class="slide-btn-cotizar floating" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Solicitar una cotizacion</button>
+          <div class="modal-cotizacion">
+            <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
+              <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="modalCotizacion-gralLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="content-form">
+                      <form action="">
+                        <div class="form-floating mb-3">
+                          <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" id="nombreCliente"/>
+                          <label class="form-label" for="nombreCliente">Nombre Completo</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                          <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                          <label class="form-label" for="exampleInputEmail1">Email </label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                          <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                          <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                          <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-body__buttons"> 
+                      <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                      <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Solicitud </h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">Cotización realizada con exito!</div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="link-categorias">
@@ -73,56 +134,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -154,56 +216,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -235,56 +298,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -325,56 +389,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -406,56 +471,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -487,56 +553,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -577,56 +644,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -658,56 +726,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -739,56 +808,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -829,56 +899,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -910,56 +981,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -991,56 +1063,57 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, cum aut beatae</p>
                 </div>
                 <div class="accordion-body__item-link">
-                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Cotizar</button>
+                  <button class="btn-cotizacion btn btn-secundary" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica">Cotizar</button>
                   <div class="modal-cotizacion">
-                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-                      <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal fade" id="modalCotizacion-unica" aria-hidden="true" aria-labelledby="modalCotizacion-unicaLabel" tabindex="-1">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalToggleLabel">SOLICITUD DE COTIZACIÓN</h5>
+                          <div class="modal-header modal-header-unico">
+                            <h5 class="modal-title" id="modalCotizacion-unicaLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
+                            <div class="modal-header-unico__detail">
+                              <div class="modal-header-unico__detail-img"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
+                              <div class="modal-header-unico__detail-txt">
+                                <p><strong>ID:</strong> B103</p>
+                                <p><strong>Descripción:</strong> Descripción del Producto</p>
+                                <p><strong>Categoría:</strong> Categoría del Producto</p>
+                                <p><strong>Subcategoría:</strong> Subcategoría del Producto</p>
+                              </div>
+                            </div>
                             <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            <div class="producto_cotizado"><img src="images/Productos/Semaforos/Semaforo vehicular/7.jpg" alt="imagen del producto" srcset=""/></div>
                             <div class="content-form">
                               <form action="">
-                                <div class="mb-3"> 
-                                  <div class="informacion_producto"> 
-                                    <p>semaforo vehicular una sección 003</p>
-                                  </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required="required" id="inputCantidad"/>
+                                  <label for="inputCantidad">Cantidad</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre</label>
-                                  <input class="form-control" type="text" name="nombre" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required="required" id="nombreCliente"/>
+                                  <label for="nombreCliente">Nombre Completo</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Teléfono</label>
-                                  <input class="form-control" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="tel" name="telefono" maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="required" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Teléfono a 10 dígitos</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Email</label>
-                                  <input class="form-control" type="email" name="email" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Email </label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
-                                  <input class="form-control" type="text" name="nombre_empresa" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                  <label for="exampleInputEmail1">Nombre de la empresa</label>
                                 </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Cantidad</label>
-                                  <input class="form-control" type="number" name="cantidad" maxlength="4" aria-describedby="emailHelp" id="exampleInputEmail1"/>
-                                </div>
-                                <div class="mb-3">
-                                  <label class="form-label" for="exampleInputEmail1">Mensaje</label>
-                                  <textarea class="form-control" type="text" name="mensaje" aria-describedby="emailHelp" id="exampleInputEmail1"></textarea>
-                                  <div class="form-text" id="emailHelp"> </div>
+                                <div class="form-floating mb-3">
+                                  <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                  <label for="exampleInputEmail1">Mensaje</label>
                                 </div>
                               </form>
                             </div>
-                            <button class="btn btn-warning" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            <div class="modal-body__buttons"> 
+                              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                              <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1129,10 +1202,11 @@
             <p>STEROWANIA 2023</p>
           </div>
           <p class="divisor"><strong>|</strong></p>
-          <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong>  </a></div>
+          <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong></a></div>
         </div>
       </div>
     </footer>
     <script src="js/app-dist.js"></script>
+    <script src="js/animations.js"></script>
   </body>
 </html>

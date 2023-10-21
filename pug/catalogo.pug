@@ -1,30 +1,30 @@
 extend ../components/template.pug
 block content
     .slideCatalogo.slide
-        .slide__box
+        .slide__box.slideUp
             p CONOCE 
             p NUESTROS #[br] #[strong PRODUCTOS]
     .title
         p Conoce nuestro
         p CATÁLOGO
     .content.contentCatalogo
-        .contentCatalogo__box#semaforo
+        .contentCatalogo__box.slideUp.hover#semaforo
             .contentCatalogo__box-item
                 h3 Semáforos
                 a(href="cat-semaforos.html") Ver más 
-        .contentCatalogo__box#postes
+        .contentCatalogo__box.slideRight#postes
             .contentCatalogo__box-item
                 h3 Postes
                 a(href="cat-postes.html") Ver más 
-        .contentCatalogo__box#senalamientos
+        .contentCatalogo__box.slideDown#senalamientos
             .contentCatalogo__box-item
                 h3 Señalamientos
                 a(href="cat-senalamientos.html") Ver más 
-        .contentCatalogo__box#complementos
+        .contentCatalogo__box.slideLeft#complementos
             .contentCatalogo__box-item
                 h3 Complementos #[strong viales]
                 a(href="cat-complementos.html") Ver más
-        .contentCatalogo__box#servicios
+        .contentCatalogo__box.slideDown#servicios
             .contentCatalogo__box-item
                 h3 Servicios de diseño #[strong vial y urbano]
                 a(href="cat-servicios.html") Ver más

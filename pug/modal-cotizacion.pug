@@ -1,43 +1,43 @@
-button.btn-cotizacion(type="button" class="btn btn-secundary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle") Cotizar
+button.btn-cotizacion(type="button" class="btn btn-secundary" data-bs-toggle="modal" data-bs-target="#modalCotizacion-unica") Cotizar
 .modal-cotizacion
-    #exampleModalToggle.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel' tabindex='-1')
-        .modal-dialog.modal-dialog-centered
+    #modalCotizacion-unica.modal.fade(aria-hidden='true' aria-labelledby='modalCotizacion-unicaLabel' tabindex='-1')
+        .modal-dialog.modal-lg.modal-dialog-centered
             .modal-content
-                .modal-header
-                    h5#exampleModalToggleLabel.modal-title SOLICITUD DE COTIZACIÓN
+                .modal-header.modal-header-unico
+                    h5#modalCotizacion-unicaLabel.modal-title SOLICITUD DE #[br]#[strong COTIZACIÓN]
+                    .modal-header-unico__detail
+                        .modal-header-unico__detail-img
+                            img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
+                        .modal-header-unico__detail-txt
+                            p #[strong ID:] B103
+                            p #[strong Descripción:] Descripción del Producto
+                            p #[strong Categoría:] Categoría del Producto
+                            p #[strong Subcategoría:] Subcategoría del Producto
                     button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                 .modal-body
-                    .producto_cotizado
-                        img(src="images/Productos/Semaforos/Semaforo vehicular/7.jpg", alt="imagen del producto", srcset ="") 
                     .content-form
                         form(action = "")
-                            .mb-3 
-                                .informacion_producto 
-                                    p semaforo vehicular una sección 003
-                            .mb-3
-                                label.form-label(for="exampleInputEmail1") Nombre
-                                input.form-control(type="text" name="nombre" aria-describedby="emailHelp")#exampleInputEmail1
-                                .form-text#emailHelp 
-                            .mb-3
-                                label.form-label(for="exampleInputEmail1") Teléfono
-                                input.form-control(type="number" name="telefono"  maxlength="2" aria-describedby="emailHelp")#exampleInputEmail1
-                                .form-text#emailHelp 
-                            .mb-3
-                                label.form-label(for="exampleInputEmail1") Email
-                                input.form-control(type="email" name="email" aria-describedby="emailHelp")#exampleInputEmail1
-                                .form-text#emailHelp 
-                            .mb-3
-                                label.form-label(for="exampleInputEmail1") Nombre de la empresa
-                                input.form-control(type="text" name="nombre_empresa" aria-describedby="emailHelp")#exampleInputEmail1
-                                .form-text#emailHelp 
-                            .mb-3
-                                label.form-label(for="exampleInputEmail1") Cantidad
-                                input.form-control(type="number" name="cantidad"  maxlength="4" aria-describedby="emailHelp")#exampleInputEmail1
-                            .mb-3
-                                label.form-label(for="exampleInputEmail1") Mensaje
-                                textarea.form-control(type="text" name="mensaje" aria-describedby="emailHelp")#exampleInputEmail1
-                                .form-text#emailHelp 
-                    button.btn.btn-warning(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Enviar
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(placeholder="Ingrese su nombre completo" type="number" name="nombre" aria-describedby="emailHelp" min="1" max="1000000" required)#inputCantidad
+                                label(for="inputCantidad") Cantidad
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="40" required)#nombreCliente
+                                label(for="nombreCliente") Nombre Completo
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(type="tel" name="telefono"  maxlength="10" aria-describedby="emailHelp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Ingrese su télefono")#exampleInputEmail1
+                                label(for="exampleInputEmail1") Teléfono a 10 dígitos
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido")#exampleInputEmail1
+                                label(for="exampleInputEmail1") Email 
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa")#exampleInputEmail1
+                                label(for="exampleInputEmail1") Nombre de la empresa
+                            .form-floating.mb-3
+                                textarea.form-control.form-control-lg(type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje")#exampleInputEmail1
+                                label(for="exampleInputEmail1") Mensaje
+                    .modal-body__buttons 
+                        button.btn.btn-danger( data-bs-dismiss='modal' aria-label='Close') Cancelar
+                        button.btn.btn-success(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Enviar
     #exampleModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel2' tabindex='-1')
         .modal-dialog.modal-dialog-centered
             .modal-content

@@ -10,8 +10,10 @@
 		});
 	});
 
-
-
 	$('#animatedElement').click(function() {
 		$(this).addClass("slideUp");
 	});
+
+    // $('.hover').hover(function() {
+	// 	$(this).addClass("pulse");
+	// });

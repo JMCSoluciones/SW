@@ -1,0 +1,41 @@
+button.slide-btn-cotizar.floating(type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral") Solicitar una cotizacion
+.modal-cotizacion
+    #modalCotizacion-gral.modal.fade(aria-hidden='true' aria-labelledby='modalCotizacion-gralLabel' tabindex='-1')
+        .modal-dialog.modal-lg.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5#modalCotizacion-gralLabel.modal-title SOLICITUD DE #[br]#[strong COTIZACIÓN]
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .content-form
+                        form(action = "")
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp")#nombreCliente
+                                label.form-label(for="nombreCliente") Nombre Completo
+                                
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(type="number" name="telefono"  maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Teléfono a 10 dígitos
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Email 
+                            .form-floating.mb-3
+                                input.form-control.form-control-lg(type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Nombre de la empresa
+                            .form-floating.mb-3
+                                textarea.form-control.form-control-lg(type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Mensaje
+                    .modal-body__buttons 
+                        button.btn.btn-danger( data-bs-dismiss='modal' aria-label='Close') Cancelar
+                        button.btn.btn-success(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Enviar
+    #exampleModalToggle2.modal.fade(aria-hidden='true' aria-labelledby='exampleModalToggleLabel2' tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                .modal-header
+                    h5#exampleModalToggleLabel2.modal-title Solicitud 
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    | Cotización realizada con exito!
+                .modal-footer
+                    button.btn.btn-primary(data-bs-target='#exampleModalToggle' data-bs-toggle='modal' data-bs-dismiss='modal') Cancelar 
+                    button.btn.btn-secondary(type="button" data-bs-dismiss="modal") Aceptar

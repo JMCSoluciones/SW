@@ -6,6 +6,71 @@
         max-width: none;
     }
 }
+.slide{
+
+    &__box{
+        background-color: rgba(30, 30, 30, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 100px;
+        max-width: 1110px;
+        border-radius: 60px 0 60px 0;
+        p:nth-child(1){
+            border-bottom: 2px solid @color-primary;
+            font-size: 3.6rem;
+            width: auto;
+            margin-bottom: 0;
+            font-weight: @font-extralight;
+
+        }
+        p:nth-child(2){
+            font-size: 6rem;
+
+            line-height: 6rem;
+            font-weight: @font-extralight;
+            margin-top: 5px;
+            strong{
+                font-size: 6.4rem;
+            }
+
+
+        }
+    }
+}
+
+.slideCatalogo{
+    background-image: url(../images/Desktop/desktopSlidesProductos-1920x466.jpg);
+}
+.slideSemaforos{
+    background-image: url(../images/Desktop/desktopSlidesSemaforos-1920x466.jpg);
+    height: 466px;
+
+}
+.slideSenalamientos{
+    height: 466px;
+    background-image: url(../images/Desktop/desktopSlidesSenalamientos-1920x466.jpg);
+}
+.slideServicios{
+    background-image: url(../images/Desktop/desktopSlidesDiseno-1920x466.jpg);
+    height: 466px;
+
+}
+.slideCotizarGral{
+    background-image: url(../images/Desktop/desktopSlidesCotizacion-1920x466.jpg);
+    height: 466px;
+}
+.slideComplementos{
+    background-image: url(../images/Desktop/desktopSlidesComplementos-1920x466.jpg);
+    height: 466px;
+
+}
+.slidePostes{
+    background-image: url(../images/Desktop/desktopSlidesPostes-1920x466.jpg);
+    height: 466px;
+
+}
 .carousel-item{
     .slideContent{
         max-width: 1110px;
@@ -64,6 +129,12 @@
                 }
             }
         }
+    }
+}
+.contentCatalogo{
+    &__box{
+        width: 318px;
+        visibility: hidden;
     }
 }
 footer{
