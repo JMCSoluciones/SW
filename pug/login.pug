@@ -1,21 +1,20 @@
 extend ../components/template.pug
 block content 
-    .login
-        .login__title.title  Iniciar sesión
+    .login.slideUp
+        .login__title  
+            h2 Iniciar sesión
         form.login__formLogin
-            .login__formLogin__box.box
+            .login__formLogin__box
                 .form-group
-                    label(for='exampleInputEmail1') Email address
+                    label(for='exampleInputEmail1') Usuario
                     .icono 
                         img(src="/images/iconos/email-login.svg", alt="")
-                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email')
-                    small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Ingrese su usuario')
                 .form-group
                     label(for='exampleInputPassword1') Password
                     .icono 
                         img(src="images/iconos/password.svg", alt="")
                         input#exampleInputPassword1.form-control(type='password' placeholder='Password')
-                .form-group.form-check
-                        //- button.btn.btn-warning(type='submit') Ingresar
-                        a.btn.btn-warning(href="control-productos.html") ingresar
+                .form-group.form-group__loginButton
+                    a.btn.btn-warning(href="control-productos.html") ingresar
                         
