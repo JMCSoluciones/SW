@@ -50,6 +50,7 @@ body {
 }
 .slide__box p:nth-child(2) strong {
   font-size: 6.4rem;
+  width: 400px;
 }
 .slideCatalogo {
   background-image: url(../images/Desktop/desktopSlidesProductos-1920x466.jpg);

@@ -1520,4 +1520,32 @@ table{
         }
     }
 }
-
+.content-formContacto{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-title{
+        font-size: 2.8rem;
+        color: @color-text;
+        margin: 10px;
+        border-bottom: 1px solid @color-primary;
+    }
+    form{
+        width: 70vw;
+        margin: 30px;
+        max-width: 800px;
+        textarea{
+            height: 100px !important;
+            resize: none;
+        }
+        button{
+            width: 100px;
+        }
+        
+    }
+}
