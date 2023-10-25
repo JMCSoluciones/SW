@@ -1,9 +1,162 @@
-.btnStatus_cotizaciones 
-    form(action="")
-        button.btn.btn-secondary(type='button') Todas
-        button.btn.btn-info(type='button') 
-            a(href="solicitud-pendiente.html") Pendientes 
-        button.btn.btn-success(type='button') 
-            a(href="solicitud-cotizada.html") Cotizadas
-        button.btn.btn-danger(type='button') Pendientes
-        
+extend ../components/template-admin.pug
+block content
+    include control-menuAdmin.pug
+    .content__CtrlCotizaciones
+        h3.title Solicitudes de cotizaciones
+        .content__CtrlCotizaciones__tabs
+            ul#myTab.nav.nav-tabs(role='tablist')
+                li.nav-item.content__CtrlCotizaciones__tabs__link(role='presentation')
+                    button#pendientes-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#pendientes-tab-pane', type='button', role='tab', aria-controls='pendientes-tab-pane', aria-selected='true') Pendientes
+                li.nav-item.content__CtrlCotizaciones__tabs__link(role='presentation')
+                    button#atendidas-tab.nav-link(data-bs-toggle='tab', data-bs-target='#atendidas-tab-pane', type='button', role='tab', aria-controls='atendidas-tab-pane', aria-selected='false') Atendidas
+                li.nav-item.content__CtrlCotizaciones__tabs__link(role='presentation')
+                    button#canceladas-tab.nav-link(data-bs-toggle='tab', data-bs-target='#canceladas-tab-pane', type='button', role='tab', aria-controls='canceladas-tab-pane', aria-selected='false') Canceladas
+            #myTabContent.tab-content
+                #pendientes-tab-pane.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pendientes-tab', tabindex='0') 
+                    .content__CtrlCotizaciones__tabs__item
+                        .content__CtrlCotizaciones__tabs__item__header#pendientes-header
+                            h3 Solicitudes Pendientes
+                            form.d-flex(role="search")
+                                input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+                                button.btn.btn-dark(type="submit") Buscar
+                        .content__CtrlCotizaciones__tabs__item__body
+                            .table-wrapper.content__CtrlCotizaciones__tabs__item__body__table
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th #
+                                            th Cliente
+                                            th Fecha
+                                            th Estatus
+                                            th Detalles
+                                            th Acciones
+                                    tbody 
+                                        tr 
+                                            td 01
+                                            td Nombre cliente
+                                            td 23/octubre/2023
+                                            td pendiente 
+                                            td
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr 
+                                            td 02
+                                            td cliente 2
+                                            td 23/octubre/2023
+                                            td cotizada
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más... 
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                        .content__CtrlCotizaciones__tabs__item__footer
+                            nav(aria-label='...')
+                                ul.pagination
+                                    li.page-item.disabled
+                                    a.page-link Previous
+                                    li.page-item
+                                    a.page-link(href='#') 1
+                                    li.page-item.active(aria-current='page')
+                                    a.page-link(href='#') 2
+                                    li.page-item
+                                    a.page-link(href='#') 3
+                                    li.page-item
+                                    a.page-link(href='#') Next
+                #atendidas-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='atendidas-tab', tabindex='0')
+                    .content__CtrlCotizaciones__tabs__item
+                        .content__CtrlCotizaciones__tabs__item__header#atendidas-header
+                            h3 Solicitudes Atendidas
+                            form.d-flex(role="search")
+                                input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+                                button.btn.btn-dark(type="submit") Buscar
+                        .content__CtrlCotizaciones__tabs__item__body
+                            .table-wrapper.content__CtrlCotizaciones__tabs__item__body__table
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th #
+                                            th Cliente
+                                            th Fecha
+                                            th Estatus
+                                            th Detalles
+                                            th Acciones
+                                    tbody 
+                                        tr 
+                                            td 01
+                                            td Nombre cliente
+                                            td 23/octubre/2023
+                                            td pendiente 
+                                            td
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr 
+                                            td 02
+                                            td cliente 2
+                                            td 23/octubre/2023
+                                            td cotizada
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más... 
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                        .content__CtrlCotizaciones__tabs__item__footer
+                #canceladas-tab-pane.tab-pane.fade(role='tabpanel', aria-labelledby='canceladas-tab', tabindex='0')
+                    .content__CtrlCotizaciones__tabs__item
+                        .content__CtrlCotizaciones__tabs__item__header#canceladas-header
+                            h3 Solicitudes Canceladas
+                            form.d-flex(role="search")
+                                input.form-control.me-2(type="search" placeholder="Search" aria-label="Search")
+                                button.btn.btn-dark(type="submit") Buscar
+                        .content__CtrlCotizaciones__tabs__item__body
+                            .table-wrapper.content__CtrlCotizaciones__tabs__item__body__table
+                                table.table.table-striped.table-hover
+                                    thead 
+                                        tr                  
+                                            th #
+                                            th Cliente
+                                            th Fecha
+                                            th Estatus
+                                            th Detalles
+                                            th Acciones
+                                    tbody 
+                                        tr 
+                                            td 01
+                                            td Nombre cliente
+                                            td 23/octubre/2023
+                                            td pendiente 
+                                            td
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más...  
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                                        tr 
+                                            td 02
+                                            td cliente 2
+                                            td 23/octubre/2023
+                                            td cotizada
+                                            td 
+                                                a(href="#verzualizarProductoModal" data-toggle='modal') ver más... 
+                                            td
+                                                a.edit(href="#editProductoModal" data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Edit') &#xE254;
+                                                a.delete(href='#deleteProductoModal' data-toggle='modal')
+                                                    i.material-icons(data-toggle='tooltip' title='Delete') &#xE872;
+                        .content__CtrlCotizaciones__tabs__item__footer
+           
+       
+
+            

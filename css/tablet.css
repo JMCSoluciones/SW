@@ -102,6 +102,9 @@ body {
 .modal-content textarea {
   resize: none !important;
 }
+.controlMenuAdmin {
+  border-radius: 0 0 20px 20px;
+}
 footer {
   display: -webkit-box;
   display: -ms-flexbox;

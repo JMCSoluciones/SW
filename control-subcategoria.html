@@ -13,304 +13,570 @@
     <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 1024px)"/>
     <link rel="stylesheet" href="css/menu.css"/>
     <link rel="stylesheet" href="css/form.css"/>
-    <link rel="shortcut icon" href="images/favIcon.png"/>
+    <link rel="stylesheet" href="css/animations.css"/>
+    <link rel="shortcut icon" href="images/favIcon1.png"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body> 
     <header> 
-      <div class="menu-top"> 
-        <p>Bienvenido a Sterowania</p><a class="menu-top__link" href="privacidad.html">Aviso de Privacidad</a>
-      </div>
       <nav class="menu"> 
         <section class="menu__container"> <img class="menu__logo" src="images/iconos/logo-amarillo.svg"/>
           <ul class="menu__links"> 
-            <li class="menu__item"> <a class="menu__link" href="index.html">Inicio</a></li>
-            <li class="menu__item"> <a class="menu__link" href="catalogo.html">Productos</a></li>
-            <li class="menu__item"> <a class="menu__link" href="cotiza_gral.html">Cotizar</a></li>
-            <li class="menu__item"> <a class="menu__link" href="login.html">Login</a></li>
+            <li class="menu__item"> <a class="menu__link" href="/">Inicio</a></li>
+            <li class="menu__item"> <a class="menu__link" href="login.html">Cerrar Sesión</a></li>
           </ul>
           <div class="menu__hamburger"> <img class="menu__img" src="images/iconos/menu.svg" alt="icono de menu"/></div>
         </section>
       </nav>
     </header>
-    <div class="control__subcategoria">
-      <div class="control_productos_admin"> 
-        <div class="menu_control"> 
-          <div class="icono_productos"> <img src="images/iconos/iconmonstr-tiles-list-lined.svg" alt=""/><a href="control-productos.html">Control de productos</a></div>
-          <div class="icono_subcategorias"> <img src="images/iconos/gear-wide-connected.svg" alt=""/><a href="control-subcategoria.html">Control de subcategorias</a></div>
-          <div class="icono_cotizaciones"> <img src="images/iconos/iconmonstr-credit-card-thin.svg" alt=""/><a href="control-cotizaciones.html">Control de cotizaciones</a></div>
-        </div>
+    <div class="controlMenuAdmin"> 
+      <div class="controlMenuAdmin__box">
+        <div class="controlMenuAdmin__box__item"><a href="control-cotizaciones.html">Cotizaciones<img src="images/iconos/iconmonstr-tiles-list-lined.svg" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"> <a href="control-subcategoria.html">Subcategorias<img src="images/iconos/gear-wide-connected.svg" alt=""/></a></div>
+        <div class="controlMenuAdmin__box__item"><a href="control-productos.html">Productos<img src="images/iconos/iconmonstr-credit-card-thin.svg" alt=""/></a></div>
       </div>
-      <h2>control de subcategorias </h2>
-      <div class="control__content">
-        <div class="btn-group">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Semáforo</button>
-          <ul class="dropdown-menu">
-            <li></li><a class="dropdown-item" href="#">
-              <div class="content-form-subcategoria">
-                <table class="table table-striped table-hover">
-                  <thead> 
-                    <tr>                 
-                      <th>Subcategoría</th>
-                      <th>Destalles</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Semáforo Vehicular</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Semáforo Peatonales</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Semáforo Auditivos</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Complementos Semáforo </td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div></a>
-          </ul>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Postes</button>
-          <ul class="dropdown-menu">
-            <li></li><a class="dropdown-item" href="#">
-              <div class="content-form-subcategoria">
-                <table class="table table-striped table-hover">
-                  <thead> 
-                    <tr>                 
-                      <th>Subcategoría</th>
-                      <th>Destalles</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Poste Semáforos Vehicular Tipo Látigo</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Poste Semáforo Vehicular Tipo Bandera</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Poste Semáforo Peatonal</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Poste Autopista</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Poste Tipo Puente</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Poste Control Semáforo</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div></a>
-          </ul>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Señalamientos</button>
-          <ul class="dropdown-menu">
-            <li></li><a class="dropdown-item" href="#">
-              <div class="content-form-subcategoria">
-                <table class="table table-striped table-hover">
-                  <thead> 
-                    <tr>                 
-                      <th>Subcategoría</th>
-                      <th>Destalles</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Señalamiento Urbano</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Señalamiento Para Obra</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Señalamiento Para Carreteras</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Señalamiento Protección Civil, Seguridad ...</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div></a>
-          </ul>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Complementos Viales</button>
-          <ul class="dropdown-menu">
-            <li></li><a class="dropdown-item" href="#">
-              <div class="content-form-subcategoria">
-                <table class="table table-striped table-hover">
-                  <thead> 
-                    <tr>                 
-                      <th>Subcategoría</th>
-                      <th>Destalles</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Aditamentos Reductivos De Velocidad Boyas..</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Aditamento Para Estacionamientos</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Complementos De Seguridad </td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Complementos De Seguridad Personal</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div></a>
-          </ul>
-        </div>
-        <div class="btn-group">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios De Diseño Vial Y Urbano</button>
-          <ul class="dropdown-menu">
-            <li></li><a class="dropdown-item" href="#">
-              <div class="content-form-subcategoria">
-                <table class="table table-striped table-hover">
-                  <thead> 
-                    <tr>                 
-                      <th>Subcategoría</th>
-                      <th>Destalles</th>
-                      <th>Acciones</th>
-                    </tr>
-                  </thead>
-                  <tbody> 
-                    <tr> 
-                      <td>Diseño Urbano</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
-                    </tr>
-                    <tr> 
-                      <td>Estudio impacto vial, Fraccionamientos...</td>
-                      <td> <a href="info-subcategoria.html" data-toggle="modal">ver más...  </a></td>
-                      <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"></a></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div></a>
-          </ul>
+    </div>
+    <div class="content__CtrlSubcategorias">
+      <h3 class="title">Control de Subcategorias</h3>
+      <div class="content__CtrlSubcategorias__tabs">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item content__CtrlSubcategorias__tabs__link" role="presentation">
+            <button class="nav-link active" id="Semaforos-tab" data-bs-toggle="tab" data-bs-target="#Semaforos-tab-pane" type="button" role="tab" aria-controls="Semaforos-tab-pane" aria-selected="true">Semáforos</button>
+          </li>
+          <li class="nav-item content__CtrlSubcategorias__tabs__link" role="presentation">
+            <button class="nav-link" id="Postes-tab" data-bs-toggle="tab" data-bs-target="#Postes-tab-pane" type="button" role="tab" aria-controls="Postes-tab-pane" aria-selected="false">Postes</button>
+          </li>
+          <li class="nav-item content__CtrlSubcategorias__tabs__link" role="presentation">
+            <button class="nav-link" id="Senalamientos-tab" data-bs-toggle="tab" data-bs-target="#Senalamientos-tab-pane" type="button" role="tab" aria-controls="Senalamientos-tab-pane" aria-selected="false">Señalamientos</button>
+          </li>
+          <li class="nav-item content__CtrlSubcategorias__tabs__link" role="presentation">
+            <button class="nav-link" id="Complementos-tab" data-bs-toggle="tab" data-bs-target="#Complementos-tab-pane" type="button" role="tab" aria-controls="Complementos-tab-pane" aria-selected="false">Complementos Viales</button>
+          </li>
+          <li class="nav-item content__CtrlSubcategorias__tabs__link" role="presentation">
+            <button class="nav-link" id="Servicios-tab" data-bs-toggle="tab" data-bs-target="#Servicios-tab-pane" type="button" role="tab" aria-controls="Servicios-tab-pane" aria-selected="false">Servicios de diseño</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="Semaforos-tab-pane" role="tabpanel" aria-labelledby="Semaforos-tab" tabindex="0"> 
+            <div class="content__CtrlSubcategorias__tabs__item">
+              <div class="content__CtrlSubcategorias__tabs__item__header" id="Semaforos-header">
+                <h3>Subcategorías de Semáforos</h3>
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
+                <div class="modal-cotizacion">
+                  <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalCotizacion-gralLabel">Control <br/><strong>Subcategoria</strong></h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="content-form">
+                            <form action="">
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp"/>
+                                <label class="form-label" for="nombreCliente">ID</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Email </label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-body__buttons"> 
+                            <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Solicitud </h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Cotización realizada con exito!</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                  <button class="btn btn-dark" type="submit">Buscar</button>
+                </form>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__body">
+                <div class="table-wrapper content__CtrlSubcategorias__tabs__item__body__table">
+                  <table class="table table-striped table-hover">
+                    <thead> 
+                      <tr>                 
+                        <th>#</th>
+                        <th>Subcategoria</th>
+                        <th>Detalles</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>01</td>
+                        <td>Semáforos Vehiculares</td>
+                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                      <tr> 
+                        <td>02</td>
+                        <td>Sémaforos peatonales</td>
+                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__footer">
+                <nav aria-label="...">
+                  <ul class="pagination">
+                    <li class="page-item disabled"></li><a class="page-link">Previous</a>
+                    <li class="page-item"></li><a class="page-link" href="#">1</a>
+                    <li class="page-item active" aria-current="page"></li><a class="page-link" href="#">2</a>
+                    <li class="page-item"></li><a class="page-link" href="#">3</a>
+                    <li class="page-item"></li><a class="page-link" href="#">Next</a>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="Postes-tab-pane" role="tabpanel" aria-labelledby="Postes-tab" tabindex="0">
+            <div class="content__CtrlSubcategorias__tabs__item">
+              <div class="content__CtrlSubcategorias__tabs__item__header" id="Postes-header">
+                <h3>Subcategorías de Postes</h3>
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
+                <div class="modal-cotizacion">
+                  <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalCotizacion-gralLabel">Control <br/><strong>Subcategoria</strong></h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="content-form">
+                            <form action="">
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp"/>
+                                <label class="form-label" for="nombreCliente">ID</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Email </label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-body__buttons"> 
+                            <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Solicitud </h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Cotización realizada con exito!</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                  <button class="btn btn-dark" type="submit">Buscar</button>
+                </form>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__body">
+                <div class="table-wrapper content__CtrlSubcategorias__tabs__item__body__table">
+                  <table class="table table-striped table-hover">
+                    <thead> 
+                      <tr>                 
+                        <th>#</th>
+                        <th>Subcategoria</th>
+                        <th>Detalles</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>01</td>
+                        <td>Semáforos Vehiculares</td>
+                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                      <tr> 
+                        <td>02</td>
+                        <td>Sémaforos peatonales</td>
+                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__footer"></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="Senalamientos-tab-pane" role="tabpanel" aria-labelledby="Senalamientos-tab" tabindex="0">
+            <div class="content__CtrlSubcategorias__tabs__item">
+              <div class="content__CtrlSubcategorias__tabs__item__header" id="Senalamientos-header">
+                <h3>Subcategorías de Señalamientos</h3>
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
+                <div class="modal-cotizacion">
+                  <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalCotizacion-gralLabel">Control <br/><strong>Subcategoria</strong></h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="content-form">
+                            <form action="">
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp"/>
+                                <label class="form-label" for="nombreCliente">ID</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Email </label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-body__buttons"> 
+                            <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Solicitud </h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Cotización realizada con exito!</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                  <button class="btn btn-dark" type="submit">Buscar</button>
+                </form>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__body">
+                <div class="table-wrapper content__CtrlSubcategorias__tabs__item__body__table">
+                  <table class="table table-striped table-hover">
+                    <thead> 
+                      <tr>                 
+                        <th>#</th>
+                        <th>Subcategoria</th>
+                        <th>Detalles</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>01</td>
+                        <td>Semáforos Vehiculares</td>
+                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                      <tr> 
+                        <td>02</td>
+                        <td>Sémaforos peatonales</td>
+                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__footer"></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="Complementos-tab-pane" role="tabpanel" aria-labelledby="Complementos-tab" tabindex="0">
+            <div class="content__CtrlSubcategorias__tabs__item">
+              <div class="content__CtrlSubcategorias__tabs__item__header" id="Complementos-header">
+                <h3>Subcategorías de Complementos Viales</h3>
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
+                <div class="modal-cotizacion">
+                  <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalCotizacion-gralLabel">Control <br/><strong>Subcategoria</strong></h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="content-form">
+                            <form action="">
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp"/>
+                                <label class="form-label" for="nombreCliente">ID</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Email </label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-body__buttons"> 
+                            <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Solicitud </h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Cotización realizada con exito!</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                  <button class="btn btn-dark" type="submit">Buscar</button>
+                </form>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__body">
+                <div class="table-wrapper content__CtrlSubcategorias__tabs__item__body__table">
+                  <table class="table table-striped table-hover">
+                    <thead> 
+                      <tr>                 
+                        <th>#</th>
+                        <th>Subcategoria</th>
+                        <th>Detalles</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>01</td>
+                        <td>Semáforos Vehiculares</td>
+                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                      <tr> 
+                        <td>02</td>
+                        <td>Sémaforos peatonales</td>
+                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__footer"></div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="Servicios-tab-pane" role="tabpanel" aria-labelledby="Servicios-tab" tabindex="0">
+            <div class="content__CtrlSubcategorias__tabs__item">
+              <div class="content__CtrlSubcategorias__tabs__item__header" id="Servicios-header">
+                <h3>Subcategorías de Servicios de Diseño</h3>
+                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
+                <div class="modal-cotizacion">
+                  <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
+                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="modalCotizacion-gralLabel">Control <br/><strong>Subcategoria</strong></h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="content-form">
+                            <form action="">
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp"/>
+                                <label class="form-label" for="nombreCliente">ID</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Email </label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>
+                                <label class="form-label" for="exampleInputEmail1">Nombre de la empresa</label>
+                              </div>
+                              <div class="form-floating mb-3">
+                                <textarea class="form-control form-control-lg" type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje" id="exampleInputEmail1"></textarea>
+                                <label class="form-label" for="exampleInputEmail1">Mensaje</label>
+                              </div>
+                            </form>
+                          </div>
+                          <div class="modal-body__buttons"> 
+                            <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+                            <button class="btn btn-success" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Enviar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalToggleLabel2">Solicitud </h5>
+                          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">Cotización realizada con exito!</div>
+                        <div class="modal-footer">
+                          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Cancelar </button>
+                          <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                  <button class="btn btn-dark" type="submit">Buscar</button>
+                </form>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__body">
+                <div class="table-wrapper content__CtrlSubcategorias__tabs__item__body__table">
+                  <table class="table table-striped table-hover">
+                    <thead> 
+                      <tr>                 
+                        <th>#</th>
+                        <th>Subcategoria</th>
+                        <th>Detalles</th>
+                        <th>Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody> 
+                      <tr> 
+                        <td>01</td>
+                        <td>Semáforos Vehiculares</td>
+                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                      <tr> 
+                        <td>02</td>
+                        <td>Sémaforos peatonales</td>
+                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="content__CtrlSubcategorias__tabs__item__footer"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <footer>
-      <div class="footer__header">
-        <div class="footer__header__box">
-          <div class="footer__header__box__phone">
-            <div class="footer__header-icon"><img src="images/iconos/phone.svg" alt="icono de teléfono fijo"/></div>
-            <div class="footer__header__phone-num"> 
-              <p>442 219-76-51 <br/>444 257-52-88</p>
-            </div>
-          </div>
-          <div class="footer__header__box__cellphone">
-            <div class="footer__header-icon"> <img src="images/iconos/smartphone.svg" alt="ícono de un celular"/></div>
-            <div class="footer__header__cellphone-num"> 
-              <p>442 3867559</p>
-            </div>
-          </div>
-          <div class="footer__header__box__email"> 
-            <div class="footer__header-icon"><img src="images/iconos/email.svg" alt="ícono de un email"/></div>
-            <div class="footer__header__email-txt"> 
-              <p>contacto@stw.com.mx</p>
-            </div>
-          </div>
+      <div class="footer__foot"> 
+        <div class="rights">
+          <p>STEROWANIA 2023</p>
         </div>
-      </div>
-      <div class="footer__box">
-        <div class="footer__box__body">
-          <div class="footer__box__body-logo"><img src="images/iconos/logo-amarillo.svg" alt="logotipo de Sterowania"/></div>
-          <div class="footer__box__body-links">
-            <h2>Enlaces Directos</h2>
-            <ul> 
-              <li><a href="/">Inicio</a></li>
-              <li><a href="catalogo.html">Catálogo </a></li>
-              <li><a href="cotiza_gral.html">Cotizar</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="privacidad.html">Aviso de Privacidad </a></li>
-            </ul>
-          </div>
-          <div class="footer__box__body-address"> <img src="images/iconos/address.svg" alt="ícono de ubicación"/>
-            <p>Agregar dirección de SW</p>
-          </div>
-          <div class="footer__box__body-schedule">
-            <h2>HORARIOS DE ATENCIÓN</h2>
-            <div class="footer__box__body-schedule-hours">
-              <p>Lunes a Viernes: </p>
-              <p>9:00am - 6:00 pm</p>
-              <p>Sábado: </p>
-              <p>9:00am - 2:00 pm</p>
-              <p>Domingo: </p>
-              <p>Cerrado</p>
-            </div>
-          </div>
-          <div class="footer__box__body-socialmedia">
-            <div class="footer__box__body-socialmedia__icon">
-              <h2>SÍGUENOS</h2><a href="https://facebook.com"> <img src="images/iconos/facebook.svg" alt="Ícono de facebook"/></a>
-            </div>
-          </div>
-        </div>
-        <div class="footer__foot"> 
-          <div class="rights">
-            <p>STEROWANIA 2023</p>
-          </div>
-          <p class="divisor"><strong>|</strong></p>
-          <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong>  </a></div>
-        </div>
+        <p class="divisor"><strong>|</strong></p>
+        <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong></a></div>
       </div>
     </footer>
     <script src="js/app-dist.js"></script>
+    <script src="js/animations.js"></script>
   </body>
 </html>
