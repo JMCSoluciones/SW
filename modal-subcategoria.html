@@ -1,5 +1,5 @@
 
-<button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
+<button class="btn btn-success newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral">Nueva Subcategoria</button>
 <div class="modal-cotizacion">
   <div class="modal fade" id="modalCotizacion-gral" aria-hidden="true" aria-labelledby="modalCotizacion-gralLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -17,11 +17,16 @@
               </div>
               <div class="form-floating mb-3">
                 <input class="form-control form-control-lg" type="number" name="telefono" maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono" id="exampleInputEmail1"/>
-                <label class="form-label" for="exampleInputEmail1">Teléfono a 10 dígitos</label>
+                <label class="form-label" for="exampleInputEmail1">Nombre de la subcategoría</label>
               </div>
               <div class="form-floating mb-3">
-                <input class="form-control form-control-lg" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1"/>
-                <label class="form-label" for="exampleInputEmail1">Email </label>
+                <select class="form-control form-control-lg form-select" type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido" id="exampleInputEmail1">
+                  <option>Semáforos</option>
+                  <option>Postes </option>
+                  <option>Señalamientos</option>
+                  <option>Complementos Viales</option>
+                  <option>Servicios de diseño</option>
+                </select>
               </div>
               <div class="form-floating mb-3">
                 <input class="form-control form-control-lg" type="text" name="nombre_empresa" aria-describedby="emailHelp" placeholder="Nombre de la empresa" id="exampleInputEmail1"/>

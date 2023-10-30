@@ -1,6 +1,4 @@
-//- -var services = ["Movimiento de Maquinaria","Acometidas Eléctricas", "Acometidas Hidráulicas","Pailería","Pintura"]
-//- -var links = ["Inicio","Empresa","Movimiento de Maquinaria","Acometidas Eléctricas", "Acometidas Hidráulicas","Pailería","Pintura","Contacto","Aviso de privacidad"]
-//- -var valores = ["PASIÓN POR EL SERVICIO","HONESTIDAD","LIDERAZGO","COMPROMISO","EXPERIENCIA","CALIDAD","RESPONSABILIDAD","CONFIANZA"]
+-var categorias = ["Semáforos","Postes","Señalamientos","Complementos Viales","Servicios de diseño"]
 -var titulo = "STEROWANIA"
 -var titulos = ["CONOCE NUESTROS PRODUCTOS","Semaforo", "Postes", "Señalamientos","Complementos viales","Servicios de diseño vial y urbano"]
 mixin caja(imagen,titulo,enlace)
@@ -9,3 +7,8 @@ mixin caja(imagen,titulo,enlace)
 		.caja__contenido
 			h3=titulo
 			a(href="http://www.google.com") enlace 
+
+mixin categorias(catgs)
+	select.form-control.form-control-lg.form-select(type="email" name="email" aria-describedby="emailHelp" placeholder="Email válido")#exampleInputEmail1
+		each categoria in catgs
+			option= categoria

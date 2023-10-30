@@ -1,10 +1,10 @@
-button.btn.btn-success.newBtnElement(type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral") Nueva Subcategoria
+button.btn.btn-success.newBtnElement(type="button" data-bs-toggle="modal" data-bs-target="#modalCotizacion-gral") Nueva Producto
 .modal-cotizacion
     #modalCotizacion-gral.modal.fade(aria-hidden='true' aria-labelledby='modalCotizacion-gralLabel' tabindex='-1')
         .modal-dialog.modal-lg.modal-dialog-centered
             .modal-content
                 .modal-header
-                    h5#modalCotizacion-gralLabel.modal-title Control #[br]#[strong Subcategoria]
+                    h5#modalCotizacion-gralLabel.modal-title Control de #[br]#[strong Productos]
                     button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                 .modal-body
                     .content-form
@@ -13,11 +13,23 @@ button.btn.btn-success.newBtnElement(type="button" data-bs-toggle="modal" data-b
                                 input.form-control.form-control-lg(placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp")
                                 label.form-label(for="nombreCliente") ID
                             .form-floating.mb-3
-                                input.form-control.form-control-lg(type="text" name="telefono"  maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono")#exampleInputEmail1
-                                label.form-label(for="exampleInputEmail1") Nombre de la subcategoría
+                                input.form-control.form-control-lg(type="number" name="telefono"  maxlength="2" aria-describedby="emailHelp" placeholder="Ingrese su télefono")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Nombre del producto
                             .form-floating.mb-3
                                 lablel.form-label Categoría
                                 +categorias(categorias)
+                            .form-floating.mb-3
+                                lablel.form-label Subcategoria
+                                +categorias(categorias)
+                            .mb-3
+                                label.form-label#formFile(for="exampleInputEmail1") Imagen
+                                input.form-control.form-control-lg(type="file" name="imagen" aria-describedby="emailHelp" placeholder="Ingrese su mensaje")#exampleInputEmail1
+                            .form-floating.mb-3
+                                textarea.form-control.form-control-lg(type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Extracto
+                            .form-floating.mb-3
+                                textarea.form-control.form-control-lg(type="text" name="mensaje" aria-describedby="emailHelp" placeholder="Ingrese su mensaje")#exampleInputEmail1
+                                label.form-label(for="exampleInputEmail1") Descripción
                     .modal-body__buttons 
                         button.btn.btn-danger( data-bs-dismiss='modal' aria-label='Close') Cancelar
                         button.btn.btn-success(data-bs-target='#exampleModalToggle2' data-bs-toggle='modal' data-bs-dismiss='modal') Enviar

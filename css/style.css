@@ -1163,13 +1163,6 @@ footer .footer__foot .link__jmc a {
   color: #6C6864 !important;
   font-weight: 600 !important;
 }
-.btn-warning {
-  font-size: 12px !important;
-  font-family: 'Raleway', sans-serif !important;
-  color: #6C6864 !important;
-  font-weight: 600 !important;
-  width: 250px !important;
-}
 .producto_cotizado {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1518,6 +1511,18 @@ table.table.avatar {
   margin: 20px auto;
   padding: 20px;
   height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.content__CtrlSubcategorias .newBtnElement {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 .content__CtrlSubcategorias__tabs__link button {
   font-size: 1.6rem;
@@ -1569,6 +1574,82 @@ table.table.avatar {
   background-color: #ED4C67;
 }
 .content__CtrlSubcategorias__tabs__item #Servicios-header {
+  background-color: #c5838e;
+}
+.content__CtrlProductos {
+  max-width: 1110px;
+  margin: 20px auto;
+  padding: 20px;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.content__CtrlProductos .newBtnElement {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.content__CtrlProductos__tabs__link button {
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.content__CtrlProductos__tabs__link #Semaforos-tab {
+  background-color: #6F1E51;
+}
+.content__CtrlProductos__tabs__link #Postes-tab {
+  background-color: #833471;
+}
+.content__CtrlProductos__tabs__link #Senalamientos-tab {
+  background-color: #B53471;
+}
+.content__CtrlProductos__tabs__link #Complementos-tab {
+  background-color: #ED4C67;
+}
+.content__CtrlProductos__tabs__link #Servicios-tab {
+  background-color: #c5838e;
+}
+.content__CtrlProductos__tabs__item {
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.content__CtrlProductos__tabs__item__header {
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  border-radius: 4px 4px 4px 4px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 10px;
+}
+.content__CtrlProductos__tabs__item__header ul li {
+  font-size: 1.6rem !important;
+}
+.content__CtrlProductos__tabs__item #Semaforos-header {
+  background-color: #6F1E51;
+}
+.content__CtrlProductos__tabs__item #Postes-header {
+  background-color: #833471;
+}
+.content__CtrlProductos__tabs__item #Senalamientos-header {
+  background-color: #B53471;
+}
+.content__CtrlProductos__tabs__item #Complementos-header {
+  background-color: #ED4C67;
+}
+.content__CtrlProductos__tabs__item #Servicios-header {
   background-color: #c5838e;
 }
 /*FORMULARIO AGREGAR PRODUCTO*/
