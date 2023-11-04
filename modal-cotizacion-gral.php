@@ -5,7 +5,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalCotizacion-gralLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
-          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button class="btn-close" type="button" onclick="limpiarNotificacion();" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="content-form">
@@ -31,8 +31,8 @@
               <label for="mensaje_cotGral">Mensaje</label>
             </div>
             <div class="modal-body__buttons"> 
-              <button class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
-              <button class="btn btn-success btn-lg"  type="submit">Enviar</button>
+              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarNotificacion();">Cancelar</button>
+              <button class="btn btn-success btn-lg" onclick="mostrarNotificacion();" type="submit">Enviar</button>
           </div>
             <input type="hidden" name="oculto" value=1>
             <div class="form-floating mb-3">
@@ -97,3 +97,4 @@
 
     });
   </script>
+  <script src="/js/script.js"></script>

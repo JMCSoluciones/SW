@@ -21,3 +21,11 @@ $(document).ready(function(){
 		}
 	});
 });
+
+function limpiarNotificacion(){
+	var notificacion = document.querySelector('#mostrar_mensaje');
+	$('#mostrar_mensaje').removeClass("notificacion-exito");
+	$('#mostrar_mensaje').removeClass("notificacion-error");
+	notificacion.innerHTML="";
+
+}
