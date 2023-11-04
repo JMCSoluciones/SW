@@ -26,6 +26,47 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+.notificacion-error {
+  margin: 20px auto;
+  font-size: 1.6rem;
+  padding: 0px 10px;
+  background-color: #ff4757;
+  color: #ffffff;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+.notificacion-exito {
+  margin: 20px auto;
+  font-size: 1.6rem;
+  padding: 0px 10px;
+  background-color: #2ed573;
+  color: #ffffff;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+.hidden {
+  display: none !important;
+}
 .slide {
   background-position: center;
   background-attachment: fixed;

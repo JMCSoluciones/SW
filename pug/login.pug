@@ -3,18 +3,21 @@ block content
     .login.slideUp
         .login__title  
             h2 Iniciar sesión
-        form.login__formLogin
+        form.login__formLogin(action="loginProcess.php" class="contentLogin__form" method="POST")
             .login__formLogin__box
                 .form-group
                     label(for='exampleInputEmail1') Usuario
                     .icono 
                         img(src="/images/iconos/email-login.svg", alt="")
-                        input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Ingrese su usuario')
+                        input#exampleInputEmail1.form-control(type='text' aria-describedby='emailHelp' placeholder='Ingrese su usuario' name="user")
                 .form-group
                     label(for='exampleInputPassword1') Password
                     .icono 
                         img(src="images/iconos/password.svg", alt="")
-                        input#exampleInputPassword1.form-control(type='password' placeholder='Password')
+                        input#exampleInputPassword1.form-control(type='password' placeholder='Password' name="password")
                 .form-group.form-group__loginButton
-                    a.btn.btn-warning(href="control-cotizaciones.html") ingresar
+                    button.btn.btn-warning(type="submit" href="control-cotizaciones.html") ingresar
+                .form-group
+                    .alert.alert-danger(role="alert") A simple danger alert—check it out!
+
                         
