@@ -46,15 +46,21 @@ include './components/control-menuAdmin.php';
                         <td>Nombre cliente</td>
                         <td>23/octubre/2023</td>
                         <td>pendiente </td>
-                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
-                        <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
+                        <td><a href="visualizar-producto.html" data-toggle="modal">ver más...  </a></td>
+                        <td><a class="edit" href="#editProductoModal" data-toggle="modal">
+                          <img src="/images/iconos/pencil-square.svg" alt="" srcset="/images/iconos/pencil-square.svg">
+                        </a>
+                        <a class="delete" href="#deleteProductoModal" data-toggle="modal">
+                          <img src="/images/iconos/trash3-fill.svg" alt="" srcset="/images/iconos/trash3-fill.svg">
+                        </a>
+                      </td>
                       </tr>
                       <tr> 
                         <td>02</td>
                         <td>cliente 2</td>
                         <td>23/octubre/2023</td>
                         <td>cotizada</td>
-                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td> <a href="visualizar-producto.html" data-toggle="modal">ver más... </a></td>
                         <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                       </tr>
                     </tbody>
@@ -102,7 +108,7 @@ include './components/control-menuAdmin.php';
                         <td>Nombre cliente</td>
                         <td>23/octubre/2023</td>
                         <td>pendiente </td>
-                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a href="visualizar-producto.html" data-toggle="modal">ver más...  </a></td>
                         <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                       </tr>
                       <tr> 
@@ -110,7 +116,7 @@ include './components/control-menuAdmin.php';
                         <td>cliente 2</td>
                         <td>23/octubre/2023</td>
                         <td>cotizada</td>
-                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td> <a href="visualizar-producto.html" data-toggle="modal">ver más... </a></td>
                         <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                       </tr>
                     </tbody>
@@ -148,7 +154,7 @@ include './components/control-menuAdmin.php';
                         <td>Nombre cliente</td>
                         <td>23/octubre/2023</td>
                         <td>pendiente </td>
-                        <td><a href="#verzualizarProductoModal" data-toggle="modal">ver más...  </a></td>
+                        <td><a href="visualizar-producto.html" data-toggle="modal">ver más...  </a></td>
                         <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                       </tr>
                       <tr> 
@@ -156,7 +162,7 @@ include './components/control-menuAdmin.php';
                         <td>cliente 2</td>
                         <td>23/octubre/2023</td>
                         <td>cotizada</td>
-                        <td> <a href="#verzualizarProductoModal" data-toggle="modal">ver más... </a></td>
+                        <td> <a href="visualizar-producto.html" data-toggle="modal">ver más... </a></td>
                         <td><a class="edit" href="#editProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a><a class="delete" href="#deleteProductoModal" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a></td>
                       </tr>
                     </tbody>
