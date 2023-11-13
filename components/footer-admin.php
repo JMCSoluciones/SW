@@ -8,6 +8,6 @@
       </div>
     </footer>
     <script src="js/app-dist.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="/js/script.js"></script> 
   </body>
 </html>

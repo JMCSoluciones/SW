@@ -9,7 +9,7 @@
         </div>
         <div class="modal-body">
           <div class="content-form">
-          <form action="/model/insert_cotgral.php" method="POST" id="form_cotGral">
+          <form action="insert_cotgral.php" method="POST" id="form_cotGral">
             <div class="form-floating mb-3">
               <input class="form-control form-control-lg" placeholder="Ingrese su nombre completo" type="text" name="nombre" aria-describedby="emailHelp" maxlength="30" minlength="3" required id="nombre_cotGral" pattern="[A-Za-z0-9_-]{3,30}"/>
               <label for="nombre_cotGral">Nombre Completo</label>
@@ -31,8 +31,8 @@
               <label for="mensaje_cotGral">Mensaje</label>
             </div>
             <div class="modal-body__buttons"> 
-              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarNotificacion();">Cancelar</button>
-              <button class="btn btn-success btn-lg" onclick="mostrarNotificacion();" type="submit">Enviar</button>
+              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarNotificacion('mostrar_mensaje');">Cancelar</button>
+              <button class="btn btn-success btn-lg" onclick="" type="submit">Enviar</button>
           </div>
             <input type="hidden" name="oculto" value=1>
             <div class="form-floating mb-3">

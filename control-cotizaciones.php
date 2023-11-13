@@ -1,6 +1,6 @@
 <?php 
 include './components/head.php';
-include './components/header.php';
+include './components/header-admin.php';
 include './components/control-menuAdmin.php';
 ?>
     <div class="content__CtrlCotizaciones">
@@ -176,5 +176,5 @@ include './components/control-menuAdmin.php';
       </div>
     </div>
     <?php 
-   include './components/footer-admin.php'
+   include './components/footer-admin.php';
    ?>

@@ -1,43 +1,49 @@
 @import "globals.less";
 @import "variables.less";
 .nav-link.active{
-    color: white !important;
+    color: @color-white !important;
     scale: 1.2;
-    border: 2px solid @color-primary !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: .3s;
+    border: 0px !important;
+    border-radius: 5px;
+
+    // background-color: @color-black !important;
 }
 .nav-link:hover{
     scale: 1.1;
-    color: white !important;
+    color: @color-white !important;
+    border: 0px !important;
+
     transition: .3s;
 }
-// Notificaciones
-.notificacion-error{
-    margin: 20px auto;
-    font-size: 1.6rem;
-    padding: 0px 10px;
-    background-color: #ff4757;
-    color: #ffffff;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 4px;
-}
-.notificacion-exito{
-    margin: 20px auto;
-    font-size: 1.6rem;
-    padding: 0px 10px;
-    background-color: #2ed573;
-    color: #ffffff;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 4px;
-}
+// // Notificaciones
+// .notificacion-error{
+//     margin: 20px auto;
+//     font-size: 1.6rem;
+//     padding: 0px 10px;
+//     background-color: #ff4757;
+//     color: #ffffff;
+//     height: 70px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 10px;
+//     border-radius: 4px;
+// }
+// .notificacion-exito{
+//     margin: 20px auto;
+//     font-size: 1.6rem;
+//     padding: 0px 10px;
+//     background-color: #2ed573;
+//     color: #ffffff;
+//     height: 70px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 10px;
+//     border-radius: 4px;
+// }
 .hidden {
     display: none !important;
 }
@@ -1342,7 +1348,6 @@ table{
     max-width: 1110px;
     margin: 20px auto;
     padding: 20px;
-    height: 90vh;
     &__tabs{
         &__link{
             button{
@@ -1383,13 +1388,46 @@ table{
     }
    
 }
+.contentCtrlSearch{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    &__input{
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 10px;
+        height: 70px;
+        width: 300px;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: @color-text;
+        color: white;
+        font-size: 1.4rem;
+        select{
+            width: 240px;
+            option{
+                font-size: 1.4rem;
+            }
+        }
+        input{
+            width: 240px;
+            font-size: 1.4rem;
+        }
+        &__cta{
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+    }
+}
 // CONTROL DE SUBCATEGORIAS
-
 .content__CtrlSubcategorias{
     max-width: 1110px;
     margin: 20px auto;
     padding: 20px;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1402,19 +1440,19 @@ table{
                 font-size: 1.6rem;
                 color: @color-white;
             }
-            #Semaforos-tab{
+            #semaforos-tab{
                 background-color: #6F1E51;
             }
-            #Postes-tab{
+            #postes-tab{
                 background-color: #833471;
             }
-            #Senalamientos-tab{
+            #senalamientos-tab{
                 background-color: #B53471;
             }
-            #Complementos-tab{
+            #complementos-tab{
                 background-color: #ED4C67;
             }
-            #Servicios-tab{
+            #servicios-tab{
                 background-color: #c5838e;
             }
         }
@@ -1427,22 +1465,22 @@ table{
                 align-items: center;
                 padding: 30px;
                 border-radius: 4px 4px 4px 4px;
-                
+                background-color: @color-black;
 
             }
-            #Semaforos-header{
+            #semaforos-header{
                 background-color: #6F1E51;
             }
-            #Postes-header{
+            #postes-header{
                 background-color: #833471;
             }
-            #Senalamientos-header{
+            #senalamientos-header{
                 background-color: #B53471;
             }
-            #Complementos-header{
+            #complementos-header{
                 background-color: #ED4C67;
             }
-            #Servicios-header{
+            #servicios-header{
                 background-color: #c5838e;
             }
         }
@@ -1454,7 +1492,6 @@ table{
     max-width: 1110px;
     margin: 20px auto;
     padding: 20px;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     gap: 10px;

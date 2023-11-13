@@ -5,13 +5,13 @@
       <div class="footer__header__box__phone">
         <div class="footer__header-icon"><img src="images/Iconos/phone.svg" alt="icono de teléfono fijo"/></div>
         <div class="footer__header__phone-num"> 
-          <p>442 219-76-51 <br/>444 257-52-88</p>
+          <p>477-1730233</p>
         </div>
       </div>
       <div class="footer__header__box__cellphone">
         <div class="footer__header-icon"> <img src="images/Iconos/smartphone.svg" alt="ícono de un celular"/></div>
         <div class="footer__header__cellphone-num"> 
-          <p>442 3867559</p>
+          <p>(Whatsapp) <br> 477-3793135</p>
         </div>
       </div>
       <div class="footer__header__box__email"> 
@@ -36,7 +36,7 @@
         </ul>
       </div>
       <div class="footer__box__body-address"> <img src="images/Iconos/address.svg" alt="ícono de ubicación"/>
-        <p>Agregar dirección de SW</p>
+        <p>Manuel G. Escobedo 411, Col. Héroes, Aguascalientes, Ags. C.p. 20190</p>
       </div>
       <div class="footer__box__body-schedule">
         <h2>HORARIOS DE ATENCIÓN</h2>
@@ -57,7 +57,7 @@
     </div>
     <div class="footer__foot"> 
       <div class="rights">
-        <p>STEROWANIA 2023</p>
+        <p>STEROWANIA <?php echo date('Y');?></p>
       </div>
       <p class="divisor"><strong>|</strong></p>
       <div class="link__jmc"> <a href="https://jmcsoluciones.com" target="_blank">Desarrollado por <strong>JMC Soluciones</strong>  </a></div>

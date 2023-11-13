@@ -106,6 +106,17 @@ function dosEspacios($elemento,$campo){
     }
 }
 
+//QUITAR ACENTOS PARA LOS ID
+function quitarAcentos($cadena) {
+    $acentos = array('á', 'é', 'í', 'ó', 'ú', 'ü', 'Á', 'É', 'Í', 'Ó', 'Ú', 'Ü');
+    $sinAcentos = array('a', 'e', 'i', 'o', 'u', 'u', 'A', 'E', 'I', 'O', 'U', 'U');
+
+    // Utiliza strtr para reemplazar los caracteres acentuados por sus equivalentes sin acentos
+    $cadenaSinAcentos = strtr($cadena, array_combine($acentos, $sinAcentos));
+
+    return $cadenaSinAcentos;
+}
+
 
 
 

@@ -41,7 +41,7 @@ include './components/header.php';
     <div class="content contentIndex">
       <div class="contentIndex__section-nosotros">
         <h2 class="contentIndex__section-nosotros-title title">ACERCA DE NOSOTROS</h2>
-        <p class="contentIndex__section-nosotros-txt"><strong>STEROWANIA</strong> es una empresa mexicana, fundada en el año 2010 con el nombre de AUTEN MEXICO, que gracias a la preferencia de nuestros clientes, demandas de nuevos productos y servicios en el 2017, renovamos la sociedad creando e nueva sociedad con el nombre STEROWANIA MEXICO S. DE R.L DE C.V, enfocada en ofrecer servicios industriales,</p>
+        <p class="contentIndex__section-nosotros-txt"><strong>STEROWANIA (STW)</strong> que ha mantenido una evolución constante y ha sido punta de lanza en el mercado nacional durante los últimos 13 años. Hoy en día seguimos consolidando los proyectos de nuestros clientes siendo articuladores del Ecosistema de Movilidad Sustentable en México.</p>
       </div>
       <div class="contentIndex__section-contactanos">
         <div class="contentIndex__section-contactanos-txt">
@@ -51,7 +51,8 @@ include './components/header.php';
       </div>
       <div class="contentIndex__section-soporte">
         <h2 class="contentIndex__section-soporte-title title entrance">¿POR QUÉ SOPORTE?</h2>
-        <p class="contentIndex__section-soporte-txt"> <strong>Sterowania</strong> tiene como base el conocimiento de lo que una empresa necesita, independientemente de su capacidad, nivel de producción o de especialización, esto nos permite ser un aliado estratégico de cualquier tipo de empresa y garantizar que no somos un costo sino una inversión.</p>
+        <p class="contentIndex__section-soporte-txt"> Mantenemos una relación 24/7 con nuestros clientes, logrando empatía con sus necesidades , información y procesos, <strong>incorporándonos a sus desarrollos y proyectos </strong>como un aliado estratégico.
+</p>
       </div>
       <div class="contentIndex__section-catalogo">
         <div class="contentIndex__section-catalogo-txt">
@@ -64,7 +65,8 @@ include './components/header.php';
       </div>
       <div class="contentIndex__section-especializado">
         <h2 class="contentIndex__section-especializado-title title entrance">Equipo especializado</h2>
-        <p class="contentIndex__section-especializado-txt"> Contamos con un grupo de Ingenieros y especialistas en procesos los cuales son capacitados constantemente.</p>
+        <p class="contentIndex__section-especializado-txt"> Contamos con un grupo de especialistas de alto nivel, con dominio en las mejoras prácticas de la industria.
+        </p>
       </div>
       <div class="contentIndex__section-innovacion">
         <div class="contentIndex__section-innovacion-txt">
@@ -75,8 +77,8 @@ include './components/header.php';
         </div>
       </div>
       <div class="contentIndex__section-soporte2">
-        <h2 class="contentIndex__section-soporte2-title title entrance">Soporte</h2>
-        <p class="contentIndex__section-soporte2-txt"> Somos un aliado que permite eficientar el cumplimientode los Sistemas de Gestion de Calidad.</p>
+        <h2 class="contentIndex__section-soporte2-title title entrance">Soporte Contínuo</h2>
+        <p class="contentIndex__section-soporte2-txt"> Estamos enfocados en sus necesidades, así como en eficientar sus Sistemas de Gestion de Calidad y Maximizar el potencial de éxito.</p>
       </div>
     </div>
     <?php 

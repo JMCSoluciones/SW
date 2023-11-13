@@ -1,31 +1,17 @@
-$(document).ready(function(){
-	// Activate tooltip
-	$('[data-toggle="tooltip"]').tooltip();
-	
-	// Select/Deselect checkboxes
-	var checkbox = $('table tbody input[type="checkbox"]');
-	$("#selectAll").click(function(){
-		if(this.checked){
-			checkbox.each(function(){
-				this.checked = true;                        
-			});
-		} else{
-			checkbox.each(function(){
-				this.checked = false;                        
-			});
-		} 
-	});
-	checkbox.click(function(){
-		if(!this.checked){
-			$("#selectAll").prop("checked", false);
-		}
-	});
-});
 
-function limpiarNotificacion(){
-	var notificacion = document.querySelector('#mostrar_mensaje');
-	$('#mostrar_mensaje').removeClass("notificacion-exito");
-	$('#mostrar_mensaje').removeClass("notificacion-error");
+function limpiarNotificacion(caja){
+	var notificacion = document.querySelector('#'+caja);
+	$('#'+caja).removeClass("notificacion-exito");
+	$('#'+caja).removeClass("notificacion-error");
 	notificacion.innerHTML="";
-
+	console.log(notificacion);
 }
+function confirmacion(){
+    var decision = confirm("¿Son correctos los datos?");    
+    if(decision==true){
+        return true;
+    }else{ 
+       return false; 
+    }
+}
+

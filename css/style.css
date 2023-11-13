@@ -14,15 +14,19 @@ body {
   display: none !important;
 }
 .nav-link.active {
-  color: white !important;
+  color: #ffffff !important;
   scale: 1.2;
-  border: 2px solid #f6b100 !important;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  border: 0px !important;
+  border-radius: 5px;
 }
 .nav-link:hover {
   scale: 1.1;
-  color: white !important;
+  color: #ffffff !important;
+  border: 0px !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1505,7 +1509,6 @@ table.table.avatar {
   max-width: 1110px;
   margin: 20px auto;
   padding: 20px;
-  height: 90vh;
 }
 .content__CtrlCotizaciones__tabs__link button {
   font-size: 1.6rem;
@@ -1547,11 +1550,68 @@ table.table.avatar {
 .content__CtrlCotizaciones__tabs__item #canceladas-header {
   background-color: #EA2027;
 }
+.contentCtrlSearch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contentCtrlSearch__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  padding: 10px;
+  height: 70px;
+  width: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #6C6864;
+  color: white;
+  font-size: 1.4rem;
+}
+.contentCtrlSearch__input select {
+  width: 240px;
+}
+.contentCtrlSearch__input select option {
+  font-size: 1.4rem;
+}
+.contentCtrlSearch__input input {
+  width: 240px;
+  font-size: 1.4rem;
+}
+.contentCtrlSearch__input__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+}
 .content__CtrlSubcategorias {
   max-width: 1110px;
   margin: 20px auto;
   padding: 20px;
-  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1569,19 +1629,19 @@ table.table.avatar {
   font-size: 1.6rem;
   color: #ffffff;
 }
-.content__CtrlSubcategorias__tabs__link #Semaforos-tab {
+.content__CtrlSubcategorias__tabs__link #semaforos-tab {
   background-color: #6F1E51;
 }
-.content__CtrlSubcategorias__tabs__link #Postes-tab {
+.content__CtrlSubcategorias__tabs__link #postes-tab {
   background-color: #833471;
 }
-.content__CtrlSubcategorias__tabs__link #Senalamientos-tab {
+.content__CtrlSubcategorias__tabs__link #senalamientos-tab {
   background-color: #B53471;
 }
-.content__CtrlSubcategorias__tabs__link #Complementos-tab {
+.content__CtrlSubcategorias__tabs__link #complementos-tab {
   background-color: #ED4C67;
 }
-.content__CtrlSubcategorias__tabs__link #Servicios-tab {
+.content__CtrlSubcategorias__tabs__link #servicios-tab {
   background-color: #c5838e;
 }
 .content__CtrlSubcategorias__tabs__item {
@@ -1601,27 +1661,27 @@ table.table.avatar {
           align-items: center;
   padding: 30px;
   border-radius: 4px 4px 4px 4px;
+  background-color: #000000;
 }
-.content__CtrlSubcategorias__tabs__item #Semaforos-header {
+.content__CtrlSubcategorias__tabs__item #semaforos-header {
   background-color: #6F1E51;
 }
-.content__CtrlSubcategorias__tabs__item #Postes-header {
+.content__CtrlSubcategorias__tabs__item #postes-header {
   background-color: #833471;
 }
-.content__CtrlSubcategorias__tabs__item #Senalamientos-header {
+.content__CtrlSubcategorias__tabs__item #senalamientos-header {
   background-color: #B53471;
 }
-.content__CtrlSubcategorias__tabs__item #Complementos-header {
+.content__CtrlSubcategorias__tabs__item #complementos-header {
   background-color: #ED4C67;
 }
-.content__CtrlSubcategorias__tabs__item #Servicios-header {
+.content__CtrlSubcategorias__tabs__item #servicios-header {
   background-color: #c5838e;
 }
 .content__CtrlProductos {
   max-width: 1110px;
   margin: 20px auto;
   padding: 20px;
-  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
