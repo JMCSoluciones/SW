@@ -9,8 +9,8 @@ include './model/conexion.php';
   <div class="content__CtrlSubcategorias__box contentCtrlSearch">
     <div class="contentCtrlSearch__input">
       <form action="pquery_categoria_table.php" id="formQueryCat" method="POST">
-      <label for="selectCategorias">Filtrar por categoría</label>
-      <div class="contentCtrlSearch__input__cta">
+        <label for="selectCategorias">Filtrar por categoría</label>
+        <div class="contentCtrlSearch__input__cta">
         <select name="selectedCategoria" id="selectCategorias" class="form-select">
             <?php
               $consulta = $bd->query("SELECT id,nombre FROM categoria");
@@ -34,16 +34,16 @@ include './model/conexion.php';
         <button class="btn btn-warning" type="submit"><img src="/images/iconos/funnel-fill.svg" alt=""></button>
         </div>
       </form>
-      </div>
-      <div class="contentCtrlSearch__input">
-        <form action="pquery_subnombre_table.php" method="POST" id="formQueryName">
+    </div>
+    <div class="contentCtrlSearch__input">
+      <form action="pquery_subnombre_table.php" method="POST" id="formQueryName">
         <label for="searchSubName">Buscar por nombre</label>
         <div class="contentCtrlSearch__input__cta">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchSubName" name="subname"/>
           <button class="btn btn-warning" type="submit"><img src="/images/iconos/funnel-fill.svg" alt=""></button>
         </div>
-        </form>
-      </div>
+      </form>
+    </div>
   </div>
   <?php include 'modal-subcategoria.php';?>
 
@@ -86,7 +86,7 @@ include './model/conexion.php';
         ?></td>
         <td>
           <!-- EDIT SUBCATEGORIA -->
-        <button class="btn newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalEditSubCategoria<?= $info->id?>"><img src="/images/iconos/pencil-square.svg" alt=""></button>
+        <button class="btn newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalEditSubCategoria<?= $info->id?>" data-id="<?= $info->id ?>"><img src="/images/iconos/pencil-square.svg" alt="" data-id="<?= $info->id ?>"></button>
           <div class="modal-subcategoria">
             <div class="modal fade" id="modalEditSubCategoria<?= $info->id?>" aria-hidden="true" aria-labelledby="modalEditSubCategoria<?= $info->id?>Label" tabindex="-1">
               <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -94,12 +94,12 @@ include './model/conexion.php';
                   <div class="modal-header">
            
                     <h5 class="modal-title" id="modalEditSubCategoria<?= $info->id?>Label">Editar <br/><strong>Subcategoria  </strong></h5>
-              
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" id="#modalCloseEditBtn"></button>
+                    <!-- Boton cerrar x -->
+                    <button class="btn-close closeXmodal" type="button" data-bs-dismiss="modal" aria-label="Close" id="#modalCloseEditBtn"></button>
                   </div>
                   <div class="modal-body">
-                    <div class="content-form">
-                      <form action="edit_subcategoria.php" id="formularioEditSub" method="POST">
+                    <div class="content-form formulario-container" data-info-id="<?php echo $info->id; ?>">
+                      <form action="edit_subcategoria.php" id="formularioEditSub<?= $info->id?>" method="POST">
                         <div class="form-floating mb-3">
                           <input class="form-control form-control-lg" type="text" name="idSubcategoria" maxlength="40" id="idSubcategoria" value="<?= $info->id ?>" placeholder="<?= $info->id ?>" readonly />
                           <label class="form-label" for="idSubcategoria">ID</label>
@@ -125,12 +125,12 @@ include './model/conexion.php';
                           </select>
                         </div>
                         <div class="modal-body__buttons form-floating mb-3"> 
-                          <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="" id="#modalCloseEditBtn2">Cancelar</button>
+                          <button class="btn btn-danger btn-lg closeXmodal" data-bs-dismiss="modal" aria-label="Close" onclick="" id="#modalCloseEditBtn2">Cancelar</button>
                           <button class="btn btn-warning btn-lg" type="submit">Editar</button>
                         </div>
                         <input type="hidden" name="oculto" value=1>
                         <div class="form-floating mb-3">
-                          <div class="" id="mostrar_mensaje_modalEdit"></div>
+                          <div class="" id="mostrar_mensaje_modalEdit<?= $info->id?>"></div>
                         </div>
                       </form>
                     </div>
@@ -142,19 +142,19 @@ include './model/conexion.php';
         </td>
         <td>
           <!-- ELIMINAR SUBCATEGORIA -->
-        <button class="btn newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalDeleteSubCategoria<?= $info->id?>">
-          <img src="/images/iconos/trash3-fill.svg" alt="ícono de un bote de basura"></button>
+        <button class="btn newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalDeleteSubCategoria<?= $info->id?>"  data-id="<?= $info->id ?>">
+          <img src="/images/iconos/trash3-fill.svg" alt="ícono de un bote de basura"  data-id="<?= $info->id ?>"></button>
           <div class="modal-subcategoria">
             <div class="modal fade" id="modalDeleteSubCategoria<?= $info->id?>" aria-hidden="true" aria-labelledby="modalDeleteSubCategoria<?= $info->id?>Label" tabindex="-1">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
                     <h5 class="modal-title" id="modalDeleteSubCategoria<?= $info->id?>Label">Eliminar <br/><strong>Subcategoria  </strong></h5>
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" id="modalCancelBtn"></button>
+                    <button class="btn-close closeXmodal" type="button" data-bs-dismiss="modal" aria-label="Close" id="modalCancelBtn"></button>
                   </div>
                   <div class="modal-body">
-                    <div class="content-form">
-                      <form action="delete_subcategoria.php" id="formularioDeleteSub" method="POST">
+                    <div class="content-form formulario-container" data-info-id="<?= $info->id; ?>">
+                      <form action="delete_subcategoria.php" id="formularioDeleteSub<?= $info->id; ?>" method="POST">
                         <div class="form-floating mb-3">
                           <input class="form-control form-control-lg" type="text" name="idSubcategoria" maxlength="40" id="idSubcategoria" value="<?= $info->id ?>" placeholder="<?= $info->id ?>" readonly />
                           <label class="form-label" for="idSubcategoria">ID</label>
@@ -170,7 +170,7 @@ include './model/conexion.php';
                         </div>
                         <input type="hidden" name="oculto" value=1>
                         <div class="form-floating mb-3">
-                          <div class="" id="mostrar_mensaje_modal_delete"></div>
+                          <div class="" id="mostrar_mensaje_modal_delete<?= $info->id; ?>"></div>
                         </div>
                       </form>
                     </div>
@@ -203,17 +203,19 @@ include './model/conexion.php';
               </li>
           </ul>
       </nav>
-<!-- SCRIPT AJAX MODAL DELETE  -->
-<script src="js/ajax_modal_deleteSubcategoria.js"></script>
   </div>
 </div>
 <!-- SCRIPT AJAX MODAL EDIT-->
 <script src="js/ajax_modal_editSubcategoria.js"></script>
 
-<!-- SCRIPT PAGINACIÓN -->
-<script src="js/paginacion_Subcategoria.js"></script>
+
 <!-- SCRIPT AJAX TABLA -->
 <!-- <script src="js/ajax_tabla_Subcategoria.js"></script> -->
+<!-- SCRIPT AJAX MODAL DELETE  -->
+<script src="js/ajax_modal_deleteSubcategoria.js"></script>
+<!-- SCRIPT PAGINACIÓN -->
+<script src="js/paginacion_Subcategoria.js"></script>
+
 <?php
  include './components/footer-admin.php';
 ?>

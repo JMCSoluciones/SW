@@ -1,5 +1,5 @@
 // Manajador de eventos para el botón "Cancelar" o el botón de cierre del modal
-          $('#modalCancelarBtn','#modalCancelBtn').on('click', function (event) {
+  $('#modalCancelarBtn','#modalCancelBtn').on('click', function (event) {
         // Prevenir la acción por defecto del formulario
         event.preventDefault();
         $('#mostrar_mensaje_modal1').empty();

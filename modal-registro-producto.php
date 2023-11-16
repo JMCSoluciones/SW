@@ -6,7 +6,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="modalNuevoProductoLabel">Control de <br/><strong>Productos</strong></h5>
-                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarNotificacion();"></button>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close" onclick=""></button>
               </div>
               <div class="modal-body">
                 <div class="content-form">
@@ -20,8 +20,8 @@
                       <label class="form-label" for="nombreProducto">Nombre del producto</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <lablel class="form-label" for="categoria">Categoría</lablel>
-                      <select class="form-control form-control-lg form-select" name="categoria" id="categoria">
+                      <lablel class="form-label" for="selectcategoria">Categoría</lablel>
+                      <select class="form-control form-control-lg form-select" name="categoria" id="selectcategoria">
                         <option value=1>Semáforos</option>
                         <option value=2>Postes</option>
                         <option value=3>Señalamientos</option>
@@ -30,15 +30,10 @@
                       </select>
                     </div>
                     <div class="form-floating mb-3">
-                      <lablel class="form-label" for="subcategoria">Subcategoria</lablel>
-                      <select class="form-control form-control-lg form-select" name="subcategoria" id="subcategoria">
-                        Falta conectar a la base de datos con la tabla subcategoria
-                        <option value=6>Semáforos</option>
-                        <option value=7>Postes</option>
-                        <option value=8>Señalamientos</option>
-                        <option value=9>Complementos Viales</option>
-                        <option value=0>Servicios de diseño</option>
+                      <lablel class="form-label" for="selectsubcategoria">Subcategoria</lablel>
+                      <select class="form-control form-control-lg form-select" name="selectsubcategoria" id="selectsubcategoria">
                       </select>
+
                     </div>
                     <div class="mb-3">
                       <label class="form-label" id="formFile" for="ctaImagen">Imagen</label>
@@ -56,7 +51,7 @@
                       <input type="hidden" value=1 name="oculto">
                     </div>
                     <div class="modal-body__buttons form-floating mb-3"> 
-                      <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarNotificacion();">Cancelar</button>
+                      <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick=";">Cancelar</button>
                       <button class="btn btn-success btn-lg"  type="submit" name="guardar">Guardar</button>
                     </div>
                     <div class="form-floating mb-3">
@@ -77,8 +72,8 @@
   const formData = new FormData();
   formData.append('clave', form.clave.value);
   formData.append('producto', form.producto.value);
-  formData.append('categoria', form.categoria.value);
-  formData.append('subcategoria', form.subcategoria.value);
+  formData.append('selectcategoria', form.selectcategoria.value);
+  formData.append('selectsubcategoria', form.selectsubcategoria.value);
   formData.append('extracto', form.extracto.value);
   formData.append('descripcion', form.descripcion.value);
   formData.append('foto', fileInputElement.files[0]);
@@ -120,4 +115,4 @@
 });
 
   </script>
- 
+ <script src="js/script.js"></script>

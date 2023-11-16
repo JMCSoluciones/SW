@@ -3,7 +3,7 @@ include 'model/conexion.php';
 include 'validaciones.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    if(!isset($_POST['oculto'])){
+    if(!isset($_POST['oculto']) || $_POST['oculto'] !== '1'){
         exit();
     }
 

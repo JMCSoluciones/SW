@@ -1,5 +1,6 @@
+<!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
 <?php
-include './components/head.php';
 include 'model/conexion.php';
 
 ini_set('display_errors', 1);
@@ -10,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $opcion = $_POST['selectedCategoria'];
    
     $tableHTML = "
-    <table class='table dataTable' id='table'>
+    <table class='table dataTable' id='tableQCat'>
     <thead class='table-dark'>
     <tr>
       <th scope='col'>ID</th>
@@ -136,7 +137,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                   </div>
                   <div class='modal-body'>
                     <div class='content-form'>
-                      <form action='delete_subcategoria.php' id='formularioDeleteSub' method='POST'>
+                      <form action='delete_subcategoria.php' id='formularioDeleteSubQ' method='POST'>
                         <div class='form-floating mb-3'>
                           <input class='form-control form-control-lg' type='text' name='idSubcategoria' maxlength='40' id='idSubcategoria' value='". $info->id;
               $tableHTML .="' placeholder='". $info->id; 
@@ -157,7 +158,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                         </div>
                         <input type='hidden' name='oculto' value=1>
                         <div class='form-floating mb-3'>
-                          <div class='' id='mostrar_mensaje_modal_delete'></div>
+                          <div class='' id='mostrar_mensaje_modal_delete_catQ'></div>
                         </div>
                       </form>
                     </div>
@@ -188,6 +189,83 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
       </li>
   </ul>
 </nav>
+<script>
+
+// Manajador de eventos para el botón 'Cancelar' o el botón de cierre del modal
+$('#modalCancelarBtn').on('click', function (event) {
+  // Prevenir la acción por defecto del formulario
+  event.preventDefault();
+  $('#mostrar_mensaje_modal_delete_catQ').empty();
+  $('#mostrar_mensaje_modal_delete_catQ').removeClass('alert-danger');
+  $('#mostrar_mensaje_modal_delete_catQ').removeClass('alert-success');
+  });
+// Obtener el formulario y el campo de tipo file
+let formDeleteSubQ = document.querySelector('#formularioDeleteSubQ');
+// Escuchar el evento submit del formulario
+formDeleteSubQ.addEventListener('submit', function (event){
+event.preventDefault();
+const xhrdeleteQ = new XMLHttpRequest();
+
+ // Crear un objeto FormData y agregar los datos del formulario
+  const formDataDelSubQ = new FormData();
+  formDataDelSubQ.append('idSubcategoria', formDeleteSubQ.idSubcategoria.value);
+  formDataDelSubQ.append('nombreSubcategoria', formDeleteSubQ.nombreSubcategoria.value);
+  formDataDelSubQ.append('oculto', formDeleteSubQ.oculto.value);
+
+  //WAITING PROGRESS
+   //Crear un elemento de imagen y establecer su atributo src en la URL de la imagen GIF
+   let imgloading = $(document.createElement('img')).attr('src', 'images/cargando.gif');
+  $('#mostrar_mensaje_modal_delete_catQ').removeClass('alert-danger');
+  $('#mostrar_mensaje_modal_delete_catQ').removeClass('alert-success');
+  $('#mensaje-imagen').remove();
+  $('#mostrar_mensaje_modal_delete_catQ').html(imgloading);
+
+xhrdeleteQ.upload.onprogress = function(event){  
+// Actualizar el contenido de la imagen de carga
+imgloading.attr('src', 'images/cargando.gif');
+};
+
+// Enviar los datos con AJAX
+  xhrdeleteQ.open('POST', 'delete_subcategoria.php');
+  xhrdeleteQ.onload = function () {
+    $('#mostrar_mensaje_modal_delete_catQ').addClass('slideDown');
+    if (xhrdeleteQ.status === 200) {
+      $('#mostrar_mensaje_modal_delete_catQ').empty();
+      let msg = xhrdeleteQ.responseText;
+      $('#mostrar_mensaje_modal_delete_catQ').html(msg);
+      let botonCerrarD = $('<button>', {
+        type: 'button',
+        class: 'btn-close',
+        'data-bs-dismiss': 'alert',
+        'aria-label': 'Close'
+      });
+      
+      if(msg.includes('Error')){
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('alert-dismissible');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('alert');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('fade');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('show');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('alert-danger');
+        $('#mostrar_mensaje_modal_delete_catQ').removeClass('alert-success');
+        $('#mostrar_mensaje_modal_delete_catQ').attr('role', 'alert');
+        $('#mostrar_mensaje_modal_delete_catQ').append(botonCerrarD);      
+      }else if(msg.includes('exitosa')){
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('alert');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('alert-dismissible');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('fade');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('show');
+        $('#mostrar_mensaje_modal_delete_catQ').removeClass('alert-danger');
+        $('#mostrar_mensaje_modal_delete_catQ').addClass('alert-success');
+        $('#mostrar_mensaje_modal_delete_catQ').attr('role', 'alert');
+        $('#mostrar_mensaje_modal_delete_catQ').append(botonCerrarD);      
+        $('#formularioDeleteSubQ')[0].reset();
+      }
+    
+};
+}
+xhrdeleteQ.send(formDataDelSubQ);
+});
+</script>
 ";
 
     echo $tableHTML;
@@ -196,4 +274,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 <script src='js/paginacion_Subcategoria.js'></script>
 <!-- SCRIPT AJAX MODAL DELETE -->
-<script src='js/ajax_modal_deleteSubcategoria.js'></script>"

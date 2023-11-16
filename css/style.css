@@ -13,6 +13,9 @@ body {
 .hidden {
   display: none !important;
 }
+#resultadoTabla {
+  overflow: auto;
+}
 .nav-link.active {
   color: #ffffff !important;
   scale: 1.2;
@@ -29,44 +32,6 @@ body {
   border: 0px !important;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-.notificacion-error {
-  margin: 20px auto;
-  font-size: 1.6rem;
-  padding: 0px 10px;
-  background-color: #ff4757;
-  color: #ffffff;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  border-radius: 4px;
-}
-.notificacion-exito {
-  margin: 20px auto;
-  font-size: 1.6rem;
-  padding: 0px 10px;
-  background-color: #2ed573;
-  color: #ffffff;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  border-radius: 4px;
 }
 .hidden {
   display: none !important;
@@ -1550,6 +1515,47 @@ table.table.avatar {
 .content__CtrlCotizaciones__tabs__item #canceladas-header {
   background-color: #EA2027;
 }
+.amarillo {
+  background-color: #f6e58d !important;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.verde {
+  background-color: #6ab04c !important;
+  color: white !important;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.rojo {
+  background-color: #eb4d4b !important;
+  color: white !important;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+.formEdit-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  height: auto;
+  gap: 10px;
+}
+.formEdit-img__file {
+  width: 100%;
+}
+.formEdit-img img {
+  width: 120px;
+  margin: 5px auto;
+  border: 1px solid #6C6864;
+  border-radius: 5px;
+  padding: 5px;
+}
 .contentCtrlSearch {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1565,6 +1571,7 @@ table.table.avatar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 20px auto;
 }
 .contentCtrlSearch__input {
   display: -webkit-box;

@@ -16,7 +16,35 @@
         });
 
         // Lógica para manejar la paginación personalizada
-        var table = $('#table').DataTable();
+        let table = $('#table').DataTable();
+        $('#prevPage').on('click', function() {
+            table.page('previous').draw('page');
+        });
+
+        $('#nextPage').on('click', function() {
+            table.page('next').draw('page');
+        });
+    });
+    
+    $(document).ready(function() {
+        // Inicializa DataTables con opciones, incluyendo la paginación
+        $('#tableCotizacion').DataTable({
+            paging: true,         // Habilita la paginación
+            lengthChange: false,  // Oculta el control de cambio de longitud
+            searching: false,     // Deshabilita la búsqueda
+            ordering: true,      // Deshabilita la ordenación
+            order: [[0, "desc"]],
+            info: false,        // Oculta la información del estado de la tabla
+            pageLength: 20,  // Cantidad de registros en las vistas
+            columnDefs: [
+            { targets: [0, 1, 2, 3], orderable: true },  // Columnas 'id', 'nombre' y 'categoria' son ordenables
+            { targets: [4], orderable: false }      // Columnas 'eliminar' no es ordenable
+          ]          
+                   
+        });
+
+        // Lógica para manejar la paginación personalizada
+        let table = $('#tableCotizacion').DataTable();
         $('#prevPage').on('click', function() {
             table.page('previous').draw('page');
         });

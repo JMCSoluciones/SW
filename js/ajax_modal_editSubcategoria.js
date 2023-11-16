@@ -1,77 +1,84 @@
-$(document).ready(function () {
-// Manajador de eventos para el botón "Cancelar" o el botón de cierre del modal
-$('#modalCloseEditBtn','#modalCloseEditBtn2').on('click', function (event) {
+
+// Obtener el formulario y el campo de tipo file
+const formContainers = document.querySelectorAll('.formulario-container');
+formContainers.forEach(function(container) {
+  const infoId = container.getAttribute('data-info-id');
+  // Obtener el formulario utilizando el valor de infoId
+  const form = document.querySelector(`#formularioEditSub${infoId}`);
+  // Manajador de eventos para el botón "Cancelar" o el botón de cierre del modal
+  $('.closeXmodal').on('click', function (event) {
   // Prevenir la acción por defecto del formulario
   event.preventDefault();
-  $('#mostrar_mensaje_modalEdit').empty();
-  $('#mostrar_mensaje_modalEdit').removeClass('alert-danger');
-  $('#mostrar_mensaje_modalEdit').removeClass('alert-success');
+  $(`#mostrar_mensaje_modalEdit${infoId}`).empty();
+  $(`#mostrar_mensaje_modalEdit${infoId}`).removeClass('alert-danger');
+  $(`#mostrar_mensaje_modalEdit${infoId}`).removeClass('alert-success');
   });
-// Obtener el formulario y el campo de tipo file
-const formEditSub = document.querySelector('#formularioEditSub');
-// Escuchar el evento submit del formulario
-formEditSub.addEventListener('submit', function (event){
-event.preventDefault();
-const xhrEdit = new XMLHttpRequest();
 
- // Crear un objeto FormData y agregar los datos del formulario
-  const formDataEditSub = new FormData();
-  formDataEditSub.append('idSubcategoria', formEditSub.idSubcategoria.value);
-  formDataEditSub.append('nombreSubcategoria', formEditSub.nombreSubcategoria.value);
-  formDataEditSub.append('categoria', formEditSub.categoria.value);
-  formDataEditSub.append('oculto', formEditSub.oculto.value);
 
-  //WAITING PROGRESS
-   //Crear un elemento de imagen y establecer su atributo src en la URL de la imagen GIF
-  let img = $('<img>', { src: 'images/cargando.gif' });
-  $('#mostrar_mensaje_modalEdit').removeClass('alert-danger');
-  $('#mostrar_mensaje_modalEdit').removeClass('alert-success');
-  $('#mensaje-imagen').remove();
-  $('#mostrar_mensaje_modalEdit').html(img);
+  // Escuchar el evento submit del formulario
+  form.addEventListener('submit', function (event){
+  event.preventDefault();
+  const xhr = new XMLHttpRequest();
 
-xhrEdit.upload.onprogress = function(event){       
-// Actualizar el contenido de la imagen de carga
-img.attr('src', 'images/cargando.gif');
-};
+   // Crear un objeto FormData y agregar los datos del formulario
+    const formData = new FormData();
+    formData.append('idSubcategoria', form.idSubcategoria.value);
+    formData.append('nombreSubcategoria', form.nombreSubcategoria.value);
+    formData.append('categoria', form.categoria.value);
+    formData.append('oculto', form.oculto.value);
 
-// Enviar los datos con AJAX
-  xhrEdit.open('POST', 'edit_subcategoria.php');
-  xhrEdit.onload = function () {
-    $('#mostrar_mensaje_modalEdit').addClass('slideDown');
-    if (xhrEdit.status === 200) {
-      $('#mostrar_mensaje_modalEdit').empty();
-      let mensaje = xhrEdit.responseText;
-      $('#mostrar_mensaje_modalEdit').html(mensaje);
-      let botonCerrarD = $('<button>', {
-        type: 'button',
-        class: 'btn-close',
-        'data-bs-dismiss': 'alert',
-        'aria-label': 'Close'
-      });
+
+    //WAITING PROGRESS
+     //Crear un elemento de imagen y establecer su atributo src en la URL de la imagen GIF
+    var img = $('<img>', { src: 'images/cargando.gif' });
+    $(`#mostrar_mensaje_modalEdit${infoId}`).removeClass('alert-danger');
+    $(`#mostrar_mensaje_modalEdit${infoId}`).removeClass('alert-success');
+    $('#mensaje-imagen').remove();
+    $(`#mostrar_mensaje_modalEdit${infoId}`).html(img);
+
+  xhr.upload.onprogress = function(event){       
+    // Actualizar el contenido de la imagen de carga
+  img.attr('src', 'images/cargando.gif');
+  };
+
+  // Enviar los datos con AJAX
+    xhr.open('POST', 'edit_subcategoria.php');
+    xhr.onload = function () {
+      $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('slideDown');
+      if (xhr.status === 200) {
+        $(`#mostrar_mensaje_modalEdit${infoId}`).empty();
+        var mensaje = xhr.responseText;
+        $(`#mostrar_mensaje_modalEdit${infoId}`).html(mensaje);
+        var botonCerrar = $('<button>');
+          botonCerrar.attr({
+            type: "button",
+            class: "btn-close",
+            "data-bs-dismiss": "alert",
+            "aria-label": "Close"
+          });
+        if(mensaje.includes('Error')){
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('alert-dismissible');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('alert');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('fade');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('show');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('alert-danger');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).removeClass('alert-success');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).attr("role", 'alert');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).append(botonCerrar);      
+        }else if(mensaje.includes('exitosa')){
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('alert');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('alert-dismissible');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('fade');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('show');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).removeClass('alert-danger');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).addClass('alert-success');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).attr("role", 'alert');
+          $(`#mostrar_mensaje_modalEdit${infoId}`).append(botonCerrar);      
+          $(`#formularioEditSub${infoId}`)[0].reset();
+        }
       
-      if(mensaje.includes('Error')){
-        $('#mostrar_mensaje_modalEdit').addClass('alert-dismissible');
-        $('#mostrar_mensaje_modalEdit').addClass('alert');
-        $('#mostrar_mensaje_modalEdit').addClass('fade');
-        $('#mostrar_mensaje_modalEdit').addClass('show');
-        $('#mostrar_mensaje_modalEdit').addClass('alert-danger');
-        $('#mostrar_mensaje_modalEdit').removeClass('alert-success');
-        $('#mostrar_mensaje_modalEdit').attr("role", 'alert');
-        $('#mostrar_mensaje_modalEdit').append(botonCerrarD);      
-      }else if(mensaje.includes('exitosa')){
-        $('#mostrar_mensaje_modalEdit').addClass('alert');
-        $('#mostrar_mensaje_modalEdit').addClass('alert-dismissible');
-        $('#mostrar_mensaje_modalEdit').addClass('fade');
-        $('#mostrar_mensaje_modalEdit').addClass('show');
-        $('#mostrar_mensaje_modalEdit').removeClass('alert-danger');
-        $('#mostrar_mensaje_modalEdit').addClass('alert-success');
-        $('#mostrar_mensaje_modalEdit').attr("role", 'alert');
-        $('#mostrar_mensaje_modalEdit').append(botonCerrarD);      
-        $('#formularioInsert')[0].reset();
-      }
-    
-};
-}
-xhrEdit.send(formDataEditSub);
+  };
+  }
+  xhr.send(formData);
   });
-});
+  });
