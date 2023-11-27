@@ -5,7 +5,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalCotizacion-gralLabel">SOLICITUD DE <br/><strong>COTIZACIÓN</strong></h5>
-          <button class="btn-close" type="button" onclick="limpiarNotificacion();" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button class="btn-close closeXmodal" type="button" onclick="" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="content-form">
@@ -31,7 +31,7 @@
               <label for="mensaje_cotGral">Mensaje</label>
             </div>
             <div class="modal-body__buttons"> 
-              <button class="btn btn-danger btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarNotificacion('mostrar_mensaje');">Cancelar</button>
+              <button class="btn btn-danger btn-lg closeXmodal" data-bs-dismiss="modal" aria-label="Close" onclick="">Cancelar</button>
               <button class="btn btn-success btn-lg" onclick="" type="submit">Enviar</button>
           </div>
             <input type="hidden" name="oculto" value=1>
@@ -46,55 +46,5 @@
     </div>
   </div>
 </div>
-<script>
-    // Obtener el formulario y el campo de tipo file
-    const form = document.querySelector('#form_cotGral');
-    // Escuchar el evento submit del formulario
-    form.addEventListener('submit', function (event){
-      event.preventDefault();
-       // Crear un objeto FormData y agregar los datos del formulario
-        const formData = new FormData();
-        formData.append('nombre', form.nombre.value);
-        formData.append('telefono', form.telefono.value);
-        formData.append('email', form.email.value);
-        formData.append('nombre_empresa', form.nombre_empresa.value);
-        formData.append('mensaje', form.mensaje.value);
-        formData.append('oculto', form.oculto.value);
-
-      // Enviar los datos con AJAX
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'insert_cotgral.php');
-        xhr.onload = function () {
-          $('#mostrar_mensaje').addClass('slideDown');
-          if (xhr.status === 200) {
-            var mensaje = xhr.responseText;
-            $('#mostrar_mensaje').html(mensaje);
-
-            if(mensaje.includes('Error')){
-              $('#mostrar_mensaje').addClass('notificacion-error');
-              $('#mostrar_mensaje').removeClass("notificacion-exito");      
-            }else if(mensaje.includes('exitosa')){
-              $('#mostrar_mensaje').removeClass("notificacion-error");
-              $('#mostrar_mensaje').addClass("notificacion-exito");
-
-              $('#form_cotGral').trigger('reset');
-            }
-          
-      };
-    }
-    xhr.upload.onprogress = function(event){
-          //Crear un elemento de imagen y establecer su atributo src en la URL de la imagen GIF
-            var img = $('<img>', { src: 'images/cargando.gif' });
-            // Agregar el elemento de imagen al elemento HTML que deseas mostrar la imagen de carga
-            $('#mostrar_mensaje').removeClass("notificacion-error");
-            $('#mostrar_mensaje').removeClass("notificacion-exito");
-            $('#mensaje-imagen').remove();
-            $('#mostrar_mensaje').html(img);
-
-    };
-  xhr.send(formData);
-
-
-    });
-  </script>
+<script src="js/ajax_modal_cotizacionGral.js"></script>
   <script src="/js/script.js"></script>

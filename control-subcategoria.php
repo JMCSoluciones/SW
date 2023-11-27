@@ -4,52 +4,19 @@ include './components/header-admin.php';
 include './components/control-menuAdmin.php';
 include './model/conexion.php';
 ?>
+<style>
+  .dataTables_wrapper .dataTables_filter input {
+    margin-bottom: 10px !important;
+}
+</style>
   <h3 class="title">Control de Subcategorias</h3>
 <div class="content__CtrlSubcategorias">
-  <div class="content__CtrlSubcategorias__box contentCtrlSearch">
-    <div class="contentCtrlSearch__input">
-      <form action="pquery_categoria_table.php" id="formQueryCat" method="POST">
-        <label for="selectCategorias">Filtrar por categoría</label>
-        <div class="contentCtrlSearch__input__cta">
-        <select name="selectedCategoria" id="selectCategorias" class="form-select">
-            <?php
-              $consulta = $bd->query("SELECT id,nombre FROM categoria");
-              $categoria = $consulta->fetchAll(PDO::FETCH_OBJ);
-              if(!$categoria){
-              echo 'No existen Categorias ';
 
-              }else{
-                ?>
-                <option value="0">Todas</option>
-                <?php
-              foreach ($categoria as $dato){
-                ?>
-                <option value="<?php echo $dato->id;?>"><?php echo $dato->nombre;?></option>
-                <?php
-            
-            }
-          }
-              ?>
-        </select>
-        <button class="btn btn-warning" type="submit"><img src="/images/iconos/funnel-fill.svg" alt=""></button>
-        </div>
-      </form>
-    </div>
-    <div class="contentCtrlSearch__input">
-      <form action="pquery_subnombre_table.php" method="POST" id="formQueryName">
-        <label for="searchSubName">Buscar por nombre</label>
-        <div class="contentCtrlSearch__input__cta">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchSubName" name="subname"/>
-          <button class="btn btn-warning" type="submit"><img src="/images/iconos/funnel-fill.svg" alt=""></button>
-        </div>
-      </form>
-    </div>
-  </div>
   <?php include 'modal-subcategoria.php';?>
 
   <!-- TABLA -->
   <div id="resultadoTabla">        
-    <table class="table dataTable" id="table">
+    <table class="table display table-hover" id="tableSubcategoria">
     <thead class="table-dark">
     <tr>
       <th scope="col">ID</th>
@@ -188,33 +155,17 @@ include './model/conexion.php';
     </tbody>
     </table> 
 
-    <!-- PAGINACIÓN -->
-            <!-- Contenedor para la paginación -->
-      <nav aria-label="Page navigation example">
-          <ul class="pagination">
-              <li class="page-item" id="prevPage">
-                  <a class="page-link" href="#" aria-label="Previous">
-                  </a>
-              </li>
-              <!-- Números de página se generarán aquí -->
-              <li class="page-item" id="nextPage">
-                  <a class="page-link" href="#" aria-label="Next">
-                  </a>
-              </li>
-          </ul>
-      </nav>
+    
   </div>
 </div>
 <!-- SCRIPT AJAX MODAL EDIT-->
 <script src="js/ajax_modal_editSubcategoria.js"></script>
-
-
-<!-- SCRIPT AJAX TABLA -->
-<!-- <script src="js/ajax_tabla_Subcategoria.js"></script> -->
-<!-- SCRIPT AJAX MODAL DELETE  -->
 <script src="js/ajax_modal_deleteSubcategoria.js"></script>
-<!-- SCRIPT PAGINACIÓN -->
-<script src="js/paginacion_Subcategoria.js"></script>
+<script>
+$(document).ready( function () {
+$('#tableSubcategoria').DataTable();
+} );
+</script>
 
 <?php
  include './components/footer-admin.php';

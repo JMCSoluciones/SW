@@ -4,12 +4,15 @@ include './components/header-admin.php';
 include './components/control-menuAdmin.php';
 include './model/conexion.php';
 ?>
-
-      <h3 class="title">Solicitudes de cotizaciones</h3>
-
+<style>
+  .dataTables_wrapper .dataTables_filter input {
+    margin-bottom: 10px !important;
+}
+</style>
+    <h3 class="title">Solicitudes de cotizaciones</h3>
     <div class="content__CtrlCotizaciones">
       <div id="resultadoTabla">        
-        <table class="table dataTable" id="tableCotizacion">
+        <table class="table display table-hover" id="tableCotizacion" cellspacing="0" width="100%">
           <thead class="table-dark">
             <tr>
               <th scope="col">ID</th>
@@ -130,26 +133,18 @@ include './model/conexion.php';
     </tbody>
     </table> 
 
-    <!-- PAGINACIÓN -->
-            <!-- Contenedor para la paginación -->
-      <nav aria-label="Page navigation example">
-          <ul class="pagination">
-              <li class="page-item" id="prevPage">
-                  <a class="page-link" href="#" aria-label="Previous">
-                  </a>
-              </li>
-              <!-- Números de página se generarán aquí -->
-              <li class="page-item" id="nextPage">
-                  <a class="page-link" href="#" aria-label="Next">
-                  </a>
-              </li>
-          </ul>
-      </nav>
+   
   </div>
     </div>
 <!-- SCRIPT PAGINACIÓN -->
 <script src="js/ajax_modal_scotizacion.js"></script>
-<script src="js/paginacion_Subcategoria.js"></script>
+<!-- <script src="js/paginacion_Subcategoria.js"></script> -->
+<script>
+$(document).ready( function () {
+$('#tableCotizacion').DataTable();
+} );
+</script>
+
 <script src="/js/script.js"></script> 
 
     <?php 

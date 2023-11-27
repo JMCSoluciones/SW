@@ -36,7 +36,7 @@ function sinCespecialesM($text){
 
 //***** VALIDA CANTIDAD DE CARACTERES ******
 function digitosNombre($elemento,$campo){
-    if(strlen($elemento)<=30){
+    if(strlen($elemento)<=60){
 
     }else{
         echo "Error : el campo ". $campo ." Debe ser menor de 30 caracteres";

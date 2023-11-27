@@ -4,52 +4,19 @@ include './components/header-admin.php';
 include './components/control-menuAdmin.php';
 include './model/conexion.php';
 ?>
+<style>
+  .dataTables_wrapper .dataTables_filter input {
+    margin-bottom: 10px !important;
+}
+</style>
+
   <h3 class="title">Control de Productos</h3>
 <div class="content__CtrlProductos">
-  <div class="content__CtrlProductos__box contentCtrlSearch">
-    <div class="contentCtrlSearch__input">
-      <form action="pquery_categoria_table.php" id="formQueryCat" method="POST">
-        <label for="selectCategorias">Filtrar por categoría</label>
-        <div class="contentCtrlSearch__input__cta">
-        <select name="selectedCategoria" id="selectCategorias" class="form-select">
-            <?php
-              $consulta = $bd->query("SELECT id,nombre FROM categoria");
-              $categoria = $consulta->fetchAll(PDO::FETCH_OBJ);
-              if(!$categoria){
-              echo 'No existen Productos ';
-
-              }else{
-                ?>
-                <option value="0">Todas</option>
-                <?php
-              foreach ($categoria as $dato){
-                ?>
-                <option value="<?php echo $dato->id;?>"><?php echo $dato->nombre;?></option>
-                <?php
-            
-            }
-          }
-              ?>
-        </select>
-        <button class="btn btn-warning" type="submit"><img src="/images/iconos/funnel-fill.svg" alt=""></button>
-        </div>
-      </form>
-    </div>
-    <div class="contentCtrlSearch__input">
-      <form action="pquery_subnombre_table.php" method="POST" id="formQueryName">
-        <label for="searchSubName">Buscar por nombre</label>
-        <div class="contentCtrlSearch__input__cta">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchSubName" name="subname"/>
-          <button class="btn btn-warning" type="submit"><img src="/images/iconos/funnel-fill.svg" alt=""></button>
-        </div>
-      </form>
-    </div>
-  </div>
   <?php include 'modal-registro-producto.php';?>
 
   <!-- TABLA -->
   <div id="resultadoTabla">        
-    <table class="table dataTable" id="table">
+    <table class="table display" id="tableProductos">
     <thead class="table-dark">
     <tr>
       <th scope="col">ID</th>
@@ -105,15 +72,15 @@ include './model/conexion.php';
            
                     <h5 class="modal-title" id="modalEditSubCategoria<?= $info->id?>Label">Detalles del <br/><strong>Producto  </strong></h5>
                     <!-- Boton cerrar x -->
-                    <button class="btn-close closeXmodal" type="button" data-bs-dismiss="modal" aria-label="Close" id="#modalCloseEditBtn"></button>
+                    <button class="btn-close closeXmodal" type="button" data-bs-dismiss="modal" aria-label="Close" id="modalCloseEditBtn"></button>
                   </div>
                   <div class="modal-body">
-                    <div class="content-form" data-info-id="<?php echo $info->id; ?>">
+                    <div class="content-form formulario-container" data-info-id="<?php echo $info->id; ?>">
                     <!-- FORMULARIO -->
-                      <form action="edit_producto.php" id="formularioEditProd<?= $info->id?>" method="POST">
+                      <form action="edit_producto.php" id="formularioEditProd<?= $info->id?>" method="POST" enctype="multipart/form-data">
                       <!-- ID -->
                       <div class="form-floating mb-3">
-                        <input class="form-control form-control-lg" value="<?= $info->id;?>" type="text" name="clave" maxlength="10"  placeholder="ID del Producto" id="IdProducto"/>
+                        <input class="form-control form-control-lg" value="<?= $info->id;?>" type="text" name="id_producto" maxlength="10"  placeholder="ID del Producto" id="IdProducto" readonly/>
                         <label class="form-label" for="IdProducto">ID</label>
                     </div>
                     <!-- CLAVE -->
@@ -129,7 +96,7 @@ include './model/conexion.php';
                     <!-- CATEGORIA -->
                     <div class="form-floating mb-3">
                       <lablel class="form-label" for="selectcategoriaEdit<?= $info->id?>">Categoría</lablel>
-                      <select class="form-control form-control-lg form-select" name="categoria" id="selectcategoriaEdit<?= $info->id?>" onchange="cargarSubcategorias(this.value,<?= $info->id?>)">
+                      <select class="form-control form-control-lg form-select" name="selectcategoria" id="selectcategoriaEdit<?= $info->id?>" onchange="cargarSubcategorias(this.value,<?= $info->id?>)">
                         <option value="1" <?php echo ($info->id_categoria == 1) ? 'selected' : ''; ?>>Semáforos</option>
                         <option value="2" <?php echo ($info->id_categoria == 2) ? 'selected' : ''; ?>>Postes</option>
                         <option value="3" <?php echo ($info->id_categoria == 3) ? 'selected' : ''; ?>>Señalamientos</option>
@@ -140,7 +107,7 @@ include './model/conexion.php';
                     <!-- SUBCATEGORIA -->
                     <div class="form-floating mb-3">
                       <lablel class="form-label" for="selectsubcategoriaEdit<?= $info->id?>">Subcategoria</lablel>
-                      <select class="form-control form-control-lg form-select" name="selectsubcategoriaEdit<?= $info->id?>" id="selectsubcategoriaEdit<?= $info->id?>">
+                      <select class="form-control form-control-lg form-select" name="selectsubcategoria" id="selectsubcategoriaEdit<?= $info->id?>">
                       <?php
                           // Obtener las opciones de la subcategoría desde la base de datos
                           $consultaSubcategorias = $bd->query("SELECT id, nombre FROM subcategoria");
@@ -163,7 +130,7 @@ include './model/conexion.php';
                         <img class="" src="data:<?php echo "$info->tipofoto"?>;base64,<?php echo $imagen_decodificada;?>" alt="Imagen">
                        <div class="formEdit-img__file">
                         <label class="form-label" id="formFile" for="ctaImagen">Modificar Imagen</label>
-                        <input class="form-control form-control-lg" type="file" name="foto" id="foto" accept="image/jpeg, image/png/">
+                        <input class="form-control form-control-lg" type="file" name="foto" id="foto<?= $info->id;?>" accept="image/jpeg, image/png/">
                        </div> 
                       
                     </div>
@@ -185,7 +152,7 @@ include './model/conexion.php';
                       <button class="btn btn-warning btn-lg"  type="submit" name="guardar">Editar</button>
                     </div>
                     <div class="form-floating mb-3">
-                      <div class="" id="mostrar_mensaje"></div>
+                      <div class="" id="mensajeEditProd<?=$info->id?>"></div>
                     </div>
                       </form>
                     </div>
@@ -196,36 +163,38 @@ include './model/conexion.php';
           </div>
         </td>
         <td>
-          <!-- ELIMINAR SUBCATEGORIA -->
-        <button class="btn newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalDeleteSubCategoria<?= $info->id?>"  data-id="<?= $info->id ?>">
+          <!-- ELIMINAR PRODUCTO -->
+        <button class="btn newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalDeleteProducto<?= $info->id?>"  data-id="<?= $info->id ?>">
           <img src="/images/iconos/trash3-fill.svg" alt="ícono de un bote de basura"  data-id="<?= $info->id ?>"></button>
-          <div class="modal-subcategoria">
-            <div class="modal fade" id="modalDeleteSubCategoria<?= $info->id?>" aria-hidden="true" aria-labelledby="modalDeleteSubCategoria<?= $info->id?>Label" tabindex="-1">
+          <div class="modal_delete_producto">
+            <div class="modal fade" id="modalDeleteProducto<?= $info->id?>" aria-hidden="true" aria-labelledby="modalDeleteProducto<?= $info->id?>Label" tabindex="-1">
               <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modalDeleteSubCategoria<?= $info->id?>Label">Eliminar <br/><strong>Subcategoria  </strong></h5>
+                    <h5 class="modal-title" id="modalDeleteProducto<?= $info->id?>Label">Eliminar <br/><strong>Producto  </strong></h5>
                     <button class="btn-close closeXmodal" type="button" data-bs-dismiss="modal" aria-label="Close" id="modalCancelBtn"></button>
                   </div>
                   <div class="modal-body">
                     <div class="content-form formulario-container" data-info-id="<?= $info->id; ?>">
-                      <form action="delete_subcategoria.php" id="formularioDeleteSub<?= $info->id; ?>" method="POST">
+                    <!-- FORMULARIO ELIMINAR PRODUCTO  -->
+                      <form action="delete_producto.php" id="formularioDeleteProd<?= $info->id; ?>" method="POST">
+                      <!-- ID DEL PRODUCTO  -->
                         <div class="form-floating mb-3">
-                          <input class="form-control form-control-lg" type="text" name="idSubcategoria" maxlength="40" id="idSubcategoria" value="<?= $info->id ?>" placeholder="<?= $info->id ?>" readonly />
-                          <label class="form-label" for="idSubcategoria">ID</label>
+                          <input class="form-control form-control-lg" type="text" name="idProductoD" maxlength="40" id="idProductoD" value="<?= $info->id ?>" placeholder="<?= $info->id ?>" readonly />
+                          <label class="form-label" for="idProductoD">ID</label>
                         </div>
-                        <!-- INPUT NOMBRE DE LA SUBCATEGORIA -->
+                        <!-- INPUT NOMBRE DEL PRODUCTO -->
                         <div class="form-floating mb-3">
-                          <input class="form-control form-control-lg" type="text" name="nombreSubcategoria" maxlength="40" placeholder="<?= $info->nombre?>" id="nombreSubcategoria" readonly/>
-                          <label class="form-label" for="nombreSubcategoria" value="<?= $info->nombre?>"><?= $info->nombre?></label>
+                          <input class="form-control form-control-lg" type="text" name="nombreProductoD" maxlength="40" placeholder="<?= $info->producto?>" id="nombreProductoD<?= $info->id?>"  value="<?= $info->producto?>" readonly/>
+                          <label class="form-label" for="nombreProductoD"><?= $info->id?></label>
                         </div> 
                         <div class="modal-body__buttons form-floating mb-3"> 
-                          <button class="btn btn-dark btn-lg" data-bs-dismiss="modal" aria-label="Close" onclick="" id="modalCancelarBtn">Cancelar</button>
+                          <button class="btn btn-dark btn-lg closeXmodal" data-bs-dismiss="modal" aria-label="Close" onclick="" id="modalCancelarBtn">Cancelar</button>
                           <button class="btn btn-danger btn-lg" type="submit">Eliminar</button>
                         </div>
                         <input type="hidden" name="oculto" value=1>
                         <div class="form-floating mb-3">
-                          <div class="" id="mostrar_mensaje_modal_delete<?= $info->id; ?>"></div>
+                          <div class="" id="mostrar_mensaje_modal_deleteP<?= $info->id; ?>"></div>
                         </div>
                       </form>
                     </div>
@@ -242,28 +211,16 @@ include './model/conexion.php';
     ?>
     </tbody>
     </table> 
-
-    <!-- PAGINACIÓN -->
-            <!-- Contenedor para la paginación -->
-      <nav aria-label="Page navigation example">
-          <ul class="pagination">
-              <li class="page-item" id="prevPage">
-                  <a class="page-link" href="#" aria-label="Previous">
-                  </a>
-              </li>
-              <!-- Números de página se generarán aquí -->
-              <li class="page-item" id="nextPage">
-                  <a class="page-link" href="#" aria-label="Next">
-                  </a>
-              </li>
-          </ul>
-      </nav>
   </div>
 </div>
-
-<script src="js/paginacion_Subcategoria.js"></script>
+<script>
+$(document).ready( function () {
+$('#tableProductos').DataTable();
+} );
+</script>
+<script src="js/ajax_modal_editProducto.js"></script>
+<script src="js/ajax_modal_deleteProducto.js"></script>
 <script src="js/script.js"></script>
-
 <?php
  include './components/footer-admin.php';
 ?>

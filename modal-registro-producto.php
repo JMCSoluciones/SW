@@ -1,4 +1,4 @@
-<button class="btn btn-success newBtnElement" type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoProducto">Nuevo Producto</button>
+<button class="btn btn-success newBtnElement btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#modalNuevoProducto">Nuevo Producto</button>
   <!-- MODAL -->
       <div class="modal-cotizacion">
         <div class="modal fade" id="modalNuevoProducto" aria-hidden="true" aria-labelledby="modalNuevoProductoLabel" tabindex="-1">
@@ -68,7 +68,7 @@
    const form = document.querySelector('#formularioP');
     form.addEventListener('submit', function (event) {
   event.preventDefault();
-  var fileInputElement = document.getElementById('foto');
+  let fileInputElement = document.getElementById('foto');
   const formData = new FormData();
   formData.append('clave', form.clave.value);
   formData.append('producto', form.producto.value);
